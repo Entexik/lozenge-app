@@ -957,3 +957,26 @@ html.mid-text .ex-pick{border-radius:1.25rem}
 /* Settings buttons in the app's glass, not a grey system button */
 /* (the generic grey button rule is a long :not() chain, so this needs !important to win) */
 .btn.st-btn{background:var(--paper)!important;border:1px solid var(--glass-line);color:var(--brand-ink)!important;box-shadow:var(--e1)!important;font-weight:800}
+
+/* ---------- accessibility and comfort ---------- */
+/* right and wrong are never colour alone: a tick or a cross comes with them */
+.opt.ok::after,.duo-opt.right::after{content:"✓";margin-left:auto;font:800 1.125rem/1 var(--f-ui);color:var(--right)}
+.opt.bad::after,.duo-opt.wrong::after{content:"✗";margin-left:auto;font:800 1.125rem/1 var(--f-ui);color:var(--wrong)}
+/* everything you tap is at least 44 × 44 points */
+.sheet-x{width:44px;height:44px}
+.btn.sm{min-height:2.75rem}
+.rnudge-x{width:44px;height:44px}
+.qnav button{min-width:44px;min-height:44px}
+.switch{position:relative}
+.switch::before{content:"";position:absolute;inset:-6px -2px}
+/* long texts sit on a solid page, not on the moving glass */
+:root{--paper-solid:#FBFCFF}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper-solid:#12163A}}
+:root[data-theme="dark"]{--paper-solid:#12163A}
+.passage{background:var(--paper-solid)!important;-webkit-backdrop-filter:none;backdrop-filter:none}
+/* a disabled button looks disabled */
+.btn:disabled,.btn[disabled]{opacity:.5;filter:saturate(.4);box-shadow:none!important;cursor:default}
+/* the pushed-screen animation doesn't keep a GPU layer alive afterwards */
+.scr{will-change:auto}
+.mic-off{display:flex;align-items:flex-start;gap:.5rem;margin:.5rem 0 0}
+.mic-off .icon{flex:none;width:1.125rem;height:1.125rem;margin-top:.125rem}
