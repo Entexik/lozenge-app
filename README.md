@@ -6,12 +6,13 @@
 
 <p align="center">
   <b>Pass your Cambridge English exam, ten minutes a day.</b><br>
+  <a href="https://entexik.github.io/lozenge-app/">entexik.github.io/lozenge-app</a><br>
   B1 Preliminary · B2 First · C1 Advanced
 </p>
 
 <p align="center">
   <a href="https://github.com/Entexik/lozenge-app/releases/latest/download/Lozenge.apk"><img alt="Download for Android" src="https://img.shields.io/badge/Android-Download%20APK-3DDC84?style=for-the-badge&logo=android&logoColor=white"></a>
-  <a href="https://claude.ai/artifact/VDAeQnF6U1XyRPamAZ4fRp"><img alt="Try it in your browser" src="https://img.shields.io/badge/Web-Try%20it%20now-4457FF?style=for-the-badge&logo=googlechrome&logoColor=white"></a>
+  <a href="https://entexik.github.io/lozenge-app/app/"><img alt="Try it in your browser" src="https://img.shields.io/badge/Web-Try%20it%20now-4457FF?style=for-the-badge&logo=googlechrome&logoColor=white"></a>
   <img alt="iPhone: coming soon" src="https://img.shields.io/badge/iPhone-coming%20soon-0B0F2E?style=for-the-badge&logo=apple&logoColor=white">
 </p>
 
@@ -78,11 +79,11 @@ open it and allow your browser to install apps when Android asks. Android 8.0 or
 This is a beta: everything that's free works, and Plus can't be bought yet. When Lozenge arrives on
 Google Play, uninstall this version first.
 
-**iPhone** – coming to the App Store. Until then, use the [web version](https://claude.ai/artifact/VDAeQnF6U1XyRPamAZ4fRp)
+**iPhone** – coming to the App Store. Until then, use the [web version](https://entexik.github.io/lozenge-app/app/)
 in Safari.
 
-**Web** – [try it in your browser](https://claude.ai/artifact/VDAeQnF6U1XyRPamAZ4fRp). Everything that's free in
-the app is free there too, and your progress stays on your device.
+**Web** – [try it in your browser](https://entexik.github.io/lozenge-app/app/). Everything that's free in
+the app is free there too. On iPhone, tap Share › Add to Home Screen and it opens like an app.
 
 ## Česky
 
@@ -90,7 +91,7 @@ Lozenge tě připraví na zkoušky Cambridge **B1 Preliminary, B2 First a C1 Adv
 lekce, zkušební testy na čas se skóre na Cambridge English Scale, poslech s britskými hlasy a hodnocené
 psaní i mluvení. Rozhraní je česky i v dalších 15 jazycích.
 [Stáhni si APK pro Android](https://github.com/Entexik/lozenge-app/releases/latest/download/Lozenge.apk)
-nebo si ho [vyzkoušej v prohlížeči](https://claude.ai/artifact/VDAeQnF6U1XyRPamAZ4fRp).
+nebo si ho [vyzkoušej v prohlížeči](https://entexik.github.io/lozenge-app/app/).
 
 ## Feedback
 
@@ -99,4 +100,4 @@ Found a mistake in an exercise, or something that doesn't work? [Open an issue](
 ---
 
 <sub>Lozenge is an independent practice app and isn't affiliated with Cambridge University Press &amp; Assessment.
-All texts, recordings and exercises are original. [Privacy policy](https://claude.ai/code/artifact/2ba21a37-60d6-4ab3-95e9-8546b66bd612) · © 2026 Lozenge. All rights reserved.</sub>
+All texts, recordings and exercises are original. [Privacy policy](https://entexik.github.io/lozenge-app/privacy.html) · © 2026 Lozenge. All rights reserved.</sub>
