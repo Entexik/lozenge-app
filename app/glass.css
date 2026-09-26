@@ -980,3 +980,15 @@ html.mid-text .ex-pick{border-radius:1.25rem}
 .scr{will-change:auto}
 .mic-off{display:flex;align-items:flex-start;gap:.5rem;margin:.5rem 0 0}
 .mic-off .icon{flex:none;width:1.125rem;height:1.125rem;margin-top:.125rem}
+
+/* ---------- F1: the tab bar sits on the bottom edge (not floating over the content) ---------- */
+.bottomnav{left:0;right:0;bottom:0;border-radius:1.5rem 1.5rem 0 0;border-width:1px 0 0;
+  padding:.375rem .75rem calc(.375rem + var(--sab, env(safe-area-inset-bottom)));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 -10px 30px -18px rgba(30,42,140,.4)}
+.nav-lens{top:.375rem;bottom:calc(.375rem + var(--sab, env(safe-area-inset-bottom)))}
+body{padding-bottom:calc(5.25rem + var(--sab, env(safe-area-inset-bottom)))}
+@media (min-width:768px){.bottomnav{left:0;right:0}}
+
+/* ---------- F2: working screens use the plain UI face for headings; the display face stays for Home,
+   the shop and celebrations ---------- */
+.lesson-head h1,.scr-bar h1,.st-h,.pagehead h1,.tsec-head h2,.lx-q,.duo-screen h1{font-family:var(--f-ui);font-weight:800;letter-spacing:-.02em}
