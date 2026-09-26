@@ -1,0 +1,538 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lozenge Cambridge Prep</title>
+<link rel="icon" href="app/icon.png">
+<meta name="description" content="Lozenge: Cambridge B1 Preliminary, B2 First and C1 Advanced practice in ten-minute lessons, mock tests and marked Writing and Speaking.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Serif:ital@1&family=Plus+Jakarta+Sans:wght@400..800&display=swap">
+<style>
+/* Tokens come from the Lozenge app itself (theme.css / glass.css), so the page and the app feel like one product. */
+:root{
+  --ground:#E9EDFF; --ground-2:#F5F6FF; --paper:#FFFFFF; --glass:rgba(255,255,255,.74); --rim:rgba(255,255,255,.9); --rule:#DCE2F6;
+  --ink:#0B0F2E; --ink-2:#3A4168; --lead:#5A6288;
+  --brand:#4457FF; --brand-edge:#2F3FE0; --brand-ink:#2B3AD6; --brand-soft:#E0E5FF; --violet:#7A5BFF;
+  --right:#0E9F68; --right-edge:#0C8A5A; --right-soft:#D9F5E9; --wrong:#E2474E; --wrong-edge:#C2333A; --wrong-soft:#FFE2E4;
+  --bar-lo:#C9D2FF; --bar-hi:#4457FF;
+  --aur-a:rgba(120,190,255,.50); --aur-b:rgba(170,146,255,.42); --aur-c:rgba(255,190,165,.30);
+  --shadow:0 1px 0 rgba(255,255,255,.95) inset,0 2px 4px rgba(24,32,96,.04),0 22px 44px -26px rgba(24,32,96,.45);
+  --t-sky:#D6EBFF; --t-lav:#E8E0FF; --t-mint:#D3F4E5; --t-peach:#FFE3D4; --t-pink:#FFDCEA; --t-lime:#EAF7C2; --t-ink:#1C2350;
+  --display:"Bricolage Grotesque","Plus Jakarta Sans",ui-sans-serif,system-ui,sans-serif;
+  --ui:"Plus Jakarta Sans",ui-sans-serif,-apple-system,system-ui,sans-serif;
+  --serif:"Instrument Serif","New York",ui-serif,Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --ground:#070814; --ground-2:#0D1030; --paper:#131734; --glass:rgba(22,26,60,.74); --rim:rgba(255,255,255,.09); --rule:#252B52;
+  --ink:#F3F4FF; --ink-2:#C6CBEC; --lead:#9AA2CC;
+  --brand:#7B8CFF; --brand-edge:#5468F0; --brand-ink:#B0BBFF; --brand-soft:#1F2657; --violet:#A08BFF;
+  --right:#2ED18E; --right-edge:#1FA36F; --right-soft:#0F3428; --wrong:#FF6E74; --wrong-edge:#D9484E; --wrong-soft:#3B1C20;
+  --bar-lo:#2A3268; --bar-hi:#7B8CFF;
+  --aur-a:rgba(60,110,255,.30); --aur-b:rgba(130,90,255,.30); --aur-c:rgba(255,120,90,.13);
+  --shadow:0 1px 0 rgba(255,255,255,.05) inset,0 2px 6px rgba(0,0,0,.4),0 22px 44px -24px rgba(0,0,0,.9);
+  --t-sky:#10284A; --t-lav:#231C4A; --t-mint:#0E3126; --t-peach:#3A2216; --t-pink:#381A2B; --t-lime:#222B10; --t-ink:#E6E9FF;
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ground:#070814; --ground-2:#0D1030; --paper:#131734; --glass:rgba(22,26,60,.74); --rim:rgba(255,255,255,.09); --rule:#252B52;
+  --ink:#F3F4FF; --ink-2:#C6CBEC; --lead:#9AA2CC;
+  --brand:#7B8CFF; --brand-edge:#5468F0; --brand-ink:#B0BBFF; --brand-soft:#1F2657; --violet:#A08BFF;
+  --right:#2ED18E; --right-edge:#1FA36F; --right-soft:#0F3428; --wrong:#FF6E74; --wrong-edge:#D9484E; --wrong-soft:#3B1C20;
+  --bar-lo:#2A3268; --bar-hi:#7B8CFF;
+  --aur-a:rgba(60,110,255,.30); --aur-b:rgba(130,90,255,.30); --aur-c:rgba(255,120,90,.13);
+  --shadow:0 1px 0 rgba(255,255,255,.05) inset,0 2px 6px rgba(0,0,0,.4),0 22px 44px -24px rgba(0,0,0,.9);
+  --t-sky:#10284A; --t-lav:#231C4A; --t-mint:#0E3126; --t-peach:#3A2216; --t-pink:#381A2B; --t-lime:#222B10; --t-ink:#E6E9FF;
+}
+
+*{box-sizing:border-box}
+html{background:var(--ground)}
+body{margin:0;background:var(--ground);color:var(--ink);font:400 1rem/1.6 var(--ui);-webkit-font-smoothing:antialiased;overflow-x:clip;position:relative}
+/* the app's living background: three soft auroras, still */
+body::before{content:"";position:fixed;inset:-20vh -20vw;z-index:0;pointer-events:none;
+  background:radial-gradient(38vw 30vw at 12% 8%,var(--aur-a),transparent 70%),radial-gradient(36vw 30vw at 92% 18%,var(--aur-b),transparent 70%),radial-gradient(40vw 32vw at 70% 96%,var(--aur-c),transparent 70%)}
+.wrap{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:0 3rem}
+a{color:var(--brand-ink)}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:12px}
+
+/* ---------- top bar ---------- */
+.nav{display:flex;align-items:center;gap:.75rem;padding-block:1.25rem}
+.logo{display:flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--ink);font:800 1.375rem/1 var(--display);letter-spacing:-.04em}
+.logo svg{width:2.1rem;height:2.1rem;filter:drop-shadow(0 4px 8px rgba(224,58,38,.3))}
+.spacer{flex:1}
+.lang{display:flex;padding:.1875rem;border-radius:999px;background:var(--glass);box-shadow:var(--shadow)}
+.lang button{border:0;background:transparent;color:var(--lead);font:700 .8125rem/1 var(--ui);padding:.5rem .75rem;border-radius:999px;cursor:pointer;letter-spacing:.02em}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--ground)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:3rem;padding:0 1.375rem;border-radius:1rem;border:0;
+  font:700 1rem/1.1 var(--ui);text-decoration:none;cursor:pointer;transition:transform .08s,box-shadow .08s}
+.btn.primary{background:var(--brand);color:#fff;box-shadow:0 4px 0 var(--brand-edge),0 14px 30px -12px rgba(68,87,255,.6)}
+.btn.primary:active{transform:translateY(3px);box-shadow:0 1px 0 var(--brand-edge)}
+.btn.small{min-height:2.5rem;padding:0 1rem;font-size:.9375rem;border-radius:.875rem}
+.btn svg{width:1.125rem;height:1.125rem}
+@media (max-width:520px){.nav .btn.small{display:none}}
+
+/* ---------- hero ---------- */
+.hero{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:clamp(2rem,5vw,4rem);align-items:center;padding-block:clamp(1.5rem,5vw,4rem) clamp(2.5rem,6vw,5rem)}
+@media (max-width:880px){.hero{grid-template-columns:minmax(0,1fr)}}
+.eyebrow{margin:0 0 1rem;font:700 .75rem/1.3 var(--ui);letter-spacing:.14em;text-transform:uppercase;color:var(--brand-ink)}
+h1{margin:0;font:800 clamp(2.6rem,6.4vw,4.75rem)/.94 var(--display);letter-spacing:-.05em;text-wrap:balance}
+h1 em,h2 em{font:italic 400 1.08em/1 var(--serif);letter-spacing:-.01em;color:var(--brand)}
+.lede{margin:1.5rem 0 0;max-width:34rem;font-size:clamp(1.0625rem,1.6vw,1.1875rem);line-height:1.6;color:var(--ink-2)}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem;margin-top:2rem}
+.cta-row .note{font:600 .875rem/1.3 var(--ui);color:var(--lead)}
+.soon{margin:1.25rem 0 0;display:flex;align-items:center;gap:.5rem;font:600 .875rem/1.4 var(--ui);color:var(--lead)}
+.soon i{flex:none;width:.5rem;height:.5rem;border-radius:50%;background:var(--right);box-shadow:0 0 0 4px var(--right-soft)}
+
+/* the live demo: the gem + one question at a time */
+.demo{position:relative;border-radius:2rem;padding:clamp(1.25rem,3vw,1.75rem);background:var(--glass);box-shadow:var(--shadow),inset 0 0 0 1px var(--rim)}
+.demo-top{display:flex;align-items:center;gap:1rem}
+.gem{flex:none;width:clamp(96px,22vw,132px);height:auto;filter:drop-shadow(0 12px 22px rgba(108,125,255,.45))}
+.gem .lit{opacity:0;transition:opacity .6s ease}
+.gem .lit.on{opacity:1}
+.gem .sweep{animation:sweep 4.6s ease-in-out infinite}
+@keyframes sweep{0%,55%{transform:translateX(0)}100%{transform:translateX(220px)}}
+.meter small{display:block;font:700 .6875rem/1.2 var(--ui);letter-spacing:.14em;text-transform:uppercase;color:var(--lead)}
+.meter b{display:block;font:800 3rem/1 var(--display);letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.meter b span{font-size:.5em;letter-spacing:0;color:var(--brand)}
+.meter p{margin:.375rem 0 0;font:500 .875rem/1.4 var(--ui);color:var(--ink-2)}
+.q{margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--rule)}
+.q-head{display:flex;align-items:center;gap:.5rem;font:700 .75rem/1 var(--ui);letter-spacing:.06em;text-transform:uppercase;color:var(--lead)}
+.pill{padding:.375rem .625rem;border-radius:999px;background:var(--brand-soft);color:var(--brand-ink);letter-spacing:.04em}
+.q-head .n{margin-left:auto;font-variant-numeric:tabular-nums}
+.q-text{margin:.875rem 0 1rem;font:600 1.1875rem/1.45 var(--ui);color:var(--ink);text-wrap:pretty}
+.gap{display:inline-block;min-width:4.5rem;border-bottom:2px dashed var(--brand);color:var(--brand-ink);text-align:center;padding:0 .25rem}
+.opts{display:grid;gap:.625rem}
+.opt{display:flex;align-items:center;gap:.75rem;width:100%;min-height:3.25rem;padding:.5rem 1rem;border-radius:1rem;border:2px solid var(--rule);background:var(--paper);color:var(--ink);
+  font:600 1rem/1.3 var(--ui);text-align:left;cursor:pointer;box-shadow:0 3px 0 var(--rule);transition:transform .08s,box-shadow .08s,border-color .15s,background .15s}
+.opt:hover:not(:disabled){border-color:var(--brand)}
+.opt:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 var(--rule)}
+.opt .k{flex:none;width:1.75rem;height:1.75rem;display:grid;place-items:center;border-radius:.5rem;background:var(--brand-soft);color:var(--brand-ink);font:800 .8125rem/1 var(--ui)}
+.opt:disabled{cursor:default}
+.opt.ok{border-color:var(--right);background:var(--right-soft);box-shadow:0 3px 0 var(--right-edge)}
+.opt.ok .k{background:var(--right);color:#fff}
+.opt.bad{border-color:var(--wrong);background:var(--wrong-soft);box-shadow:0 3px 0 var(--wrong-edge);animation:shake .32s}
+.opt.bad .k{background:var(--wrong);color:#fff}
+@keyframes shake{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.why{margin:1rem 0 0;padding:.875rem 1rem;border-radius:1rem;background:var(--ground-2);font:500 .9375rem/1.5 var(--ui);color:var(--ink-2)}
+.why b{color:var(--ink)}
+.q-foot{display:flex;justify-content:flex-end;margin-top:1rem}
+.done h3{margin:.25rem 0 .5rem;font:800 1.5rem/1.15 var(--display);letter-spacing:-.03em}
+.done p{margin:0 0 1.25rem;color:var(--ink-2)}
+.done .again{margin-left:.75rem;border:0;background:none;color:var(--brand-ink);font:700 .9375rem/1 var(--ui);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- section heads ---------- */
+section.block{padding-block:clamp(2.5rem,6vw,4.5rem)}
+h2{margin:0;font:800 clamp(2rem,4.4vw,3.25rem)/1 var(--display);letter-spacing:-.045em;text-wrap:balance}
+.sub{margin:1rem 0 0;max-width:40rem;color:var(--ink-2);font-size:1.0625rem}
+
+/* ---------- the Cambridge English Scale ---------- */
+.scale{margin-top:2.5rem;padding:clamp(1.25rem,3vw,2rem);border-radius:2rem;background:var(--glass);box-shadow:var(--shadow),inset 0 0 0 1px var(--rim)}
+.axis-name{display:flex;justify-content:space-between;gap:1rem;font:700 .75rem/1.3 var(--ui);letter-spacing:.12em;text-transform:uppercase;color:var(--lead)}
+.axis{position:relative;height:1.5rem;margin:.75rem 0 .25rem}
+.axis span{position:absolute;top:0;transform:translateX(-50%);font:700 .8125rem/1 var(--ui);color:var(--lead);font-variant-numeric:tabular-nums}
+.axis span:first-child{transform:none}.axis span:last-child{transform:translateX(-100%)}
+.ex{display:grid;grid-template-columns:minmax(0,1fr);gap:.625rem;padding-block:1.375rem;border-top:1px solid var(--rule)}
+.ex-name{display:flex;align-items:baseline;flex-wrap:wrap;gap:.25rem .75rem}
+.ex-name b{font:800 1.375rem/1.1 var(--display);letter-spacing:-.03em}
+.ex-name small{font:600 .875rem/1.3 var(--ui);color:var(--lead)}
+.track{position:relative;height:1.75rem;border-radius:999px;background:var(--ground-2);box-shadow:inset 0 0 0 1px var(--rule)}
+.band{position:absolute;top:0;bottom:0;border-radius:999px;background:linear-gradient(90deg,var(--bar-lo) 0,var(--bar-lo) var(--p),var(--bar-hi) var(--p))}
+.pass{position:absolute;top:-.375rem;bottom:-.375rem;width:3px;border-radius:3px;background:var(--right);box-shadow:0 0 0 3px var(--ground-2)}
+.pass em{position:absolute;bottom:calc(100% + .25rem);left:50%;transform:translateX(-50%);white-space:nowrap;font:700 .75rem/1 var(--ui);font-style:normal;color:var(--right-edge)}
+:root[data-theme="dark"] .pass em{color:var(--right)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pass em{color:var(--right)}}
+.ex-name{margin-bottom:.75rem}
+.counts{display:flex;flex-wrap:wrap;gap:.375rem .5rem;margin:.375rem 0 0;padding:0;list-style:none}
+.counts li{padding:.3125rem .625rem;border-radius:999px;background:var(--paper);box-shadow:inset 0 0 0 1px var(--rule);font:600 .8125rem/1.2 var(--ui);color:var(--ink-2)}
+.counts b{font-variant-numeric:tabular-nums;color:var(--ink)}
+.scale-note{margin:1.25rem 0 0;font:500 .875rem/1.5 var(--ui);color:var(--lead);max-width:44rem}
+
+/* ---------- what's inside ---------- */
+.feats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1.5rem,3vw,2.5rem) clamp(1.25rem,3vw,2.25rem);margin-top:2.5rem}
+@media (max-width:880px){.feats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.feats{grid-template-columns:minmax(0,1fr)}}
+.feat .ic{width:3rem;height:3rem;border-radius:1rem;display:grid;place-items:center;color:var(--t-ink);margin-bottom:1rem}
+.feat .ic svg{width:1.5rem;height:1.5rem;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.feat h3{margin:0 0 .375rem;font:800 1.25rem/1.2 var(--display);letter-spacing:-.025em}
+.feat p{margin:0;color:var(--ink-2);font-size:.9844rem;line-height:1.6}
+.sky{background:var(--t-sky)}.lav{background:var(--t-lav)}.mint{background:var(--t-mint)}.peach{background:var(--t-peach)}.pink{background:var(--t-pink)}.lime{background:var(--t-lime)}
+
+/* ---------- closing call ---------- */
+.final{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.5rem 2rem;align-items:center;margin-top:1rem;padding:clamp(1.5rem,4vw,2.75rem);border-radius:2rem;background:var(--ink);color:var(--ground)}
+@media (max-width:720px){.final{grid-template-columns:minmax(0,1fr)}}
+.final h2{color:inherit}
+.final h2 em{color:var(--brand-soft)}
+:root[data-theme="dark"] .final h2 em{color:var(--brand-edge)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .final h2 em{color:var(--brand-edge)}}
+.final p{margin:.875rem 0 0;max-width:36rem;opacity:.82}
+.final .btn.primary{box-shadow:0 4px 0 var(--brand-edge)}
+/* ---------- get the app ---------- */
+.get{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:2.5rem}
+@media (max-width:820px){.get{grid-template-columns:minmax(0,1fr)}}
+.get-card{display:grid;align-content:start;gap:.625rem;padding:1.5rem;border-radius:1.5rem;background:var(--glass);box-shadow:var(--shadow),inset 0 0 0 1px var(--rim)}
+.get-card .ic{width:3rem;height:3rem;border-radius:1rem;display:grid;place-items:center;color:var(--t-ink)}
+.get-card .ic svg{width:1.5rem;height:1.5rem;fill:currentColor}
+.get-card h3{margin:.25rem 0 0;font:800 1.375rem/1.15 var(--display);letter-spacing:-.03em}
+.get-card p{margin:0;color:var(--ink-2);font-size:.9688rem}
+.get-card .btn{margin-top:.5rem;justify-self:start}
+.get-card small{color:var(--lead);font:600 .8125rem/1.4 var(--ui)}
+.btn.soft{background:var(--paper);color:var(--ink);box-shadow:inset 0 0 0 2px var(--rule),0 3px 0 var(--rule)}
+.btn.soft:active{transform:translateY(2px);box-shadow:inset 0 0 0 2px var(--rule)}
+.gh{display:flex;align-items:center;gap:.5rem;margin-top:1.25rem;font:600 .9375rem/1.4 var(--ui);color:var(--ink-2)}
+.gh svg{width:1.25rem;height:1.25rem;fill:currentColor;flex:none}
+footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:.75rem 2rem;justify-content:space-between;font:500 .8125rem/1.6 var(--ui);color:var(--lead)}
+footer p{margin:0;max-width:40rem}
+
+@media (prefers-reduced-motion:reduce){.gem .sweep{animation:none}.opt.bad{animation:none}.gem .lit{transition:none}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <radialGradient id="lzb" cx=".3" cy=".2" r=".95"><stop offset="0" stop-color="#FF9C86"/><stop offset=".3" stop-color="#FF6250"/><stop offset="1" stop-color="#E03A26"/></radialGradient>
+    <linearGradient id="lzs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B1030" stop-opacity="0"/><stop offset="1" stop-color="#3A0F20" stop-opacity=".17"/></linearGradient>
+  </defs>
+  <symbol id="lozzy" viewBox="0 0 100 100"><path d="M42.5 11.8Q50 4 57.5 11.8L86.5 42.2Q94 50 86.5 57.8L57.5 88.2Q50 96 42.5 88.2L13.5 57.8Q6 50 13.5 42.2Z" fill="url(#lzb)"/><path d="M42.5 11.8Q50 4 57.5 11.8L86.5 42.2Q94 50 86.5 57.8L57.5 88.2Q50 96 42.5 88.2L13.5 57.8Q6 50 13.5 42.2Z" fill="url(#lzs)"/><ellipse cx="33" cy="27" rx="10" ry="4.6" transform="rotate(-42 33 27)" fill="#fff" opacity=".55"/><ellipse cx="26" cy="58" rx="5.6" ry="3.2" fill="#FF7A9C" opacity=".5"/><ellipse cx="74" cy="58" rx="5.6" ry="3.2" fill="#FF7A9C" opacity=".5"/><ellipse cx="38" cy="44" rx="5.6" ry="7.6" fill="#1B1030"/><ellipse cx="62" cy="44" rx="5.6" ry="7.6" fill="#1B1030"/><circle cx="40" cy="41" r="2.3" fill="#fff"/><circle cx="64" cy="41" r="2.3" fill="#fff"/><path d="M41 58Q50 68.5 59 58" stroke="#1B1030" stroke-width="3.4" fill="none" stroke-linecap="round"/></symbol>
+  <symbol id="android" viewBox="0 0 24 24"><path d="M17.6 9.48 19.44 6.3a.38.38 0 0 0-.66-.38l-1.86 3.22A11.45 11.45 0 0 0 12 8.1c-1.77 0-3.43.38-4.92 1.04L5.22 5.92a.38.38 0 1 0-.66.38L6.4 9.48A10.8 10.8 0 0 0 1 18h22a10.8 10.8 0 0 0-5.4-8.52ZM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5Zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5Z"/></symbol>
+  <symbol id="apple" viewBox="0 0 24 24"><path d="M16.37 12.62c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-3-.79a4.43 4.43 0 0 0-3.74 2.27c-1.6 2.77-.41 6.87 1.14 9.12.76 1.1 1.66 2.33 2.84 2.29 1.14-.05 1.57-.74 2.95-.74 1.37 0 1.76.74 2.97.71 1.23-.02 2-1.12 2.75-2.22.87-1.27 1.22-2.5 1.24-2.57-.03-.01-2.38-.91-2.4-3.62ZM14.1 5.87c.63-.76 1.05-1.82.94-2.87-.9.04-2 .6-2.65 1.36-.58.67-1.09 1.75-.95 2.78 1 .08 2.03-.51 2.66-1.27Z"/></symbol>
+  <symbol id="github" viewBox="0 0 24 24"><path d="M12 1.5a10.5 10.5 0 0 0-3.32 20.46c.53.1.72-.23.72-.51v-1.8c-2.92.64-3.54-1.4-3.54-1.4-.48-1.22-1.17-1.54-1.17-1.54-.95-.65.07-.64.07-.64 1.06.08 1.61 1.09 1.61 1.09.94 1.6 2.46 1.14 3.06.87.1-.68.37-1.14.66-1.4-2.33-.27-4.78-1.17-4.78-5.2 0-1.14.41-2.08 1.08-2.82-.1-.27-.47-1.34.1-2.79 0 0 .88-.28 2.89 1.08a10 10 0 0 1 5.26 0c2-1.36 2.89-1.08 2.89-1.08.57 1.45.21 2.52.1 2.79.67.74 1.08 1.68 1.08 2.82 0 4.04-2.46 4.93-4.8 5.19.38.33.71.97.71 1.96v2.9c0 .28.19.62.73.51A10.5 10.5 0 0 0 12 1.5Z"/></symbol>
+  <symbol id="globe" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 6h-2.95a15.6 15.6 0 0 0-1.38-3.56A8.03 8.03 0 0 1 18.9 8ZM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82A13.9 13.9 0 0 1 12 4.04ZM4.26 14a8.2 8.2 0 0 1 0-4h3.38a16.5 16.5 0 0 0 0 4H4.26Zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56A7.99 7.99 0 0 1 5.08 16Zm2.95-8H5.08a7.99 7.99 0 0 1 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8ZM12 19.96A14 14 0 0 1 10.09 16h3.82A14 14 0 0 1 12 19.96ZM14.34 14H9.66a14.7 14.7 0 0 1 0-4h4.68a14.7 14.7 0 0 1 0 4Zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56ZM16.36 14a16.5 16.5 0 0 0 0-4h3.38a8.2 8.2 0 0 1 0 4h-3.38Z"/></symbol>
+  <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<div class="wrap">
+  <header class="nav">
+    <a class="logo" href="#top" aria-label="Lozenge"><svg aria-hidden="true"><use href="#lozzy"/></svg>lozenge</a>
+    <span class="spacer"></span>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="lang-en" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" id="lang-cs" data-lang="cs" aria-pressed="false">CZ</button>
+    </div>
+    <a class="btn primary small" data-app href="app/" target="_blank" rel="noopener" data-t="nav_cta">Try it free</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">B1 Preliminary · B2 First · C1 Advanced</p>
+        <h1 data-t="hero_h" data-html>Polish your <em>gem</em>. Pass your Cambridge exam.</h1>
+        <p class="lede" data-t="hero_lede">Ten-minute lessons, timed mock tests and marked Writing and Speaking for all three Cambridge exams. It feels like a game and works like a tutor.</p>
+        <div class="cta-row">
+          <a class="btn primary" data-app href="app/" target="_blank" rel="noopener"><span data-t="hero_cta">Try it in your browser</span><svg aria-hidden="true"><use href="#arrow"/></svg></a>
+          <a class="btn soft" href="https://github.com/Entexik/lozenge-app/releases/latest/download/Lozenge.apk" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#android"/></svg><span data-t="hero_apk">Android app</span></a>
+        </div>
+        <p class="soon"><i aria-hidden="true"></i><span data-t="soon">Free · no account needed · iPhone coming to the App Store</span></p>
+      </div>
+
+      <div class="demo" aria-label="Try a question">
+        <div class="demo-top">
+          <svg class="gem" id="gem" viewBox="0 0 120 144" role="img" aria-label="Your gem"></svg>
+          <div class="meter">
+            <small data-t="gem_label">Your gem</small>
+            <b id="pct">25<span>%</span></b>
+            <p id="gem-note" data-t="gem_note">Answer right to light the next facet.</p>
+          </div>
+        </div>
+        <div class="q" id="q" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="block" id="exams">
+      <h2 data-t="ex_h" data-html>One app, <em>three</em> exams.</h2>
+      <p class="sub" data-t="ex_sub">Pick your exam and the whole app follows it: the lessons, the mock tests and your daily plan. Every mock test gives you a score on the Cambridge English Scale, the same scale your certificate uses.</p>
+
+      <div class="scale">
+        <div class="axis-name"><span>Cambridge English Scale</span></div>
+        <div class="axis" aria-hidden="true">
+          <span style="left:0">120</span><span style="left:22.22%">140</span><span style="left:44.44%">160</span><span style="left:66.67%">180</span><span style="left:88.89%">200</span><span style="left:100%">210</span>
+        </div>
+
+        <div class="ex">
+          <div class="ex-name"><b>B1 Preliminary</b><small data-t="b1_range">Results 120–170 · pass at 140</small></div>
+          <div class="track" role="img" aria-label="B1 Preliminary: 120 to 170, pass at 140"><span class="band" style="left:0;width:55.56%;--p:40%"></span><span class="pass" style="left:22.22%"><em data-t="pass">pass</em></span></div>
+          <ul class="counts">
+            <li><b>10</b> <span data-t="c_reading">Reading papers</span></li><li><b>4</b> <span data-t="c_listening">Listening tests</span></li><li><b>10</b> <span data-t="c_writing">Writing tasks</span></li><li><b>4</b> <span data-t="c_speaking">Speaking tests</span></li><li><b>20</b> <span data-t="c_units">lesson units</span></li>
+          </ul>
+        </div>
+        <div class="ex">
+          <div class="ex-name"><b>B2 First</b><small data-t="b2_range">Results 140–190 · pass at 160</small></div>
+          <div class="track" role="img" aria-label="B2 First: 140 to 190, pass at 160"><span class="band" style="left:22.22%;width:55.56%;--p:40%"></span><span class="pass" style="left:44.44%"><em data-t="pass">pass</em></span></div>
+          <ul class="counts">
+            <li><b>8</b> <span data-t="c_ruoe">Reading & Use of English papers</span></li><li><b>4</b> <span data-t="c_listening">Listening tests</span></li><li><b>28</b> <span data-t="c_writing">Writing tasks</span></li><li><b>7</b> <span data-t="c_speaking">Speaking tests</span></li><li><b>29</b> <span data-t="c_units">lesson units</span></li>
+          </ul>
+        </div>
+        <div class="ex">
+          <div class="ex-name"><b>C1 Advanced</b><small data-t="c1_range">Results 160–210 · pass at 180</small></div>
+          <div class="track" role="img" aria-label="C1 Advanced: 160 to 210, pass at 180"><span class="band" style="left:44.44%;width:55.56%;--p:40%"></span><span class="pass" style="left:66.67%"><em data-t="pass">pass</em></span></div>
+          <ul class="counts">
+            <li><b>10</b> <span data-t="c_ruoe">Reading & Use of English papers</span></li><li><b>4</b> <span data-t="c_listening">Listening tests</span></li><li><b>10</b> <span data-t="c_writing">Writing tasks</span></li><li><b>4</b> <span data-t="c_speaking">Speaking tests</span></li><li><b>20</b> <span data-t="c_units">lesson units</span></li>
+          </ul>
+        </div>
+        <p class="scale-note" data-t="scale_note">The lighter part of each bar is a result at the level below; the green line is the pass mark. Lozenge shows you where your mock tests land on it.</p>
+      </div>
+    </section>
+
+    <section class="block" id="inside">
+      <h2 data-t="in_h" data-html>What's <em>inside</em>.</h2>
+      <p class="sub" data-t="in_sub">Over 1,100 exercises, 444 recordings and a coach for Writing and Speaking. Everything is original and written in the exam's format.</p>
+      <div class="feats">
+        <article class="feat"><div class="ic sky"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5.5A2 2 0 0 1 5.5 3.5H11v17H5.5a2 2 0 0 0-2 2zM20.5 5.5a2 2 0 0 0-2-2H13v17h5.5a2 2 0 0 1 2 2z"/></svg></div>
+          <h3 data-t="f1_h">Ten minutes a day</h3><p data-t="f1_p">Tap the right word, build the sentence, spot the mistake. Every answer tells you why, and your mistakes come back just before you'd forget them.</p></article>
+        <article class="feat"><div class="ic lav"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9.5 2.5h5"/></svg></div>
+          <h3 data-t="f2_h">Mock tests like exam day</h3><p data-t="f2_p">Timed papers with the real number of parts and questions, then a score on the Cambridge English Scale and a review of every answer.</p></article>
+        <article class="feat"><div class="ic mint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 15v-3a8 8 0 0 1 16 0v3M4 14.5h3.5V21H5a1 1 0 0 1-1-1zM20 14.5h-3.5V21H19a1 1 0 0 0 1-1z"/></svg></div>
+          <h3 data-t="f3_h">Listening with British voices</h3><p data-t="f3_p">444 original recordings: announcements, interviews and talks. Slow them to 0.75× while you learn, then take them at exam speed.</p></article>
+        <article class="feat"><div class="ic peach"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1-4.5L16 4.5l3.5 3.5L8.5 19zM13.5 7l3.5 3.5"/></svg></div>
+          <h3 data-t="f4_h">Writing and Speaking, marked</h3><p data-t="f4_p">The AI examiner marks your essay on the four official criteria and shows a stronger version of your own answer. Speaking measures your pace, pauses and range.</p></article>
+        <article class="feat"><div class="ic pink"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c.8 3.3 5.5 5.3 5.5 10.3a5.5 5.5 0 0 1-11 0c0-2.3 1.1-4 2.3-5.1.1 2 1 3.2 2.2 3.4-.3-3.3.1-6 1-8.6z"/></svg></div>
+          <h3 data-t="f5_h">A reason to come back</h3><p data-t="f5_p">Streaks, daily quests, a weekly league and quick word games. Every lesson lights another facet of your gem.</p></article>
+        <article class="feat"><div class="ic lime"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.6 3.7 5.4 3.7 8.5s-1.2 5.9-3.7 8.5c-2.5-2.6-3.7-5.4-3.7-8.5S9.5 6.1 12 3.5z"/></svg></div>
+          <h3 data-t="f6_h">In your language</h3><p data-t="f6_p">The app speaks 16 languages, Czech and Slovak included. The exam material stays in English, exactly as you'll meet it on the day.</p></article>
+      </div>
+    </section>
+
+    <section class="block" id="get">
+      <h2 data-t="get_h" data-html>Get <em>Lozenge</em>.</h2>
+      <p class="sub" data-t="get_sub">Pick where you learn. Your progress stays on your device.</p>
+      <div class="get">
+        <article class="get-card">
+          <div class="ic mint"><svg aria-hidden="true"><use href="#android"/></svg></div>
+          <h3>Android</h3>
+          <p data-t="get_android">Download the app and install it straight from the file. Android 8.0 or newer.</p>
+          <a class="btn primary" href="https://github.com/Entexik/lozenge-app/releases/latest/download/Lozenge.apk" target="_blank" rel="noopener"><span data-t="get_android_cta">Download APK</span><svg aria-hidden="true"><use href="#arrow"/></svg></a>
+          <small data-t="get_android_note">Version 1.0 beta · 76 MB</small>
+        </article>
+        <article class="get-card">
+          <div class="ic lav"><svg aria-hidden="true"><use href="#apple"/></svg></div>
+          <h3>iPhone</h3>
+          <p data-t="get_ios">Coming to the App Store. Until then, the web version works in Safari.</p>
+          <a class="btn soft" href="app/" target="_blank" rel="noopener"><span data-t="get_ios_cta">Open in Safari</span><svg aria-hidden="true"><use href="#arrow"/></svg></a>
+          <small data-t="get_ios_note">App Store: coming soon</small>
+        </article>
+        <article class="get-card">
+          <div class="ic sky"><svg aria-hidden="true"><use href="#globe"/></svg></div>
+          <h3 data-t="get_web_h">In your browser</h3>
+          <p data-t="get_web">Nothing to install, on any computer or phone. Everything that's free in the app is free here.</p>
+          <a class="btn soft" href="app/" target="_blank" rel="noopener"><span data-t="get_web_cta">Try it now</span><svg aria-hidden="true"><use href="#arrow"/></svg></a>
+          <small data-t="get_web_note">Free · no account needed</small>
+        </article>
+      </div>
+      <a class="gh" href="https://github.com/Entexik/lozenge-app" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#github"/></svg><span data-t="gh">Screenshots, release notes and feedback on GitHub</span></a>
+    </section>
+
+    <section class="final">
+      <div>
+        <h2 data-t="fin_h" data-html>Your first lesson takes <em>five</em> minutes.</h2>
+        <p data-t="fin_p">It runs in your browser. Everything that's free in the app is free here, and your progress stays on this device.</p>
+      </div>
+      <a class="btn primary" data-app href="app/" target="_blank" rel="noopener"><span data-t="fin_cta">Start learning</span><svg aria-hidden="true"><use href="#arrow"/></svg></a>
+    </section>
+  </main>
+
+  <footer>
+    <p data-t="legal">Lozenge is an independent practice app and isn't affiliated with Cambridge University Press &amp; Assessment. All texts, recordings and exercises are original.</p>
+    <p><a href="https://github.com/Entexik/lozenge-app" target="_blank" rel="noopener">GitHub</a> · <a href="privacy.html" target="_blank" rel="noopener" data-t="privacy">Privacy policy</a> · © 2026 Lozenge</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  /* ---------- words ---------- */
+  var T = {
+    en: {
+      nav_cta: "Try it free",
+      hero_h: 'Polish your <em>gem</em>. Pass your Cambridge exam.',
+      hero_lede: "Ten-minute lessons, timed mock tests and marked Writing and Speaking for all three Cambridge exams. It feels like a game and works like a tutor.",
+      hero_cta: "Try it in your browser", hero_note: "Free · no account needed",
+      soon: "Free · no account needed · iPhone coming to the App Store", hero_apk: "Android app",
+      get_h: "Get <em>Lozenge</em>.", get_sub: "Pick where you learn. Your progress stays on your device.",
+      get_android: "Download the app and install it straight from the file. Android 8.0 or newer.", get_android_cta: "Download APK", get_android_note: "Version 1.0 beta · 76 MB",
+      get_ios: "Coming to the App Store. Until then, the web version works in Safari.", get_ios_cta: "Open in Safari", get_ios_note: "App Store: coming soon",
+      get_web_h: "In your browser", get_web: "Nothing to install, on any computer or phone. Everything that's free in the app is free here.", get_web_cta: "Try it now", get_web_note: "Free · no account needed",
+      gh: "Screenshots, release notes and feedback on GitHub",
+      gem_label: "Your gem", gem_note: "Answer right to light the next facet.", gem_done: "Flawless. That's the idea.",
+      ex_h: 'One app, <em>three</em> exams.',
+      ex_sub: "Pick your exam and the whole app follows it: the lessons, the mock tests and your daily plan. Every mock test gives you a score on the Cambridge English Scale, the same scale your certificate uses.",
+      b1_range: "Results 120–170 · pass at 140", b2_range: "Results 140–190 · pass at 160", c1_range: "Results 160–210 · pass at 180", pass: "pass",
+      c_reading: "Reading papers", c_ruoe: "Reading & Use of English papers", c_listening: "Listening tests", c_writing: "Writing tasks", c_speaking: "Speaking tests", c_units: "lesson units",
+      scale_note: "The lighter part of each bar is a result at the level below; the green line is the pass mark. Lozenge shows you where your mock tests land on it.",
+      in_h: "What's <em>inside</em>.",
+      in_sub: "Over 1,100 exercises, 444 recordings and a coach for Writing and Speaking. Everything is original and written in the exam's format.",
+      f1_h: "Ten minutes a day", f1_p: "Tap the right word, build the sentence, spot the mistake. Every answer tells you why, and your mistakes come back just before you'd forget them.",
+      f2_h: "Mock tests like exam day", f2_p: "Timed papers with the real number of parts and questions, then a score on the Cambridge English Scale and a review of every answer.",
+      f3_h: "Listening with British voices", f3_p: "444 original recordings: announcements, interviews and talks. Slow them to 0.75× while you learn, then take them at exam speed.",
+      f4_h: "Writing and Speaking, marked", f4_p: "The AI examiner marks your essay on the four official criteria and shows a stronger version of your own answer. Speaking measures your pace, pauses and range.",
+      f5_h: "A reason to come back", f5_p: "Streaks, daily quests, a weekly league and quick word games. Every lesson lights another facet of your gem.",
+      f6_h: "In your language", f6_p: "The app speaks 16 languages, Czech and Slovak included. The exam material stays in English, exactly as you'll meet it on the day.",
+      fin_h: 'Your first lesson takes <em>five</em> minutes.',
+      fin_p: "It runs in your browser. Everything that's free in the app is free here, and your progress stays on this device.",
+      fin_cta: "Start learning",
+      legal: "Lozenge is an independent practice app and isn't affiliated with Cambridge University Press & Assessment. All texts, recordings and exercises are original.",
+      privacy: "Privacy policy",
+      q_of: "{0} of 3", right: "Correct.", wrong: "Not quite.", next: "Next question", finish: "See your gem",
+      done_h: "That was one lesson in miniature.", done_p: "The app has over 1,100 exercises like these, from B1 to C1, plus full mock tests.",
+      done_cta: "Open the full app", again: "Start again"
+    },
+    cs: {
+      nav_cta: "Vyzkoušet zdarma",
+      hero_h: 'Vybrus svůj <em>drahokam</em>. Slož zkoušku Cambridge.',
+      hero_lede: "Desetiminutové lekce, zkušební testy na čas a hodnocené psaní a mluvení pro všechny tři zkoušky Cambridge. Baví jako hra a učí jako lektor.",
+      hero_cta: "Vyzkoušet v prohlížeči", hero_note: "Zdarma · bez registrace",
+      soon: "Zdarma · bez registrace · iPhone brzy v App Storu", hero_apk: "Aplikace pro Android",
+      get_h: "Stáhni si <em>Lozenge</em>.", get_sub: "Vyber si, kde se budeš učit. Tvůj postup zůstává v tvém zařízení.",
+      get_android: "Stáhni si aplikaci a nainstaluj ji přímo ze souboru. Android 8.0 nebo novější.", get_android_cta: "Stáhnout APK", get_android_note: "Verze 1.0 beta · 76 MB",
+      get_ios: "Brzy v App Storu. Do té doby funguje webová verze v Safari.", get_ios_cta: "Otevřít v Safari", get_ios_note: "App Store: už brzy",
+      get_web_h: "V prohlížeči", get_web: "Nic se neinstaluje, funguje na počítači i v mobilu. Všechno, co je v aplikaci zdarma, je zdarma i tady.", get_web_cta: "Vyzkoušet hned", get_web_note: "Zdarma · bez registrace",
+      gh: "Screenshoty, poznámky k verzím a zpětná vazba na GitHubu",
+      gem_label: "Tvůj drahokam", gem_note: "Správnou odpovědí rozsvítíš další fasetu.", gem_done: "Bez chyby. Přesně o tom to je.",
+      ex_h: 'Jedna aplikace, <em>tři</em> zkoušky.',
+      ex_sub: "Vyber si svou zkoušku a celá aplikace se jí přizpůsobí: lekce, zkušební testy i denní plán. Každý zkušební test ti dá skóre na Cambridge English Scale, stejné stupnici, jakou má tvůj certifikát.",
+      b1_range: "Výsledky 120–170 · složeno od 140", b2_range: "Výsledky 140–190 · složeno od 160", c1_range: "Výsledky 160–210 · složeno od 180", pass: "složeno",
+      c_reading: "testů čtení", c_ruoe: "testů Reading & Use of English", c_listening: "poslechové testy", c_writing: "zadání na psaní", c_speaking: "testů mluvení", c_units: "kapitol lekcí",
+      scale_note: "Světlejší část pruhu znamená výsledek o úroveň níž, zelená čára je hranice pro složení. Lozenge ti ukáže, kam na ní dopadají tvoje zkušební testy.",
+      in_h: "Co je <em>uvnitř</em>.",
+      in_sub: "Přes 1 100 cvičení, 444 nahrávek a trenér psaní a mluvení. Všechno je původní a ve formátu zkoušky.",
+      f1_h: "Deset minut denně", f1_p: "Klepni na správné slovo, poskládej větu, najdi chybu. U každé odpovědi uvidíš proč a tvoje chyby se vrátí přesně ve chvíli, kdy bys je začal zapomínat.",
+      f2_h: "Zkušební testy jako u zkoušky", f2_p: "Testy na čas se skutečným počtem částí a otázek, pak skóre na Cambridge English Scale a rozbor každé odpovědi.",
+      f3_h: "Poslech s britskými hlasy", f3_p: "444 původních nahrávek: hlášení, rozhovory i přednášky. Při učení si je zpomal na 0,75×, pak je poslouchej v tempu zkoušky.",
+      f4_h: "Psaní a mluvení s hodnocením", f4_p: "AI examinátor ohodnotí tvůj text podle čtyř oficiálních kritérií a ukáže ti vylepšenou verzi tvé vlastní odpovědi. U mluvení měří tempo, pauzy a rozsah.",
+      f5_h: "Důvod se vracet", f5_p: "Série, denní úkoly, týdenní liga a rychlé slovní hry. Každá lekce rozsvítí další fasetu tvého drahokamu.",
+      f6_h: "Ve tvém jazyce", f6_p: "Aplikace umí 16 jazyků včetně češtiny a slovenštiny. Samotný obsah zkoušky zůstává v angličtině, přesně jak ho potkáš u zkoušky.",
+      fin_h: 'První lekce ti zabere <em>pět</em> minut.',
+      fin_p: "Běží v prohlížeči. Všechno, co je v aplikaci zdarma, je zdarma i tady, a tvůj postup zůstává v tomhle zařízení.",
+      fin_cta: "Začít se učit",
+      legal: "Lozenge je nezávislá aplikace na procvičování a není spojená s Cambridge University Press & Assessment. Všechny texty, nahrávky a cvičení jsou původní.",
+      privacy: "Zásady ochrany soukromí",
+      q_of: "{0} ze 3", right: "Správně.", wrong: "Tohle ne.", next: "Další otázka", finish: "Ukaž drahokam",
+      done_h: "Tohle byla jedna lekce v malém.", done_p: "V aplikaci je přes 1 100 takových cvičení od B1 po C1 a k tomu celé zkušební testy.",
+      done_cta: "Otevřít celou aplikaci", again: "Znovu"
+    }
+  };
+
+  /* Three original questions, one per exam. The exam material stays in English; the explanation follows the page language. */
+  var Q = [
+    { lvl: "B1 Preliminary", s: ["I'm really looking forward ", " you at the weekend."], o: ["to see", "to seeing", "seeing"], a: 1,
+      why: { en: "After <b>look forward to</b>, use the -ing form: <i>looking forward to seeing</i>.", cs: "Po <b>look forward to</b> následuje tvar -ing: <i>looking forward to seeing</i>." } },
+    { lvl: "B2 First", s: ["If I ", " about the traffic, I would have left earlier."], o: ["knew", "had known", "have known"], a: 1,
+      why: { en: "A past situation that didn't happen is a third conditional: <b>if + past perfect</b>, then <i>would have left</i>.", cs: "Nesplněná podmínka v minulosti je třetí kondicionál: <b>if + předminulý čas</b>, pak <i>would have left</i>." } },
+    { lvl: "C1 Advanced", s: ["Not only ", " the deadline, but he also forgot to tell anyone."], o: ["he missed", "did he miss", "he did miss"], a: 1,
+      why: { en: "A negative phrase like <b>Not only</b> at the start swaps the subject and the auxiliary: <i>did he miss</i>.", cs: "Po záporném výrazu na začátku věty, jako je <b>Not only</b>, se prohodí podmět a pomocné sloveso: <i>did he miss</i>." } }
+  ];
+
+  var lang = "en";
+  try { var saved = localStorage.getItem("lz-promo-lang"); if (saved === "en" || saved === "cs") lang = saved; else if (/^(cs|sk)/i.test(navigator.language || "")) lang = "cs"; }
+  catch (e) { if (/^(cs|sk)/i.test(navigator.language || "")) lang = "cs"; }
+  var t = function (k) { return (T[lang] && T[lang][k]) || T.en[k] || ""; };
+
+  function applyLang() {
+    document.documentElement.lang = lang;
+    document.querySelectorAll("[data-t]").forEach(function (el) {
+      var v = t(el.getAttribute("data-t"));
+      if (el.hasAttribute("data-html")) el.innerHTML = v; else el.textContent = v;
+    });
+    document.querySelectorAll(".lang button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-lang") === lang)); });
+    renderQ();
+    paintGem();
+  }
+  document.querySelectorAll(".lang button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      lang = b.getAttribute("data-lang");
+      try { localStorage.setItem("lz-promo-lang", lang); } catch (e) {}
+      applyLang();
+    });
+  });
+
+  /* ---------- the gem: the same eight-facet lozenge as in the app ---------- */
+  var NS = "http://www.w3.org/2000/svg";
+  var C = [60, 72], RING = [[60, 6], [88, 39], [114, 72], [88, 105], [60, 138], [32, 105], [6, 72], [32, 39]];
+  var COLS = [["#B8F3FF", "#4C86FF"], ["#8FB0FF", "#5B3CF0"], ["#D2B4FF", "#7A4DFF"], ["#FFC2EE", "#C04DFF"], ["#FFB0CE", "#FF5F86"], ["#FFDDA0", "#FF9A4D"], ["#FFF6B4", "#FFC53D"], ["#C4F8E2", "#3EDCFF"]];
+  var OUT = "M60 6 L114 72 L60 138 L6 72 Z";
+  var gem = document.getElementById("gem"), lits = [];
+  (function buildGem() {
+    var pts = function (a) { return a.map(function (p) { return p.join(","); }).join(" "); };
+    var defs = '<clipPath id="gc"><path d="' + OUT + '"/></clipPath>' +
+      '<linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity=".06"/></linearGradient>' +
+      '<linearGradient id="gs" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>';
+    var base = "", lit = "";
+    RING.forEach(function (a, i) {
+      var c = RING[(i + 1) % 8];
+      defs += '<linearGradient id="gf' + i + '" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="' + COLS[i][0] + '"/><stop offset="1" stop-color="' + COLS[i][1] + '"/></linearGradient>';
+      base += '<polygon points="' + pts([C, a, c]) + '" fill="' + (i % 2 ? "rgba(150,130,250,.34)" : "rgba(92,118,240,.38)") + '" stroke="rgba(255,255,255,.62)" stroke-width=".8" stroke-linejoin="round"/>';
+      lit += '<polygon class="lit" points="' + pts([C, a, c]) + '" fill="url(#gf' + i + ')" stroke="rgba(255,255,255,.75)" stroke-width=".8" stroke-linejoin="round"/>';
+    });
+    gem.innerHTML = "<defs>" + defs + "</defs>" +
+      '<path d="' + OUT + '" fill="url(#gg)" stroke="rgba(255,255,255,.9)" stroke-width="1.6" stroke-linejoin="round"/>' + base + lit +
+      '<polygon points="60,20 74,40 60,52 46,40" fill="#fff" opacity=".38"/>' +
+      '<g clip-path="url(#gc)"><rect class="sweep" x="-60" y="-10" width="30" height="170" fill="url(#gs)"/></g>' +
+      '<path d="' + OUT + '" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1" stroke-linejoin="round"/>';
+    lits = Array.prototype.slice.call(gem.querySelectorAll(".lit"));
+  })();
+
+  var state = { i: 0, lit: 2, picked: null, done: false };
+  function paintGem() {
+    lits.forEach(function (p, k) { p.classList.toggle("on", k < state.lit); });
+    var pct = Math.round(state.lit / 8 * 100);
+    document.getElementById("pct").innerHTML = pct + "<span>%</span>";
+    gem.setAttribute("aria-label", t("gem_label") + ": " + pct + "%");
+    document.getElementById("gem-note").textContent = state.lit >= 8 ? t("gem_done") : t("gem_note");
+  }
+
+  /* ---------- one question at a time ---------- */
+  var box = document.getElementById("q");
+  var el = function (tag, cls, html) { var e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+
+  function renderQ() {
+    box.innerHTML = "";
+    if (state.done) {
+      var d = el("div", "done");
+      d.appendChild(el("h3", null, esc(t("done_h"))));
+      d.appendChild(el("p", null, esc(t("done_p"))));
+      var go = el("a", "btn primary", esc(t("done_cta")) + '<svg aria-hidden="true"><use href="#arrow"/></svg>');
+      go.href = "app/"; go.target = "_blank"; go.rel = "noopener";
+      var again = el("button", "again", esc(t("again"))); again.type = "button";
+      again.addEventListener("click", function () { state = { i: 0, lit: 2, picked: null, done: false }; paintGem(); renderQ(); });
+      d.appendChild(go); d.appendChild(again);
+      box.appendChild(d);
+      return;
+    }
+    var q = Q[state.i], answered = state.picked !== null;
+    var head = el("div", "q-head");
+    head.appendChild(el("span", "pill", esc(q.lvl)));
+    head.appendChild(el("span", "n", esc(t("q_of").replace("{0}", state.i + 1))));
+    box.appendChild(head);
+    var fill = answered ? esc(q.o[q.a]) : "&nbsp;";
+    box.appendChild(el("p", "q-text", esc(q.s[0]) + '<span class="gap">' + fill + "</span>" + esc(q.s[1])));
+    var opts = el("div", "opts");
+    q.o.forEach(function (o, k) {
+      var b = el("button", "opt", '<span class="k">' + "ABC"[k] + "</span>" + esc(o));
+      b.type = "button"; b.id = "opt-" + state.i + "-" + k;
+      if (answered) { b.disabled = true; if (k === q.a) b.classList.add("ok"); else if (k === state.picked) b.classList.add("bad"); }
+      b.addEventListener("click", function () { pick(k); });
+      opts.appendChild(b);
+    });
+    box.appendChild(opts);
+    if (answered) {
+      var ok = state.picked === q.a;
+      box.appendChild(el("p", "why", "<b>" + esc(ok ? t("right") : t("wrong")) + "</b> " + q.why[lang]));
+      var foot = el("div", "q-foot");
+      var nx = el("button", "btn primary small", esc(state.i < Q.length - 1 ? t("next") : t("finish")) + '<svg aria-hidden="true"><use href="#arrow"/></svg>');
+      nx.type = "button"; nx.id = "next-q";
+      nx.addEventListener("click", function () {
+        if (state.i < Q.length - 1) { state.i++; state.picked = null; } else { state.done = true; }
+        renderQ();
+        var f = box.querySelector(".opt, .btn"); if (f) f.focus({ preventScroll: true });
+      });
+      foot.appendChild(nx); box.appendChild(foot);
+    }
+  }
+  function pick(k) {
+    if (state.picked !== null) return;
+    state.picked = k;
+    if (k === Q[state.i].a) state.lit = Math.min(8, state.lit + 2);
+    renderQ(); paintGem();
+    var nx = document.getElementById("next-q"); if (nx) nx.focus({ preventScroll: true });
+  }
+
+  applyLang();
+})();
+</script>
