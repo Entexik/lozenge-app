@@ -1110,3 +1110,18 @@ html[data-theme="dark"] .btn.provider.email,html[data-theme="dark"] .btn.provide
 .sh-item.r-legendary{box-shadow:inset 0 0 0 1.5px rgba(224,144,15,.6);background-image:linear-gradient(180deg,rgba(255,217,102,.3),transparent 70%)}
 /* the column heads are uppercase and spaced: keep "ZDARMA"/"KOSTENLOS" inside their own column */
 .pw-compare.three .pw-row.head span{font-size:.66rem;letter-spacing:.03em;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* Android web views leave smears of the previous page behind blurred glass (backdrop-filter) and it costs
+   frames on mid-range phones: there the glass is a solid, slightly see-through fill instead. */
+html.app-android *,html.app-android *::before,html.app-android *::after{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+html.app-android{--glass:rgba(255,255,255,.88);--dock-fill:rgba(248,249,255,.96)}
+html.app-android[data-theme="dark"]{--glass:rgba(34,40,96,.92);--dock-fill:rgba(16,18,48,.96)}
+@media (prefers-color-scheme: dark){html.app-android:not([data-theme="light"]){--glass:rgba(34,40,96,.92);--dock-fill:rgba(16,18,48,.96)}}
+/* the welcome's sign-in panel, as on iPhone (WelcomeView.swift): one glass card, a white Google button,
+   a glass e-mail button, a warm "start without an account" and a quiet "I already have an account" */
+.onb.is-splash .ob-auth{display:flex;flex-direction:column;gap:10px;padding:16px;border-radius:30px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14)}
+.onb.is-splash .ob-auth .btn.provider{height:52px;border-radius:999px;font:800 1rem/1 var(--f-ui);box-shadow:none;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.12);color:#fff}
+.onb.is-splash .ob-auth .btn.provider.google{background:#fff;color:#17124F;border-color:#fff}
+.onb.is-splash .ob-auth-row{display:block}
+.onb.is-splash .ob-skip{height:44px;background:none;border:0;color:#FFC98A;font:800 1rem/1 var(--f-ui)}
+.onb.is-splash .ob-login{background:none;border:0;color:rgba(255,255,255,.72);font:700 .875rem/1 var(--f-ui)}
+.auth-providers .btn.provider.google{background:#fff;color:#17124F;border:1px solid rgba(23,18,79,.12)}
