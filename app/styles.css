@@ -463,9 +463,12 @@ html.native-app .dock-foot{padding-bottom:calc(10px + var(--sab, env(safe-area-i
 .opt .k,.duo-opt .k{flex:none;width:30px;height:30px;border-radius:10px;border:2px solid var(--rule);display:grid;place-items:center;font:700 0.8125rem/1 var(--f-ui);color:var(--lead);transition:all .15s}
 .opt[aria-pressed="true"],.duo-opt.on,.onb-choice.on,.duo-pair.on{border-color:var(--brand);background:var(--brand-soft);color:var(--brand-ink)}
 .opt[aria-pressed="true"] .k,.duo-opt.on .k{border-color:var(--brand);background:var(--brand);color:#fff}
-.opt.ok,.duo-opt.right{border-color:var(--right);background:var(--right-soft);color:var(--right)}
+.opt.ok,.duo-opt.right { border-color: var(--right) !important; background: color-mix(in srgb, var(--right) 15%, var(--paper)) !important; }
+.duo-opt.right::after { content: "✓"; color: var(--right); position: absolute; right: 1rem; font-weight: bold; }
+.duo-opt.wrong::after { content: "✗"; color: var(--wrong); position: absolute; right: 1rem; font-weight: bold; }
+.duo-opt.right {border-color:var(--right);background:var(--right-soft);color:var(--right)}
 .opt.ok .k,.duo-opt.right .k{border-color:var(--right);background:var(--right);color:#fff}
-.opt.bad,.duo-opt.wrong{border-color:var(--wrong);background:var(--wrong-soft);color:var(--wrong)}
+.opt.bad,.duo-opt.wrong { border-color: var(--wrong) !important; background: color-mix(in srgb, var(--wrong) 15%, var(--paper)) !important; } .duo-opt.wrong {border-color:var(--wrong);background:var(--wrong-soft);color:var(--wrong)}
 .opt.bad .k,.duo-opt.wrong .k{border-color:var(--wrong);background:var(--wrong);color:#fff}
 .opt.long{font:400 1rem/1.5 var(--f-read)}
 .opt.used{opacity:.5}
@@ -752,6 +755,9 @@ html.native-app .duo-top{padding-top:calc(var(--sat, env(safe-area-inset-top)) +
 .plus-status{display:grid;gap:12px}
 .lockpage{display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;gap:12px;text-align:center;max-width:420px;margin:24px auto 0}
 .lockpage h1{font-size:1.6875rem}
+.lock-sheet{margin:0 auto}
+.lock-sheet h2{font-size:1.5625rem}
+.lock-sheet .crowned{margin-top:10px}
 .lockpage p{margin:0;color:var(--ink-2)}
 
 /* ---------- profile, badges, settings ---------- */

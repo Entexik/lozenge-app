@@ -76,7 +76,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
 .chip{background-image:var(--sheen)}
 
 /* ---------- the floating tab bar: liquid glass with a lens that slides ---------- */
-.bottomnav{left:.875rem;right:.875rem;padding:.4375rem;border-radius:var(--r-pill);border:1px solid var(--nav-line);
+.bottomnav{left:.875rem;right:.875rem;bottom:calc(.875rem + var(--sab, env(safe-area-inset-bottom)));padding:.4375rem;border-radius:var(--r-pill);border:1px solid var(--nav-line);
   background:var(--nav-fill);-webkit-backdrop-filter:blur(16px) saturate(1.7);backdrop-filter:blur(16px) saturate(1.7);
   box-shadow:inset 0 1px 0 rgba(255,255,255,.85),inset 0 -10px 18px -12px rgba(255,255,255,.45),0 22px 44px -16px rgba(30,42,140,.42);
   overflow:hidden;isolation:isolate}
@@ -84,10 +84,12 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
 .bottomnav a[aria-current="page"]{color:var(--brand-ink)}
 .bottomnav a[aria-current="page"] .icon{background:none;box-shadow:none;padding:0;margin:0;border-radius:0;color:var(--brand)}
 .nav-lens{position:absolute;z-index:0;top:.4375rem;bottom:.4375rem;left:0;width:var(--lw,4rem);transform:translateX(var(--lx,0));border-radius:var(--r-pill);pointer-events:none;
-  background:var(--lens);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),inset 0 0 0 1px rgba(255,255,255,.55),0 8px 18px -8px var(--lens-glow);
-  transition:transform .5s cubic-bezier(.3,1.35,.4,1),width .5s cubic-bezier(.3,1.35,.4,1);will-change:transform}
-.nav-lens::after{content:"";position:absolute;left:14%;right:14%;top:8%;height:34%;border-radius:var(--r-pill);background:linear-gradient(180deg,rgba(255,255,255,.75),rgba(255,255,255,0))}
+  background:var(--lens);box-shadow:0 4px 12px -4px var(--lens-glow);
+  transition:transform .5s cubic-bezier(.3,1.35,.4,1),width .5s cubic-bezier(.3,1.35,.4,1);}
+
 @media (prefers-reduced-motion:reduce){.nav-lens{transition:none}}
+
+body{padding-bottom:calc(5.5rem + var(--sab, env(safe-area-inset-bottom)))}
 
 /* ---------- top bar: clear at the top, a lit glass strip once the page has moved ---------- */
 .topbar{background:transparent;transition:background .25s ease,box-shadow .25s ease}
@@ -100,7 +102,7 @@ body.scrolled .topbar{background:color-mix(in srgb,var(--ground) 72%,transparent
 .btn.blue:not(.ghost):not(.sm){background:linear-gradient(180deg,#7C97FF,#3B4CF0);box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -3px 8px rgba(10,20,120,.22),0 14px 24px -12px rgba(59,76,240,.75)}
 .btn.amber:not(.ghost):not(.sm){background:linear-gradient(180deg,#FFE27A,#FF9F1C);box-shadow:inset 0 1px 0 rgba(255,255,255,.75),inset 0 -3px 8px rgba(150,70,0,.18),0 14px 24px -12px rgba(255,150,30,.8)}
 .btn.red:not(.ghost):not(.sm){background:linear-gradient(180deg,#FF8A90,#E8444C);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),inset 0 -3px 8px rgba(120,10,20,.2),0 14px 24px -12px rgba(232,68,76,.7)}
-.btn:not(.ghost):not(.sm):not(.green):not(.blue):not(.amber):not(.red):not(.pink){background:linear-gradient(180deg,rgba(255,255,255,.72),rgba(255,255,255,.38));color:var(--ink);
+.btn:not(.ghost):not(.sm):not(.green):not(.blue):not(.amber):not(.red):not(.pink):not(:disabled) {background:linear-gradient(180deg,rgba(255,255,255,.72),rgba(255,255,255,.38));color:var(--ink);
   box-shadow:var(--e1)}
 .btn.ghost{box-shadow:none}
 .btn.sm{background:var(--glass);background-image:var(--sheen)}
@@ -152,7 +154,7 @@ body.scrolled .topbar{background:color-mix(in srgb,var(--ground) 72%,transparent
 .gh-card{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr);gap:.5rem 1rem;align-items:center;padding:1.25rem 1.125rem 1rem;margin-top:.5rem;border-radius:var(--r-xl);
   background-color:var(--paper);box-shadow:var(--e2);overflow:hidden;isolation:isolate}
 .gh-card::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(70% 100% at 16% 38%,rgba(128,140,255,.34),transparent 70%),radial-gradient(60% 80% at 100% 0%,rgba(255,170,200,.22),transparent 70%)}
-.gh-stone{position:relative;display:grid;place-items:center;width:8.5rem;height:9.5rem;will-change:transform}
+.gh-stone{position:relative;display:grid;place-items:center;width:8.5rem;height:9.5rem;}
 .gh-halo{position:absolute;inset:6% -4%;border-radius:50%;background:radial-gradient(circle,rgba(150,120,255,.5),transparent 66%);filter:blur(8px)}
 .gh-gem{position:relative;width:7.5rem;height:auto;animation:gh-float 6s ease-in-out infinite}
 @keyframes gh-float{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-.4rem) rotate(1.5deg)}}
@@ -349,7 +351,7 @@ body.scrolled .topbar .bar-title{opacity:0}
 .qs-strip>.icon{flex:none;width:1rem;height:1rem;color:var(--lead)}
 .qs-strip.all{background-image:linear-gradient(135deg,rgba(255,200,80,.28),transparent 70%),var(--sheen)}
 .pl-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.5rem}
-.pl-tile{display:grid;justify-items:center;align-content:center;gap:.375rem;min-height:5.25rem;padding:.625rem .25rem;border-radius:var(--r-lg);text-decoration:none;color:var(--ink);background-color:var(--paper);background-image:var(--sheen);box-shadow:var(--e1);text-align:center}
+.pl-tile{display:grid;justify-items:center;align-content:center;gap:.375rem;min-height:5.25rem;padding:.625rem .25rem;border-radius:var(--r-lg);text-decoration:none;color:var(--ink-2);background-color:var(--p, var(--paper));background-image:var(--sheen);box-shadow:var(--e1);text-align:center}
 .pl-tile b{font:700 .6875rem/1.15 var(--f-ui);letter-spacing:0;overflow-wrap:anywhere}
 .pl-tile .obj{transition:transform .2s}
 .pl-tile:active .obj{transform:scale(.92)}
@@ -362,12 +364,12 @@ body.scrolled .topbar .bar-title{opacity:0}
 /* the film: what a video earns, shown in the top bar */
 .tr-earn{flex:none;display:inline-flex;align-items:center;gap:.3125rem;padding:.375rem .625rem;border-radius:var(--r-pill);background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.26);color:#fff;font:800 .8125rem/1 var(--f-ui);white-space:nowrap}
 
-/* Home: the gem takes whatever room the screen has left, so a tall phone gets a bigger stone instead of an empty bottom */
+/* Home: the gem takes whatever room the screen has left, but we cap it so it doesn't look huge */
 .lm-one{display:flex;flex-direction:column;min-height:calc(100dvh - var(--chrome,10rem))}
-.lm-one>.gh-card{flex:1 1 auto;--g:clamp(6rem,19dvh,10.5rem);align-content:center;row-gap:.75rem}
+.lm-one>.gh-card{--g:min(6.5rem, 28vw);align-content:center;row-gap:.75rem}
 .lm-one .gh-stone{width:calc(var(--g)*1.08);height:calc(var(--g)*1.16)}
 .lm-one .gh-gem{width:var(--g)}
-.lm-one .gh-num b{font-size:clamp(3.25rem,8.5dvh,4.5rem)}
+.lm-one .gh-num b{font-size:3rem}
 .lm-one .gh-pills{margin-top:.375rem}
 .lm-one .pl-tile{min-height:clamp(5.25rem,10dvh,6.5rem)}
 
@@ -614,7 +616,7 @@ body.scrolled .topbar{background:color-mix(in srgb,var(--ground) 95%,transparent
 @keyframes jc-flare{from{opacity:.6;transform:scale(.9)}to{opacity:1;transform:scale(1.3)}}
 @keyframes jc-pop{0%{transform:scale(.9)}45%{transform:scale(1.28) translateY(-10px) rotate(-4deg)}70%{transform:scale(1.08) rotate(2deg)}100%{transform:scale(1.14)}}
 @keyframes jc-spin{to{transform:rotate(360deg)}}
-.fly-obj{position:fixed;left:0;top:0;z-index:300;pointer-events:none;will-change:transform}
+.fly-obj{position:fixed;left:0;top:0;z-index:300;pointer-events:none;}
 .fly-obj .obj{display:block}
 .chip.bump{animation:jc-bump .34s cubic-bezier(.3,1.6,.5,1)}
 @keyframes jc-bump{0%{transform:scale(1)}40%{transform:scale(1.28)}100%{transform:scale(1)}}
@@ -649,7 +651,7 @@ body.in-screen{padding-left:16px;padding-bottom:calc(2rem + var(--sab, env(safe-
 body.in-screen .sidebar,body.in-screen .topbar,body.in-screen .bottomnav{display:none!important}
 /* a calm, solid ground instead of the living background, so it reads as a different window */
 body.in-screen::before{background:var(--ground);animation:none}
-.scr{animation:scr-in .34s cubic-bezier(.2,.8,.2,1) both;will-change:transform}
+.scr{animation:scr-in .34s cubic-bezier(.2,.8,.2,1) both;}
 .scr.leaving{animation:scr-out .22s cubic-bezier(.4,0,1,1) both}
 @keyframes scr-in{from{transform:translateX(38%);opacity:0}to{transform:none;opacity:1}}
 @keyframes scr-out{to{transform:translateX(42%);opacity:0}}
@@ -949,6 +951,9 @@ html.mid-text .ex-pick{border-radius:1.25rem}
 .sh-pack-tag{position:absolute;top:-.625rem;left:50%;transform:translateX(-50%);padding:.1875rem .5rem;border-radius:var(--r-pill);background:var(--amber);color:#4A2E00;font:800 .625rem/1.2 var(--f-ui);letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
 .sh-pack.skeleton{min-height:9.5rem;cursor:default}
 .sh-packs-off{margin:0 0 .75rem}
+.sh-pack.off{opacity:.5;cursor:default}
+.sh-packs-none{display:grid;justify-items:center;gap:.5rem;margin:.25rem 0 .75rem;text-align:center}
+.sh-packs-none .sh-note{margin:0}
 .gl-since{margin:0;text-align:center;font:500 .75rem/1.3 var(--f-ui)}
 /* Home is a column that fills the screen: nothing in it may be squeezed onto its neighbour
    (the reminder nudge was pressed up over the greeting) */
@@ -982,13 +987,126 @@ html.mid-text .ex-pick{border-radius:1.25rem}
 .mic-off .icon{flex:none;width:1.125rem;height:1.125rem;margin-top:.125rem}
 
 /* ---------- F1: the tab bar sits on the bottom edge (not floating over the content) ---------- */
-.bottomnav{left:0;right:0;bottom:0;border-radius:1.5rem 1.5rem 0 0;border-width:1px 0 0;
-  padding:.375rem .75rem calc(.375rem + var(--sab, env(safe-area-inset-bottom)));
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 -10px 30px -18px rgba(30,42,140,.4)}
-.nav-lens{top:.375rem;bottom:calc(.375rem + var(--sab, env(safe-area-inset-bottom)))}
-body{padding-bottom:calc(5.25rem + var(--sab, env(safe-area-inset-bottom)))}
-@media (min-width:768px){.bottomnav{left:0;right:0}}
 
 /* ---------- F2: working screens use the plain UI face for headings; the display face stays for Home,
    the shop and celebrations ---------- */
 .lesson-head h1,.scr-bar h1,.st-h,.pagehead h1,.tsec-head h2,.lx-q,.duo-screen h1{font-family:var(--f-ui);font-weight:800;letter-spacing:-.02em}
+
+/* ---------- F3: compact horizontal profile hero ---------- */
+.pf-hero--row{display:flex;align-items:center;gap:1rem;padding:1rem 1.125rem;text-align:left;justify-items:unset}
+.pf-hero--row .pf-glow{display:none}
+.pf-hero--row .pf-lozzy{width:4rem;animation:none;flex-shrink:0}
+.pf-hero--row .pf-info{flex:1;min-width:0;display:grid;gap:.125rem}
+.pf-hero--row h1{font-size:1.375rem;margin:0}
+.pf-hero--row .pf-title{margin:0}
+.pf-hero--row .pf-level{width:100%;margin-top:.375rem}
+.pf-hero--row .pf-next{margin-bottom:0}
+.pf-acts{display:flex;flex-direction:column;gap:.5rem;flex-shrink:0}
+.pf-act{width:2.25rem;height:2.25rem;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--paper) 60%,transparent);color:var(--ink-2);text-decoration:none}
+.pf-act .icon{width:1.125rem;height:1.125rem}
+
+/* ---------- F4: topbar polish ---------- */
+.topbar{gap:.375rem}
+.topbar .chip{padding:.25rem .625rem;gap:.3125rem;font-size:.875rem}
+
+/* ---------- F5: tighter gem card on Home ---------- */
+.lm-one .gh-card{padding:.875rem .875rem .75rem}
+.gh-num b{font-size:2.5rem}
+.gh-sub{font-size:.8125rem;line-height:1.3;margin:0}
+.gh-card .gh-stone{width:min(7rem,30vw);height:auto}
+.gh-card .gh-gem{width:100%;height:auto}
+
+/* ---------- F6: Shop link on Home ---------- */
+.gh-shop{display:flex;align-items:center;gap:.75rem;padding:.875rem 1rem;margin-bottom:.5rem;border-radius:var(--r-xl);background:linear-gradient(135deg,var(--p-lav),var(--p-sky));box-shadow:var(--e1);color:var(--ink);text-decoration:none;transition:transform .15s}
+.gh-shop:active{transform:scale(.98)}
+.gh-shop-t{flex:1;min-width:0}
+.gh-shop-t b{display:block;font:800 1.125rem/1.2 var(--f-ui)}
+.gh-shop-t small{display:block;font:600 .8125rem/1.2 var(--f-ui);color:var(--ink-2)}
+.gh-shop>.icon{color:var(--ink-2);width:1.25rem;height:1.25rem;flex-shrink:0}
+
+/* ---------- slide-to-confirm ---------- */
+.sc-track{position:relative;height:3.5rem;border-radius:1.75rem;background:var(--p-pink);overflow:hidden;touch-action:none;user-select:none}
+.sc-track.sc-done{background:var(--brand)}
+.sc-label{position:absolute;inset:0;display:grid;place-items:center;font:700 .9375rem/1 var(--f-ui);color:var(--ink);opacity:calc(1 - var(--sc-pct, 0));pointer-events:none;transition:opacity .1s}
+.sc-thumb{position:absolute;left:.25rem;top:.25rem;width:3rem;height:3rem;border-radius:50%;background:var(--paper);box-shadow:var(--e1);display:grid;place-items:center;cursor:grab;will-change:transform;transition:background .15s}
+.sc-thumb:active{cursor:grabbing}
+.sc-thumb>.icon{width:1.25rem;height:1.25rem;color:var(--ink)}
+.sc-done .sc-thumb{background:var(--brand-soft)}
+.sc-done .sc-thumb>.icon{color:var(--brand)}
+
+/* ---------- inside the native iPhone app (SwiftUI shell) ----------
+   The app draws the top counters and the tab bar itself; the page only shows the screen's content. */
+html.native-shell .topbar,html.native-shell .bottomnav,html.native-shell .sidebar{display:none!important}
+html.native-shell body{padding-top:var(--native-top,0px);padding-bottom:calc(var(--native-tabbar,0px) + 1rem)}
+html.native-shell body.in-lesson,html.native-shell body.in-screen{padding-top:0;padding-bottom:0}
+/* the empty route behind a native screen: nothing of the page shows, only its sheets and toasts */
+html.native-idle,html.native-idle body,html.native-idle-overlay,html.native-idle-overlay body{background:transparent!important}
+html.native-idle body::before,html.native-idle body::after,html.native-idle-overlay body::before,html.native-idle-overlay body::after{display:none!important}
+.native-idle-page{min-height:1px}
+/* iOS WebKit gives a date field a fixed intrinsic width, which pushed it past the right edge on narrow phones */
+input[type=date]{-webkit-appearance:none;appearance:none;display:block;width:100%;max-width:100%;min-width:0;box-sizing:border-box;text-align:left}
+input[type=date]::-webkit-date-and-time-value{text-align:left}
+.oog-sheet{display:grid;justify-items:center;gap:.75rem;text-align:center;padding:.5rem 0 .25rem}
+.oog-sheet h2{margin:0}.oog-sheet p{margin:0 0 .5rem;max-width:30ch}
+/* Free / Lite / Plus side by side on a phone */
+.pw-compare.three .pw-row{grid-template-columns:minmax(0,1fr) 60px 52px 72px;gap:6px;padding:11px 12px;font-size:.84rem}
+.pw-compare.three .pw-row span{font-size:.78rem}
+.pw-compare.three .pw-row span .icon{width:16px;height:16px;color:var(--right);stroke-width:3}
+
+/* ---------- strict exam mode (strict.js) ---------- */
+.strict-cta{display:flex;align-items:center;gap:.875rem;width:100%;margin-top:.5rem;padding:.875rem 1rem;border-radius:1.5rem;text-align:left;cursor:pointer;
+  border:1px solid rgba(255,255,255,.7);color:#fff;background:linear-gradient(135deg,#1c2250,#3b2a8c 60%,#5b3cf0);box-shadow:0 18px 36px -18px rgba(40,30,140,.7)}
+.strict-cta b{display:block;font:800 1.0625rem/1.2 var(--ui)}
+.strict-cta small{display:block;opacity:.8;font:600 .8125rem/1.35 var(--ui)}
+.strict-cta>span{flex:1}
+.strict-cta .icon{opacity:.8}
+.strict-sheet,.strict-warn{display:grid;gap:.875rem;text-align:center;padding:.25rem .25rem .5rem}
+.strict-sheet h2,.strict-warn h2{margin:0}
+.strict-hero{display:grid;place-items:center;width:6.5rem;height:6.5rem;margin:0 auto;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#dfe6ff 60%,#c8d2ff)}
+.strict-steps{list-style:none;margin:0;padding:0;display:grid;gap:.625rem;text-align:left}
+.strict-step{display:flex;gap:.75rem;align-items:flex-start;padding:.75rem .875rem;border-radius:1.125rem;background:var(--card-2,rgba(255,255,255,.5))}
+.strict-step b{display:block;font:800 .9375rem/1.25 var(--ui)}
+.strict-step small{display:block;color:var(--ink-2);font:500 .8125rem/1.4 var(--ui)}
+.strict-ic{flex:none;display:grid;place-items:center;width:2.25rem;height:2.25rem;border-radius:.75rem;background:var(--brand-soft,#e6e9ff);color:var(--brand)}
+.strict-state{display:inline-block;margin-top:.375rem;padding:.125rem .5rem;border-radius:99px;font:800 .75rem/1.5 var(--ui);background:var(--amber-soft,#ffefd1);color:var(--amber-ink,#8a5c05)}
+.strict-state.on{background:var(--green-soft,#d9f5e9);color:var(--green-ink,#0b7c52)}
+.strict-badge{display:inline-flex;align-items:center;gap:.375rem;margin:.25rem auto 0;padding:.25rem .75rem;border-radius:99px;font:800 .8125rem/1.4 var(--ui);background:var(--green-soft,#d9f5e9);color:var(--green-ink,#0b7c52)}
+.strict-badge.warn{background:var(--amber-soft,#ffefd1);color:var(--amber-ink,#8a5c05)}
+.strict-badge .icon{width:1rem;height:1rem}
+/* while a strict paper runs: nothing to select, look up or translate, no hints */
+html.strict-exam .lesson{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+html.strict-exam .lesson input,html.strict-exam .lesson textarea{-webkit-user-select:text;user-select:text}
+html.strict-exam .lesson .hint{display:none}
+html.strict-exam .lesson-top .timer{background:linear-gradient(180deg,#2a2f6b,#1a1f4f);color:#fff;border-color:transparent}
+html.strict-exam .lesson-top .timer.low{background:linear-gradient(180deg,#ff6b70,#e5434a)}
+/* the exam footer: a quiet way out, and one main button */
+.dock-foot .exam-end{flex:0 1 auto;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-inline:.875rem}
+.dock.flow .dock-foot .btn.lg{min-width:0}
+
+/* ---------- welcome: sign in under the slides ---------- */
+.ob-auth{display:grid;gap:.625rem;width:100%}
+.ob-auth .auth-providers{margin:0;gap:.625rem}
+.ob-auth-row{display:grid;grid-template-columns:1fr 1fr;gap:.625rem}
+.ob-auth-row:has(>:only-child){grid-template-columns:1fr}
+.btn.provider.email,.btn.provider.phone{--c:rgba(255,255,255,.62);--t:var(--ink);--e:rgba(255,255,255,.35);-webkit-backdrop-filter:blur(14px) saturate(1.6);backdrop-filter:blur(14px) saturate(1.6);box-shadow:inset 0 0 0 1px rgba(255,255,255,.8),0 10px 24px -14px rgba(30,42,140,.4)}
+html[data-theme="dark"] .btn.provider.email,html[data-theme="dark"] .btn.provider.phone{--c:rgba(255,255,255,.1);--t:#fff;--e:rgba(255,255,255,.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+.ob-skip{border:0;background:none;padding:.375rem;font:800 1rem/1.3 var(--ui);color:var(--brand-ink);cursor:pointer}
+.ob-login{border:0;background:none;padding:0 .375rem .25rem;font:700 .875rem/1.3 var(--ui);color:var(--ink-2);cursor:pointer}
+.ob-phone{display:grid;gap:.75rem;text-align:center}
+.ob-phone h2{margin:0}
+.ob-phone-row{display:grid;grid-template-columns:5.5rem 1fr;gap:.5rem}
+.ob-code{text-align:center;letter-spacing:.4em;font:800 1.5rem/1 var(--ui)}
+/* shop: history pill next to the heading; wardrobe tiers basic → legendary */
+.sh-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem}
+.sh-hist-pill{flex:none;display:grid;place-items:center;width:2.75rem;height:2.75rem;border-radius:50%;border:1px solid var(--glass-line,rgba(255,255,255,.6));background:var(--glass,rgba(255,255,255,.7));color:var(--ink2,#475069);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
+.sh-hist-pill svg{width:1.3rem;height:1.3rem}
+.sh-tier{display:inline-flex;align-items:center;margin:1.1rem 0 .5rem;padding:.2rem .7rem;border-radius:99px;font:800 .72rem/1.4 var(--f-ui);letter-spacing:.08em;text-transform:uppercase}
+.sh-tier.t-basic{background:rgba(120,130,160,.14);color:#5A6380}
+.sh-tier.t-rare{background:rgba(79,110,255,.14);color:#3048D8}
+.sh-tier.t-epic{background:rgba(128,88,255,.16);color:#6A3FE6}
+.sh-tier.t-legendary{background:linear-gradient(180deg,#FFE58A,#FFB420);color:#6B4300}
+.sh-item.r-rare{box-shadow:inset 0 0 0 1.5px rgba(79,110,255,.35)}
+.sh-item.r-epic{box-shadow:inset 0 0 0 1.5px rgba(128,88,255,.45);background-image:linear-gradient(180deg,rgba(176,146,255,.18),transparent 70%)}
+.sh-item.r-legendary{box-shadow:inset 0 0 0 1.5px rgba(224,144,15,.6);background-image:linear-gradient(180deg,rgba(255,217,102,.3),transparent 70%)}
+/* the column heads are uppercase and spaced: keep "ZDARMA"/"KOSTENLOS" inside their own column */
+.pw-compare.three .pw-row.head span{font-size:.66rem;letter-spacing:.03em;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
