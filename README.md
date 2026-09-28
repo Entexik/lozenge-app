@@ -34,9 +34,9 @@ Pick your exam and the whole app follows it: the lessons, the mock tests and you
 
 | | Reading &amp; Use of English | Listening | Writing | Speaking | Lesson units | Pass mark |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **B1 Preliminary** | 10 papers | 4 tests | 10 tasks | 4 tests | 20 | 140 |
-| **B2 First** | 8 papers | 4 tests | 28 tasks | 7 tests | 29 | 160 |
-| **C1 Advanced** | 10 papers | 4 tests | 10 tasks | 4 tests | 20 | 180 |
+| **B1 Preliminary** | 10 papers | 4 tests | 4 papers | 4 tests | 20 | 140 |
+| **B2 First** | 8 papers | 4 tests | 8 papers | 7 tests | 29 | 160 |
+| **C1 Advanced** | 10 papers | 4 tests | 4 papers | 4 tests | 20 | 180 |
 
 Over **1,100 exercises** and **444 recordings** with natural British voices. Everything is original and
 written in the exam's format.
@@ -52,8 +52,10 @@ written in the exam's format.
 - **Writing and Speaking, marked** – the AI examiner marks your writing on the four official criteria and
   shows a stronger version of your own answer (it always asks before anything is sent). Speaking measures
   your pace, pauses and range.
-- **A reason to come back** – streaks and streak freezes, daily quests, a weekly league, badges and four
-  quick word games.
+- **A reason to come back** – streaks and streak freezes, daily quests, a weekly league, badges, four
+  quick word games and up to five friendly reminders a day that stop as soon as you've practised.
+- **Lozzy's wardrobe** – spend the gems you earn on 20 outfits and 13 colours, from Basic to Legendary,
+  and on boosts like Double or Triple XP and a weekend of unlimited energy.
 - **In your language** – the interface speaks 16 languages, including Czech and Slovak. The exam material
   stays in English, exactly as you'll meet it on the day.
 
@@ -61,14 +63,14 @@ written in the exam's format.
 
 <table>
   <tr>
-    <td align="center"><img src="screenshots/01-home.png" width="230" alt="Home: the gem, today's plan, quests and games"><br><sub>Home</sub></td>
-    <td align="center"><img src="screenshots/02-learn.png" width="230" alt="Learn: the path of units and lessons"><br><sub>Your path</sub></td>
-    <td align="center"><img src="screenshots/03-lesson.png" width="230" alt="A lesson guide before you start"><br><sub>A lesson</sub></td>
+    <td align="center"><img src="screenshots/01-home.png" width="230" alt="Home: your gem, XP today and the next lesson"><br><sub>Home</sub></td>
+    <td align="center"><img src="screenshots/02-learn.png" width="230" alt="Learn: units and five-minute lessons"><br><sub>Your path</sub></td>
+    <td align="center"><img src="screenshots/03-tests.png" width="230" alt="Numbered mock tests for every paper"><br><sub>Mock tests</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="screenshots/04-listening.png" width="230" alt="Listening practice, one extract at a time"><br><sub>Listening</sub></td>
-    <td align="center"><img src="screenshots/05-tests.png" width="230" alt="Mock tests for B1, B2 and C1"><br><sub>Mock tests</sub></td>
-    <td align="center"><img src="screenshots/06-me.png" width="230" alt="Me: estimated score and skills"><br><sub>Your score</sub></td>
+    <td align="center"><img src="screenshots/04-writing.png" width="230" alt="Writing papers, marked by the AI examiner"><br><sub>Writing papers</sub></td>
+    <td align="center"><img src="screenshots/05-shop.png" width="230" alt="Lozzy's wardrobe: outfits from Basic to Legendary"><br><sub>Wardrobe</sub></td>
+    <td align="center"><img src="screenshots/06-me.png" width="230" alt="Me: level, streak and estimated score"><br><sub>Your progress</sub></td>
   </tr>
 </table>
 
