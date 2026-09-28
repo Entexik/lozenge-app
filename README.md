@@ -20,16 +20,16 @@
   <img src="assets/banner.png" width="100%" alt="Lozenge on iPhone: the lesson path, Home and Lozzy's wardrobe">
 </p>
 
-I'm a student from Czechia and I built Lozenge while getting ready for Cambridge exams myself. The books
-were fine but boring, and the apps I tried didn't teach the actual exam tasks. So this is both: short
-lessons you can do on the bus, and full timed tests that look like the real papers.
+Lozenge is a practice app for the Cambridge English exams, made by a student from Czechia. Most apps
+teach general English, and most exam books aren't much fun, so Lozenge tries to do both: short lessons
+you can do on the bus, and full timed tests that look like the real papers.
 
 Lessons use the same task types as the exam (gap fills, word formation, key word transformations and so
 on). After a mock test you get an estimated score on the Cambridge English Scale, so you can see roughly
 where you stand.
 
-There's also a streak, gems and a mascot called Lozzy you can dress up. It sounds silly, but it's what got
-me to open the app every day.
+There's also a streak, gems and a mascot called Lozzy you can dress up, so there's a small reason to come
+back tomorrow.
 
 ## What's in it
 
@@ -42,8 +42,7 @@ You pick one exam and the lessons, tests and daily plan follow it.
 | **C1 Advanced** | 10 papers | 4 tests | 4 papers | 4 tests | 20 | 180 |
 
 About 1,100 exercises and 444 recordings. All the texts and exercises are written from scratch in the
-exam format; nothing is copied from Cambridge. The recordings use synthetic British voices, which is the
-one thing I'd like to improve.
+exam format; nothing is copied from Cambridge. The recordings use synthetic British voices.
 
 A few more details:
 
@@ -85,8 +84,8 @@ the app is free there too. On iPhone, tap Share › Add to Home Screen and it op
 
 ## Česky
 
-Lozenge je aplikace na přípravu ke zkouškám Cambridge B1 Preliminary, B2 First a C1 Advanced. Dělám ji
-jako student, protože jsem nic podobného v češtině nenašel. Jsou v ní krátké lekce, testy na čas
+Lozenge je aplikace na přípravu ke zkouškám Cambridge B1 Preliminary, B2 First a C1 Advanced. Dělá ji
+student z Česka. Jsou v ní krátké lekce, testy na čas
 s odhadem skóre, poslech, psaní s hodnocením a mluvení. Rozhraní je česky.
 [APK pro Android](https://github.com/Entexik/lozenge-app/releases/latest/download/Lozenge.apk) ·
 [verze do prohlížeče](https://entexik.github.io/lozenge-app/app/)
