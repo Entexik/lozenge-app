@@ -1210,3 +1210,54 @@ html.app-android[data-theme="dark"] :is(.toast,.unit-tip){background:rgba(24,28,
 .wn-row{display:grid;grid-template-columns:44px 1fr;gap:.7rem;align-items:center}
 .wn-row b{display:block;font:800 1rem/1.25 var(--f-ui)}
 .wn-row small{display:block;color:var(--lead);font:600 .875rem/1.35 var(--f-ui)}
+
+/* ---------- Exam guides (guides.js): story-style cards ---------- */
+.lesson.gd{position:fixed;inset:0;z-index:30;overflow-y:auto;max-width:none;margin:0;display:flex;flex-direction:column;gap:.9rem;padding:calc(env(safe-area-inset-top,0px) + .75rem) 1rem calc(env(safe-area-inset-bottom,0px) + 1rem);
+  background:radial-gradient(120% 80% at 10% 0%,#2B2F86 0%,#141235 55%,#0B0B24 100%);color:#F3F4FF}
+.gd-bars{display:flex;gap:4px}
+.gd-bars i{flex:1;height:4px;border-radius:4px;background:rgba(255,255,255,.18)}
+.gd-bars i.done{background:rgba(255,255,255,.75)}
+.gd-bars i.now{background:linear-gradient(90deg,#FFE58A,#FF8A1F)}
+.gd-top{display:flex;align-items:center;gap:.6rem}
+.gd-name{flex:1;font:800 .95rem/1.2 var(--f-ui);opacity:.85;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gd-x{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.08);color:#fff}
+.gd-card{flex:1;display:flex;flex-direction:column;justify-content:center;gap:1rem;padding:1.4rem 1.2rem;border-radius:28px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);cursor:pointer;-webkit-user-select:none;user-select:none;animation:gd-in .35s ease}
+@keyframes gd-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.gd-hero{display:grid;place-items:center}
+.gd-title{margin:0;text-align:center;font:800 2.1rem/1.1 var(--f-display,var(--f-ui))}
+.gd-sub{margin:0;text-align:center;color:#C9CCF2;font:600 1rem/1.4 var(--f-ui)}
+.gd-h{margin:0;font:800 1.5rem/1.2 var(--f-display,var(--f-ui))}
+.gd-list,.gd-checks{margin:0;padding:0;list-style:none;display:grid;gap:.7rem}
+.gd-list li{padding:.8rem 1rem;border-radius:16px;background:rgba(255,255,255,.07);font:600 1.02rem/1.4 var(--f-ui)}
+.gd-checks li{display:flex;gap:.6rem;align-items:flex-start;font:600 1.02rem/1.4 var(--f-ui)}
+.gd-checks .icon{flex:none;width:22px;height:22px;color:#2ED18E;margin-top:1px}
+.gd-steps{margin:0;padding:0;list-style:none;display:grid;gap:.7rem}
+.gd-steps li{display:grid;gap:.2rem;padding:.8rem 1rem;border-radius:16px;background:rgba(255,255,255,.07);border-left:4px solid #FFB347}
+.gd-steps b{font:800 1rem/1.25 var(--f-ui);color:#FFE58A}.gd-steps span{font:600 .95rem/1.4 var(--f-ui);color:#E3E5FF}
+.gd-model{padding:1rem 1.1rem;border-radius:18px;background:#FFFDF6;color:#1E2140;font:500 1.05rem/1.65 var(--f-read)}
+.gd-model mark{padding:.05em .25em;border-radius:6px;color:inherit;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.gd-legend{display:flex;flex-wrap:wrap;gap:.4rem}
+.gd-chip{font:800 .72rem/1 var(--f-ui);padding:.4rem .6rem;border-radius:999px;color:#1E2140}
+mark.gd-intro,.gd-chip.gd-intro{background:#CFE3FF}
+mark.gd-point,.gd-chip.gd-point{background:#FFE3A8}
+mark.gd-example,.gd-chip.gd-example{background:#D6F5E3}
+mark.gd-link,.gd-chip.gd-link{background:#EAD9FF}
+mark.gd-opinion,.gd-chip.gd-opinion{background:#FFD3E2}
+mark.gd-talk,.gd-chip.gd-talk{background:#FFE0C7}
+mark.gd-formal,.gd-chip.gd-formal{background:#D9E0EA}
+mark.gd-mistake,.gd-chip.gd-mistake{background:#FFC9C9;text-decoration:line-through}
+.gd-groups{display:grid;gap:.9rem}
+.gd-group small{display:block;margin-bottom:.4rem;font:800 .75rem/1 var(--f-ui);letter-spacing:.08em;text-transform:uppercase;color:#FFB347}
+.gd-phr{display:flex;flex-wrap:wrap;gap:.45rem}
+.gd-phr span{padding:.5rem .75rem;border-radius:12px;background:rgba(255,255,255,.1);font:600 .95rem/1.3 var(--f-ui)}
+.gd-mist{display:grid;gap:.8rem}
+.gd-pair{display:grid;gap:.35rem}
+.gd-pair p{margin:0;display:flex;gap:.5rem;align-items:flex-start;padding:.6rem .8rem;border-radius:14px;font:600 .95rem/1.4 var(--f-ui)}
+.gd-pair .bad{background:rgba(255,92,92,.16);color:#FFC4C4}.gd-pair .good{background:rgba(46,209,142,.16);color:#BFF5DC}
+.gd-pair .icon{flex:none;width:18px;height:18px;margin-top:2px}
+.gd-dock{display:flex;gap:.6rem;align-items:center}
+.gd-dock .btn.lg{flex:1}
+.gd-back{width:52px;height:52px;flex:none;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.1);color:#fff}
+.gd-back:disabled{opacity:.3}
+@media (min-width:721px){.lesson.gd{padding-left:max(1rem,calc(50% - 300px));padding-right:max(1rem,calc(50% - 300px))}}
