@@ -365,13 +365,13 @@ body.scrolled .topbar .bar-title{opacity:0}
 .tr-earn{flex:none;display:inline-flex;align-items:center;gap:.3125rem;padding:.375rem .625rem;border-radius:var(--r-pill);background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.26);color:#fff;font:800 .8125rem/1 var(--f-ui);white-space:nowrap}
 
 /* Home: the gem takes whatever room the screen has left, but we cap it so it doesn't look huge */
-.lm-one{display:flex;flex-direction:column;min-height:calc(100dvh - var(--chrome,10rem))}
+.lm-one{display:flex;flex-direction:column;min-height:calc(calc(var(--vh,1vh)*100) - var(--chrome,10rem))}
 .lm-one>.gh-card{--g:min(6.5rem, 28vw);align-content:center;row-gap:.75rem}
 .lm-one .gh-stone{width:calc(var(--g)*1.08);height:calc(var(--g)*1.16)}
 .lm-one .gh-gem{width:var(--g)}
 .lm-one .gh-num b{font-size:3rem}
 .lm-one .gh-pills{margin-top:.375rem}
-.lm-one .pl-tile{min-height:clamp(5.25rem,10dvh,6.5rem)}
+.lm-one .pl-tile{min-height:clamp(5.25rem,calc(var(--vh,1vh)*10),6.5rem)}
 
 /* Speaking coach */
 .coach{gap:.875rem}
@@ -469,7 +469,7 @@ body.scrolled .topbar{background:color-mix(in srgb,var(--ground) 95%,transparent
 .share-btn{gap:.5rem;margin-top:.25rem}
 .share-btn .icon{width:1.125rem;height:1.125rem}
 .share-prev{display:grid;place-items:center;margin:.25rem 0 1rem}
-.share-prev img{display:block;width:auto;max-width:100%;max-height:58vh;aspect-ratio:9/16;border-radius:1.25rem;box-shadow:var(--e2)}
+.share-prev img{display:block;width:auto;max-width:100%;max-height:calc(var(--vh,1vh)*58);aspect-ratio:9/16;border-radius:1.25rem;box-shadow:var(--e2)}
 
 /* ---------- tap a word (words.js) ---------- */
 ::highlight(lz-word){background-color:rgba(68,87,255,.22);color:inherit}
@@ -880,7 +880,7 @@ html.mid-text .ex-pick{border-radius:1.25rem}
 .gl-week small{color:var(--lead);font:600 .75rem/1.2 var(--f-ui)}
 .gl-week b{font:800 1.25rem/1 var(--f-ui);font-variant-numeric:tabular-nums}
 .gl .in{color:var(--right)} .gl .out{color:var(--wrong)}
-.gl-list{display:grid;max-height:46vh;overflow:auto;margin-inline:-.25rem;padding-inline:.25rem}
+.gl-list{display:grid;max-height:calc(var(--vh,1vh)*46);overflow:auto;margin-inline:-.25rem;padding-inline:.25rem}
 .gl-day{margin:.75rem 0 .25rem;font:700 .75rem/1.2 var(--f-ui);letter-spacing:.06em;text-transform:uppercase;color:var(--lead)}
 .gl-day:first-child{margin-top:0}
 .gl-row{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:.75rem;padding:.5rem 0;border-bottom:1px solid var(--rule)}
@@ -1064,7 +1064,7 @@ input[type=date]::-webkit-date-and-time-value{text-align:left}
 .strict-sheet h2,.strict-warn h2{margin:0}
 .strict-hero{display:grid;place-items:center;width:6.5rem;height:6.5rem;margin:0 auto;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#dfe6ff 60%,#c8d2ff)}
 .strict-steps{list-style:none;margin:0;padding:0;display:grid;gap:.625rem;text-align:left}
-.strict-step{display:flex;gap:.75rem;align-items:flex-start;padding:.75rem .875rem;border-radius:1.125rem;background:var(--card-2,rgba(255,255,255,.5))}
+.strict-step{display:flex;gap:.75rem;align-items:flex-start;padding:.75rem .875rem;border-radius:1.125rem;background:color-mix(in srgb,var(--ink) 6%,transparent);border:1px solid color-mix(in srgb,var(--ink) 8%,transparent)}
 .strict-step b{display:block;font:800 .9375rem/1.25 var(--ui)}
 .strict-step small{display:block;color:var(--ink-2);font:500 .8125rem/1.4 var(--ui)}
 .strict-ic{flex:none;display:grid;place-items:center;width:2.25rem;height:2.25rem;border-radius:.75rem;background:var(--brand-soft,#e6e9ff);color:var(--brand)}
@@ -1125,3 +1125,73 @@ html.app-android[data-theme="dark"]{--glass:rgba(34,40,96,.92);--dock-fill:rgba(
 .onb.is-splash .ob-skip{height:44px;background:none;border:0;color:#FFC98A;font:800 1rem/1 var(--f-ui)}
 .onb.is-splash .ob-login{background:none;border:0;color:rgba(255,255,255,.72);font:700 .875rem/1 var(--f-ui)}
 .auth-providers .btn.provider.google{background:#fff;color:#17124F;border:1px solid rgba(23,18,79,.12)}
+/* Android app: the page's own Plus Jakarta Sans (the iPhone app uses the system's rounded face, which Android
+   doesn't have – it fell back to Roboto) */
+html.app-android{--f-ui:"Plus Jakarta Sans",system-ui,sans-serif}
+/* Android web views can paint a grid of composited cards (shadows, art) over the heading just above it:
+   headings get a layer of their own */
+html.app-android .tsec-head,html.app-android .lm-sec,html.app-android .page h1,html.app-android .page h2,html.app-android .page .eyebrow{position:relative;z-index:1}
+/* Android web views skip repainting the area under a card's big soft shadow (Chromium occlusion): stale
+   strips of the previous page showed through. Cards with big shadows get a compositing layer of their own. */
+html.app-android :is(.audio,.auth-input,.bdg,.boss,.btn.sm,.btn.st-btn,.btn:not(.ghost):not(.sm):not(.green):not(.blue):not(.amber):not(.red):not(.pink):not(:disabled),.bubble,.card,.chip,.clock,.continue-card,.continue-card.sm,.crit,.dict,.dock-in,.duo-card,.duo-card.gold,.duo-coach .bubble,.duo-foot,.duo-gemrow,.duo-input,.duo-opt,.duo-pair,.duo-quit,.duo-source,.duo-stat,.duo-tool,.empty,.ex,.exam-card,.extract,.feedback,.flash,.gh-card,.gh-go,.gh-say,.gh-shop,.gm-close,.gm-opt,.gm-pill,.gm-q,.gm-stats div,.hb-card,.hb-panel,.hb-reward,.hero-card,.iconbtn,.insights,.inv-code,.inv-stat,.isic,.kwt,.league-list,.league-row,.list,.listen .audio,.lm-avatar,.lm-bubble,.lm-course,.lm-game,.lm-game.g-build,.lm-game.g-pairs,.lm-game.g-rush,.lm-game.g-word,.lm-gear,.lm-home .plus-card,.lm-level,.lm-mini,.lm-pick,.lm-streak,.lv-hero,.lv-row,.mini-tile,.mistake,.mm,.mock-card,.mod-card,.mod-card.m-flawless,.mod-card.m-golden,.mod-card.m-speed,.model,.nextup,.notice,.notice-q,.nudge,.onb-choice,.opt,.paper-card,.papertabs a,.partrow,.parttabs a,.passage,.perks,.pf-gear,.pf-gem,.pf-hero,.pf-link,.pf-links.grouped,.pf-score,.pf-shop-banner,.pf-stat,.pill,.pl-card,.pl-hero,.pl-tile,.plan-row,.plus-card,.plus-status,.pm-card,.profile-head,.profile-hero,.prompt,.pw-compare,.pw-hero,.pw-invite,.pw-steps,.qitem,.qnav button,.qs-strip,.quests,.rubric,.rw-big,.rw-row,.sb-chip,.sb-clue,.sc-thumb,.scorecard,.segmented button[aria-pressed="true"],.sh-balance,.sh-boost,.sh-item,.sh-pack,.sh-stage,.share-prev img,.ss,.st-card,.st-me,.st-plus,.start-bubble,.stile,.summary,.tbl-wrap,.test-card,.testpick,.tile,.tl-card,.tl-dot,.transcript,.unit-block,.unit-block.is-collapsed .unit-head,.unit-head,.vd-card,.vd-card.bad,.vd-card.go-no,.vd-card.go-yes,.vd-card.ok,.warm-card,.wd-key,.wd-result,.wotd,.wprev,.wrow){will-change:transform}
+/* Android web views draw no blur (above), so the frosted panels that float over a page get a solid fill –
+   otherwise the page behind shows straight through a sheet or a toast. */
+html.app-android .sheet-panel{background:#F4F6FF}
+html.app-android .toast,html.app-android .unit-tip{background:rgba(250,251,255,.97)}
+html.app-android[data-theme="dark"] .sheet-panel{background:#141838}
+html.app-android[data-theme="dark"] :is(.toast,.unit-tip){background:rgba(24,28,64,.97)}
+@media (prefers-color-scheme: dark){html.app-android:not([data-theme="light"]) .sheet-panel{background:#141838}html.app-android:not([data-theme="light"]) :is(.toast,.unit-tip){background:rgba(24,28,64,.97)}}
+/* ---------- Speaking: the exam room (speaking.js runTest) ----------
+   A dark room, the examiner (Lozzy in a bow tie) with what he is saying, the task, and one big
+   countdown ring at the bottom that starts and stops your answer. */
+.lesson.sx{--sx-bg:#0B0E26;--sx-card:rgba(255,255,255,.07);--sx-line:rgba(255,255,255,.12);--sx-ink:#F3F4FF;--sx-ink2:#B9BFE6;--sx-pink:#FF5C9E;
+  min-height:calc(var(--vh,1vh)*100);background:radial-gradient(120% 60% at 20% 0%,#2B2F8F 0%,transparent 60%),radial-gradient(90% 50% at 100% 100%,#5A1F55 0%,transparent 60%),var(--sx-bg);color:var(--sx-ink);
+  padding:calc(var(--sat, env(safe-area-inset-top)) + .5rem) 1rem calc(var(--dock-h,0px) + 1.5rem)}
+.sx-top{display:flex;align-items:center;gap:.75rem}
+.sx-x{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--sx-card);border:1px solid var(--sx-line);color:var(--sx-ink)}
+.sx-progress{flex:1;height:8px;border-radius:99px;background:rgba(255,255,255,.12);overflow:hidden}
+.sx-progress i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#FF5C9E,#FF8A5C);transition:width .4s}
+.sx-mic{display:flex;align-items:center;gap:.4rem;height:34px;padding:0 .8rem;border-radius:99px;background:var(--sx-card);border:1px solid var(--sx-line);color:var(--sx-ink2);font:700 .8125rem/1 var(--f-ui)}
+.sx-mic i{width:9px;height:9px;border-radius:50%;background:#6B7096}
+.sx-mic.on{color:#fff}.sx-mic.on i{background:#FF4D6D;box-shadow:0 0 0 0 rgba(255,77,109,.6);animation:sx-pulse 1.4s infinite}
+.sx-head{margin:1.1rem 0 .9rem}
+.sx-part{display:inline-block;font:800 .75rem/1 var(--f-ui);letter-spacing:.08em;text-transform:uppercase;color:var(--sx-pink)}
+.sx-head h1{margin:.35rem 0 .2rem;font:800 1.75rem/1.1 var(--display);color:var(--sx-ink)}
+.sx-head small{color:var(--sx-ink2);font:600 .8125rem/1.3 var(--f-ui)}
+.sx-exam{display:flex;gap:.75rem;align-items:flex-start}
+.sx-av{position:relative;flex:0 0 64px;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#3C47B8,#1B2160);border:1px solid var(--sx-line)}
+.sx-av .lozzy,.sx-av svg{width:52px;height:52px}
+.sx-wave{position:absolute;bottom:-6px;right:-6px;display:none;gap:2px;align-items:flex-end;height:16px;padding:3px 5px;border-radius:99px;background:var(--sx-pink)}
+.sx-wave span{width:3px;border-radius:2px;background:#fff;animation:sx-wave .9s ease-in-out infinite}
+.sx-wave span:nth-child(2){animation-delay:.15s}.sx-wave span:nth-child(3){animation-delay:.3s}
+.sx-exam.talking .sx-wave{display:flex}
+.sx-bubble{flex:1;min-width:0;padding:.85rem 1rem;border-radius:4px 22px 22px 22px;background:var(--sx-card);border:1px solid var(--sx-line)}
+.sx-bubble small{display:block;margin-bottom:.3rem;color:var(--sx-ink2);font:700 .75rem/1 var(--f-ui)}
+.sx-bubble p{margin:0;font:700 1.1875rem/1.4 var(--f-ui);color:var(--sx-ink)}
+.sx-body .photo{background:linear-gradient(160deg,#2A3172,#3B1E5A);color:var(--sx-ink);border:1px solid var(--sx-line)}
+.sx-body .mm{background:var(--sx-card);border:1px solid var(--sx-line);color:var(--sx-ink)}
+.sx-body .mm.center{background:linear-gradient(135deg,#FF5C9E,#B14DFF);color:#fff;border-color:transparent}
+.sx-tip{display:flex;gap:.5rem;align-items:flex-start;margin:0;color:var(--sx-ink2);font:600 .875rem/1.4 var(--f-ui)}
+.sx-tip svg{flex:0 0 16px;margin-top:2px;color:#FFC957}
+.lesson.sx .rubric{color:var(--sx-ink2)}
+.lesson.sx .dock{background:linear-gradient(180deg,rgba(11,14,38,0),rgba(11,14,38,.96) 30%)!important;border:0!important;box-shadow:none!important}
+.sx-dock{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:.9rem;max-width:40rem;margin:0 auto;padding:.5rem .25rem calc(var(--sab, env(safe-area-inset-bottom)) + .25rem)}
+.sx-ring{--p:0;width:78px;height:78px;border-radius:50%;border:0;padding:0;display:grid;place-items:center;align-content:center;gap:1px;color:#fff;
+  background:radial-gradient(closest-side,#141838 80%,transparent 81%),conic-gradient(var(--sx-pink,#FF5C9E) calc(var(--p)*1%),rgba(255,255,255,.14) 0)}
+.sx-ring b{font:800 1.125rem/1 var(--display)}.sx-ring small{font:800 .625rem/1 var(--f-ui);letter-spacing:.1em;text-transform:uppercase;opacity:.75}
+.sx-ring.idle{background:#141838;border:1px solid rgba(255,255,255,.14)}
+.sx-dock.rec .sx-ring{box-shadow:0 0 0 0 rgba(255,92,158,.5);animation:sx-pulse 1.6s infinite}
+.sx-dock.ready .sx-ring{background:radial-gradient(closest-side,#FF5C9E 80%,transparent 81%),conic-gradient(rgba(255,255,255,.3) 0,rgba(255,255,255,.3) 100%)}
+.sx-state b{display:block;font:800 1rem/1.25 var(--f-ui);color:#F3F4FF}.sx-state small{color:#B9BFE6;font:600 .8125rem/1.3 var(--f-ui)}
+.sx-ctrls{display:flex;gap:.4rem}
+.sx-btn{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.07);color:#F3F4FF}
+.sx-btn:disabled{opacity:.35}.sx-btn.go{background:#14B87A;border-color:transparent}
+@keyframes sx-pulse{70%{box-shadow:0 0 0 12px rgba(255,92,158,0)}100%{box-shadow:0 0 0 0 rgba(255,92,158,0)}}
+@keyframes sx-wave{0%,100%{height:4px}50%{height:12px}}
+@media (max-width:420px){.sx-dock{grid-template-columns:auto 1fr;}.sx-ctrls{grid-column:1 / -1;justify-content:center}}
+.lesson.sx .sx-photos{grid-template-columns:repeat(2,minmax(0,1fr))}
+.lesson.sx .sx-photos.one{grid-template-columns:minmax(0,1fr)}
+.lesson.sx .sx-photos.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.lesson.sx .sx-photos .photo{aspect-ratio:4/5;min-height:0;padding:.75rem;font-size:.875rem;line-height:1.35}
+.lesson.sx .sx-photos.one .photo{aspect-ratio:16/10}
+@media (max-width:720px){.lesson.sx .mindmap{grid-template-columns:1fr 1fr;grid-template-areas:"m m" "a b" "c d" "e e";max-width:none}.lesson.sx .mm{padding:.7rem .6rem;font-size:.9375rem}}

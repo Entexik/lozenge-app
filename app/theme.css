@@ -362,7 +362,7 @@ body[data-page="home"] .topbar .brand{visibility:hidden}
 /* =====================================================================================
    Games
    ===================================================================================== */
-.gm{position:relative;display:flex;flex-direction:column;min-height:calc(100dvh - 1rem);padding-bottom:calc(1.5rem + var(--sab, env(safe-area-inset-bottom)));color:var(--ink)}
+.gm{position:relative;display:flex;flex-direction:column;min-height:calc(calc(var(--vh,1vh)*100) - 1rem);padding-bottom:calc(1.5rem + var(--sab, env(safe-area-inset-bottom)));color:var(--ink)}
 .gm-top{display:flex;align-items:center;gap:.75rem;padding:.5rem 0}
 .gm-close{width:2.75rem;height:2.75rem;border-radius:50%;display:grid;place-items:center;background:var(--glass);border:1px solid var(--glass-line);color:var(--ink);box-shadow:var(--e1)}
 .gm-pill{display:inline-flex;align-items:center;gap:.375rem;padding:.375rem .875rem .375rem .5rem;border-radius:var(--r-pill);background:var(--glass);border:1px solid var(--glass-line);box-shadow:var(--e1);font:800 1rem/1 var(--f-ui);font-variant-numeric:tabular-nums}
@@ -1106,7 +1106,7 @@ body.tr-open{overflow:hidden}
 .fm-rain{position:absolute;inset:0;overflow:hidden;pointer-events:none}
 .fm-rain span{position:absolute;left:var(--x);top:-3rem}
 .fm-scene.on .fm-rain span{animation:fm-fall var(--d) linear var(--w) infinite}
-@keyframes fm-fall{to{transform:translateY(110vh) rotate(25deg)}}
+@keyframes fm-fall{to{transform:translateY(calc(var(--vh,1vh)*110)) rotate(25deg)}}
 .fm-stage.big .orbit{--w:min(84vw,19.5rem)}
 .fm-flash{position:absolute;inset:-60%;background:radial-gradient(circle,#fff 0,rgba(255,240,180,.65) 26%,transparent 58%);opacity:0;pointer-events:none;z-index:4}
 .fm-scene.on .fm-flash{animation:fm-flash .9s .35s ease-out both}
