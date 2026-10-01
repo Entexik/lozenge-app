@@ -1058,7 +1058,7 @@ input[type=date]::-webkit-date-and-time-value{text-align:left}
   border:1px solid rgba(255,255,255,.7);color:#fff;background:linear-gradient(135deg,#1c2250,#3b2a8c 60%,#5b3cf0);box-shadow:0 18px 36px -18px rgba(40,30,140,.7)}
 .strict-cta b{display:block;font:800 1.0625rem/1.2 var(--ui)}
 .strict-cta small{display:block;opacity:.8;font:600 .8125rem/1.35 var(--ui)}
-.strict-cta>span{flex:1}
+.strict-cta>span:not(.obj){flex:1}
 .strict-cta .icon{opacity:.8}
 .strict-sheet,.strict-warn{display:grid;gap:.875rem;text-align:center;padding:.25rem .25rem .5rem}
 .strict-sheet h2,.strict-warn h2{margin:0}
@@ -1195,3 +1195,18 @@ html.app-android[data-theme="dark"] :is(.toast,.unit-tip){background:rgba(24,28,
 .lesson.sx .sx-photos .photo{aspect-ratio:4/5;min-height:0;padding:.75rem;font-size:.875rem;line-height:1.35}
 .lesson.sx .sx-photos.one .photo{aspect-ratio:16/10}
 @media (max-width:720px){.lesson.sx .mindmap{grid-template-columns:1fr 1fr;grid-template-areas:"m m" "a b" "c d" "e e";max-width:none}.lesson.sx .mm{padding:.7rem .6rem;font-size:.9375rem}}
+
+/* Part 2 – real photos with a caption underneath */
+.photo.has-img{display:flex;flex-direction:column;padding:0!important;aspect-ratio:auto!important;overflow:hidden;place-items:stretch;text-align:left}
+.photo.has-img img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;background:rgba(0,0,0,.2)}
+.photo.has-img figcaption{padding:.55rem .7rem .65rem;font:italic 500 .8125rem/1.35 var(--f-read);opacity:.85}
+.photo.has-img .k{background:rgba(0,0,0,.55);color:#fff;backdrop-filter:blur(6px)}
+@media (max-width:720px){.lesson.sx .sx-photos.three{grid-template-columns:1fr 1fr}.lesson.sx .sx-photos.three .photo:first-child{grid-column:1 / -1}}
+
+/* What's new */
+.wn{display:grid;gap:.6rem;text-align:left}
+.wn h2{margin:0}
+.wn-list{display:grid;gap:.8rem;margin:.4rem 0 .8rem}
+.wn-row{display:grid;grid-template-columns:44px 1fr;gap:.7rem;align-items:center}
+.wn-row b{display:block;font:800 1rem/1.25 var(--f-ui)}
+.wn-row small{display:block;color:var(--lead);font:600 .875rem/1.35 var(--f-ui)}
