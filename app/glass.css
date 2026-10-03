@@ -1298,7 +1298,7 @@ mark.gd-mistake,.gd-chip.gd-mistake{background:#FFC9C9;text-decoration:line-thro
 .ed-name small{opacity:.7;font-weight:600}
 .ed-clock{font-size:64px;font-weight:900;text-align:center;letter-spacing:-1px;font-variant-numeric:tabular-nums;margin:6px 0}
 .ed-result{text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:20px}
-.ed-score{font-size:88px;font-weight:900;line-height:1;letter-spacing:-2px}
+.ed-score{font-family:var(--f-display);font-size:88px;font-weight:800;line-height:1;letter-spacing:-2px}
 .ed-result .ed-list{width:100%;text-align:left}
 /* Pronunciation practice (speaking.js pronCard) */
 .pron-words{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
@@ -1318,3 +1318,37 @@ mark.gd-mistake,.gd-chip.gd-mistake{background:#FFC9C9;text-decoration:line-thro
 .onb-area-bar{height:10px;border-radius:99px;background:var(--rule);overflow:hidden}
 .onb-area-bar i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#7A5BFF,#FF5C9E)}
 .onb-area.weak span,.onb-area.weak b{color:#FF5C5C}
+/* Your week (weekly.js) */
+.wk-hero{text-align:center;display:grid;gap:14px;padding:22px}
+.wk-xp b{display:block;font-family:var(--f-display);font-weight:800;font-size:72px;line-height:1;letter-spacing:-2px}
+.wk-xp span{font-weight:800;opacity:.7}
+.wk-xp small{display:block;margin-top:6px;font-weight:800}
+.wk-xp small.up{color:#14B87A}.wk-xp small.down{color:#FF5C5C}
+.wk-days{display:flex;justify-content:center;gap:8px}
+.wk-days span{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;font-weight:800;background:var(--rule);font-size:.85rem}
+.wk-days span.on{background:#FFD66B;color:#3A2600}
+.wk-days .icon{width:18px;height:18px}
+.wk-say{margin:0;font-weight:700}
+.wk-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.wk-stat{padding:14px;border-radius:18px;background:var(--paper);border:1px solid var(--rule);display:grid;gap:2px}
+.wk-stat b{font-family:var(--f-display);font-weight:800;font-size:26px;line-height:1.1}
+.wk-stat span{font-weight:700;opacity:.75;font-size:.88rem}
+.wk-stat small{font-weight:800;color:#14B87A}
+/* Part 3 with a partner (voice.js) */
+.vx-line.tom small{color:#2F8CFF}
+.vx-task{text-align:left;margin:4px 0 12px}
+.vx-task b{display:block;margin-bottom:4px}
+/* Classes (classes.js) */
+.cls .stack{gap:10px}
+.cls-row{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.cls-row > div{flex:1;display:grid;gap:2px}
+.cls-codechip{font:800 14px/1 var(--f-ui);letter-spacing:2px;padding:6px 10px;border-radius:10px;background:var(--rule)}
+.cls-code{text-transform:uppercase;letter-spacing:6px;font-size:24px;text-align:center;font-weight:800}
+.cls-hero{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.cls-big{display:block;font-family:var(--f-display);font-weight:800;font-size:40px;letter-spacing:4px}
+.cls-student{display:grid;gap:6px}
+.cls-student.idle{opacity:.8;border-color:rgba(255,92,92,.45)}
+.cls-st-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.cls-student .btn{justify-self:start}
+.cls-delete{margin-top:18px;color:#FF5C5C}
+.scr-sub{margin:10px 0 14px;color:var(--lead);font-weight:600}
