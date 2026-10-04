@@ -1037,7 +1037,7 @@ html.mid-text .ex-pick{border-radius:1.25rem}
 /* ---------- inside the native iPhone app (SwiftUI shell) ----------
    The app draws the top counters and the tab bar itself; the page only shows the screen's content. */
 html.native-shell .topbar,html.native-shell .bottomnav,html.native-shell .sidebar{display:none!important}
-html.native-shell body{padding-top:var(--native-top,0px);padding-bottom:calc(var(--native-tabbar,0px) + 1rem)}
+html.native-shell body{padding-top:max(var(--native-top,0px),var(--sat,env(safe-area-inset-top)));padding-bottom:calc(var(--native-tabbar,0px) + 1rem)}
 html.native-shell body.in-lesson,html.native-shell body.in-screen{padding-top:0;padding-bottom:0}
 /* the empty route behind a native screen: nothing of the page shows, only its sheets and toasts */
 html.native-idle,html.native-idle body,html.native-idle-overlay,html.native-idle-overlay body{background:transparent!important}
@@ -1493,3 +1493,6 @@ mark.gd-mistake,.gd-chip.gd-mistake{background:#FFC9C9;text-decoration:line-thro
 .rl-rail-btn.on{background:#FF5C9E;border-color:#FF5C9E}
 .rl-empty{height:100dvh;display:grid;place-items:center;padding:20px;text-align:center;font-weight:700;opacity:.8}
 .rl [hidden]{display:none!important}
+a.hb-quest{text-decoration:none;color:inherit}
+.hb-quest.go{cursor:pointer}
+.hb-qhint{display:block;margin:2px 0 6px;font-weight:600;font-size:12px;color:var(--lead)}
