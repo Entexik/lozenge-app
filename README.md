@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Entexik/lozenge-app/releases/latest/download/Lozenge.apk"><img alt="Download for Android" src="https://img.shields.io/badge/Android-Download%20APK-3DDC84?style=for-the-badge&logo=android&logoColor=white"></a>
+  <a href="https://play.google.com/apps/testing/com.marekkalivoda.lozenge"><img alt="Android: join the Google Play test" src="https://img.shields.io/badge/Android-Google%20Play%20test-3DDC84?style=for-the-badge&logo=googleplay&logoColor=white"></a>
   <a href="https://entexik.github.io/lozenge-app/app/"><img alt="Try it in your browser" src="https://img.shields.io/badge/Web-Try%20it%20now-4457FF?style=for-the-badge&logo=googlechrome&logoColor=white"></a>
   <img alt="iPhone: coming soon" src="https://img.shields.io/badge/iPhone-coming%20soon-0B0F2E?style=for-the-badge&logo=apple&logoColor=white">
 </p>
@@ -80,13 +80,18 @@ British voices.
 
 ## Install
 
-**Android** – Lozenge is in testing on Google Play and arrives there for everyone soon. Until then, download
-[`Lozenge.apk`](https://github.com/Entexik/lozenge-app/releases/latest/download/Lozenge.apk), open it and
-allow your browser to install apps when Android asks. Android 8.0 or newer. When you install it from
-Google Play later, uninstall this version first.
+**Android (Google Play test)** – help test Lozenge before it's on Google Play for everyone:
 
-**iPhone** – coming to the App Store. Until then, use the [web version](https://entexik.github.io/lozenge-app/app/)
-in Safari: tap Share › Add to Home Screen and it opens like an app.
+1. Join this group: [groups.google.com/g/lozenge-testers](https://groups.google.com/g/lozenge-testers)
+2. Then opt in here: [play.google.com/apps/testing/com.marekkalivoda.lozenge](https://play.google.com/apps/testing/com.marekkalivoda.lozenge)
+   – and install Lozenge from Google Play.
+
+Use the same Google account for both steps. Rather not use Google Play? Download
+[`Lozenge.apk`](https://github.com/Entexik/lozenge-app/releases/latest/download/Lozenge.apk) instead
+(Android 8.0 or newer); uninstall it before you install the Google Play version.
+
+**iPhone / anything else** – there's a web version here: [entexik.github.io/lozenge-app/app](https://entexik.github.io/lozenge-app/app/).
+On iPhone, open it in Safari and tap Share › Add to Home Screen – it opens like an app. The App Store version is coming.
 
 **Web** – [try it in your browser](https://entexik.github.io/lozenge-app/app/). Everything that's free in
 the app is free there too.
