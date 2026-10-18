@@ -6,14 +6,14 @@
 
 <p align="center">
   <b>Practice for the Cambridge English exams, a few minutes at a time.</b><br>
-  <a href="https://entexik.github.io/lozenge-app/">entexik.github.io/lozenge-app</a><br>
+  <a href="https://lozenge.online/">lozenge.online</a><br>
   B1 Preliminary · B2 First · C1 Advanced
 </p>
 
 <p align="center">
   <a href="https://play.google.com/apps/testing/com.marekkalivoda.lozenge"><img alt="Android: join the Google Play test" src="https://img.shields.io/badge/Android-Google%20Play%20test-3DDC84?style=for-the-badge&logo=googleplay&logoColor=white"></a>
-  <a href="https://entexik.github.io/lozenge-app/app/"><img alt="Try it in your browser" src="https://img.shields.io/badge/Web-Try%20it%20now-4457FF?style=for-the-badge&logo=googlechrome&logoColor=white"></a>
-  <img alt="iPhone: coming soon" src="https://img.shields.io/badge/iPhone-coming%20soon-0B0F2E?style=for-the-badge&logo=apple&logoColor=white">
+  <a href="https://lozenge.online/app/"><img alt="Try it in your browser" src="https://img.shields.io/badge/Web-Try%20it%20now-4457FF?style=for-the-badge&logo=googlechrome&logoColor=white"></a>
+  <a href="https://testflight.apple.com/join/Vr9PM1Qp"><img alt="iPhone: join the TestFlight beta" src="https://img.shields.io/badge/iPhone-TestFlight%20beta-0B0F2E?style=for-the-badge&logo=apple&logoColor=white"></a>
 </p>
 
 <p align="center">
@@ -37,16 +37,16 @@ You pick one exam and the lessons, tests and daily plan follow it.
 
 | | Reading &amp; Use of English | Listening | Writing | Speaking | Lesson units | Pass mark |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **B1 Preliminary** | 10 papers | 4 tests | 4 papers · 12 tasks | 6 tests | 20 | 140 |
-| **B2 First** | 8 papers | 4 tests | 8 papers · 34 tasks | 7 tests | 29 | 160 |
-| **C1 Advanced** | 10 papers | 4 tests | 4 papers · 16 tasks | 6 tests | 20 | 180 |
+| **B1 Preliminary** | 10 mock papers + 4 practice sets | 4 tests + 2 practice sets | 4 papers · 12 tasks | 6 tests | 20 | 140 |
+| **B2 First** | 8 mock papers + 8 practice sets | 8 tests + 5 practice sets | 8 papers · 34 tasks | 8 tests + 6 practice sets | 29 | 160 |
+| **C1 Advanced** | 10 mock papers + 4 practice sets | 4 tests + 2 practice sets | 4 papers · 16 tasks | 6 tests | 20 | 180 |
 
-Over 2,000 exam-style questions, 740 recordings and 150 listening reels. All the texts and exercises are
+Over 3,000 exam-style questions, 840 recordings and 150 listening reels. All the texts and exercises are
 written from scratch in the exam format; nothing is copied from Cambridge. The recordings use synthetic
 British voices.
 
 - **Mock tests and Exam day** – timed papers with the real parts and questions, or a whole test in one go,
-  in the real order with breaks, ending with one overall grade.
+  in the real order with breaks, ending with one overall grade. A strict exam mode runs it like the real day.
 - **A live AI examiner** (Plus) – a spoken conversation with Anna, the examiner, or Speaking Part 3 with
   Tom, another candidate, like on the day. Your speaking is then marked on the official criteria.
 - **Writing, marked** – essays, emails, articles and reviews marked on the four official criteria, with
@@ -90,10 +90,13 @@ Use the same Google account for both steps. Rather not use Google Play? Download
 [`Lozenge.apk`](https://github.com/Entexik/lozenge-app/releases/latest/download/Lozenge.apk) instead
 (Android 8.0 or newer); uninstall it before you install the Google Play version.
 
-**iPhone / anything else** – there's a web version here: [entexik.github.io/lozenge-app/app](https://entexik.github.io/lozenge-app/app/).
-On iPhone, open it in Safari and tap Share › Add to Home Screen – it opens like an app. The App Store version is coming.
+**iPhone** – join the public beta on TestFlight: [testflight.apple.com/join/Vr9PM1Qp](https://testflight.apple.com/join/Vr9PM1Qp)
+(install Apple's TestFlight app first). The App Store version is in review. Widgets, Live Activities and an
+Apple Watch app are included.
 
-**Web** – [try it in your browser](https://entexik.github.io/lozenge-app/app/). Everything that's free in
+**Anything else** – there's a web version here: [lozenge.online/app](https://lozenge.online/app/).
+
+**Web** – [try it in your browser](https://lozenge.online/app/). Everything that's free in
 the app is free there too.
 
 What changed in each version: [releases](https://github.com/Entexik/lozenge-app/releases).
@@ -104,8 +107,9 @@ Lozenge je aplikace na přípravu ke zkouškám Cambridge B1 Preliminary, B2 Fir
 student z Česka. Jsou v ní krátké lekce, zkušební testy na čas a Den zkoušky s celkovou známkou, živý
 AI zkoušející (i s druhým kandidátem v Part 3), psaní s hodnocením (i z fotky ručně psaného textu),
 vysvětlení chyb česky, poslechové reels, průvodci zkouškou a třídy pro učitele. Rozhraní je česky.
+[iPhone (TestFlight)](https://testflight.apple.com/join/Vr9PM1Qp) ·
 [APK pro Android](https://github.com/Entexik/lozenge-app/releases/latest/download/Lozenge.apk) ·
-[verze do prohlížeče](https://entexik.github.io/lozenge-app/app/)
+[verze do prohlížeče](https://lozenge.online/app/)
 
 ## Feedback
 
@@ -114,4 +118,4 @@ If you find a wrong answer in an exercise or something that doesn't work, please
 ---
 
 <sub>Lozenge is an independent practice app and isn't affiliated with Cambridge University Press &amp; Assessment.
-All texts, recordings and exercises are original. [Privacy policy](https://entexik.github.io/lozenge-app/privacy.html) · © 2026 Lozenge. All rights reserved.</sub>
+All texts, recordings and exercises are original. [Privacy policy](https://lozenge.online/privacy.html) · © 2026 Lozenge. All rights reserved.</sub>
