@@ -180,6 +180,11 @@ h2{margin:0;font:800 clamp(2rem,4.4vw,3.25rem)/1 var(--display);letter-spacing:-
 .btn.soft:active{transform:translateY(2px);box-shadow:inset 0 0 0 2px var(--rule)}
 .gh{display:flex;align-items:center;gap:.5rem;margin-top:1.25rem;font:600 .9375rem/1.4 var(--ui);color:var(--ink-2)}
 .gh svg{width:1.25rem;height:1.25rem;fill:currentColor;flex:none}
+.links{display:flex;flex-wrap:wrap;gap:0 2rem}
+.get-card small a{color:inherit}
+/* the name, huge and faint, closing the page */
+.wordmark{margin:2.5rem 0 -1.5rem;text-align:center;font:800 clamp(5rem,22vw,15rem)/.8 var(--display);letter-spacing:-.06em;color:transparent;
+  background:linear-gradient(180deg,color-mix(in srgb,var(--brand) 22%,transparent),transparent 85%);-webkit-background-clip:text;background-clip:text;user-select:none;pointer-events:none}
 footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:.75rem 2rem;justify-content:space-between;font:500 .8125rem/1.6 var(--ui);color:var(--lead)}
 footer p{margin:0;max-width:40rem}
 
@@ -193,6 +198,7 @@ footer p{margin:0;max-width:40rem}
   </defs>
   <symbol id="lozzy" viewBox="0 0 100 100"><path d="M42.5 11.8Q50 4 57.5 11.8L86.5 42.2Q94 50 86.5 57.8L57.5 88.2Q50 96 42.5 88.2L13.5 57.8Q6 50 13.5 42.2Z" fill="url(#lzb)"/><path d="M42.5 11.8Q50 4 57.5 11.8L86.5 42.2Q94 50 86.5 57.8L57.5 88.2Q50 96 42.5 88.2L13.5 57.8Q6 50 13.5 42.2Z" fill="url(#lzs)"/><ellipse cx="33" cy="27" rx="10" ry="4.6" transform="rotate(-42 33 27)" fill="#fff" opacity=".55"/><ellipse cx="26" cy="58" rx="5.6" ry="3.2" fill="#FF7A9C" opacity=".5"/><ellipse cx="74" cy="58" rx="5.6" ry="3.2" fill="#FF7A9C" opacity=".5"/><ellipse cx="38" cy="44" rx="5.6" ry="7.6" fill="#1B1030"/><ellipse cx="62" cy="44" rx="5.6" ry="7.6" fill="#1B1030"/><circle cx="40" cy="41" r="2.3" fill="#fff"/><circle cx="64" cy="41" r="2.3" fill="#fff"/><path d="M41 58Q50 68.5 59 58" stroke="#1B1030" stroke-width="3.4" fill="none" stroke-linecap="round"/></symbol>
   <symbol id="android" viewBox="0 0 24 24"><path d="M17.6 9.48 19.44 6.3a.38.38 0 0 0-.66-.38l-1.86 3.22A11.45 11.45 0 0 0 12 8.1c-1.77 0-3.43.38-4.92 1.04L5.22 5.92a.38.38 0 1 0-.66.38L6.4 9.48A10.8 10.8 0 0 0 1 18h22a10.8 10.8 0 0 0-5.4-8.52ZM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5Zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5Z"/></symbol>
+  <symbol id="discord" viewBox="0 0 24 24"><path d="M19.6 5.3A18 18 0 0 0 15.2 4l-.2.4a16 16 0 0 1 3.8 1.9 14 14 0 0 0-13.6 0A16 16 0 0 1 9 4.4L8.8 4a18 18 0 0 0-4.4 1.3C1.6 9.4.9 13.4 1.2 17.4a18 18 0 0 0 5.4 2.7l1.2-1.9a11 11 0 0 1-1.8-.9l.4-.3a12.8 12.8 0 0 0 11.2 0l.4.3a11 11 0 0 1-1.8.9l1.2 1.9a18 18 0 0 0 5.4-2.7c.4-4.6-.7-8.6-3.2-12.1ZM8.7 15c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2Zm6.6 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2Z"/></symbol>
   <symbol id="apple" viewBox="0 0 24 24"><path d="M16.37 12.62c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-3-.79a4.43 4.43 0 0 0-3.74 2.27c-1.6 2.77-.41 6.87 1.14 9.12.76 1.1 1.66 2.33 2.84 2.29 1.14-.05 1.57-.74 2.95-.74 1.37 0 1.76.74 2.97.71 1.23-.02 2-1.12 2.75-2.22.87-1.27 1.22-2.5 1.24-2.57-.03-.01-2.38-.91-2.4-3.62ZM14.1 5.87c.63-.76 1.05-1.82.94-2.87-.9.04-2 .6-2.65 1.36-.58.67-1.09 1.75-.95 2.78 1 .08 2.03-.51 2.66-1.27Z"/></symbol>
   <symbol id="github" viewBox="0 0 24 24"><path d="M12 1.5a10.5 10.5 0 0 0-3.32 20.46c.53.1.72-.23.72-.51v-1.8c-2.92.64-3.54-1.4-3.54-1.4-.48-1.22-1.17-1.54-1.17-1.54-.95-.65.07-.64.07-.64 1.06.08 1.61 1.09 1.61 1.09.94 1.6 2.46 1.14 3.06.87.1-.68.37-1.14.66-1.4-2.33-.27-4.78-1.17-4.78-5.2 0-1.14.41-2.08 1.08-2.82-.1-.27-.47-1.34.1-2.79 0 0 .88-.28 2.89 1.08a10 10 0 0 1 5.26 0c2-1.36 2.89-1.08 2.89-1.08.57 1.45.21 2.52.1 2.79.67.74 1.08 1.68 1.08 2.82 0 4.04-2.46 4.93-4.8 5.19.38.33.71.97.71 1.96v2.9c0 .28.19.62.73.51A10.5 10.5 0 0 0 12 1.5Z"/></symbol>
   <symbol id="globe" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 6h-2.95a15.6 15.6 0 0 0-1.38-3.56A8.03 8.03 0 0 1 18.9 8ZM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82A13.9 13.9 0 0 1 12 4.04ZM4.26 14a8.2 8.2 0 0 1 0-4h3.38a16.5 16.5 0 0 0 0 4H4.26Zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56A7.99 7.99 0 0 1 5.08 16Zm2.95-8H5.08a7.99 7.99 0 0 1 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8ZM12 19.96A14 14 0 0 1 10.09 16h3.82A14 14 0 0 1 12 19.96ZM14.34 14H9.66a14.7 14.7 0 0 1 0-4h4.68a14.7 14.7 0 0 1 0 4Zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56ZM16.36 14a16.5 16.5 0 0 0 0-4h3.38a8.2 8.2 0 0 1 0 4h-3.38Z"/></symbol>
@@ -218,9 +224,10 @@ footer p{margin:0;max-width:40rem}
         <p class="lede" data-t="hero_lede">Ten-minute lessons, timed mock tests and marked Writing and Speaking for all three Cambridge exams. It feels like a game and works like a tutor.</p>
         <div class="cta-row">
           <a class="btn primary" data-app href="app/" target="_blank" rel="noopener"><span data-t="hero_cta">Try it in your browser</span><svg aria-hidden="true"><use href="#arrow"/></svg></a>
-          <a class="btn soft" href="https://github.com/Entexik/lozenge-app/releases/latest/download/Lozenge.apk" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#android"/></svg><span data-t="hero_apk">Android app</span></a>
+          <a class="btn soft" href="https://testflight.apple.com/join/Vr9PM1Qp" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#apple"/></svg><span data-t="hero_ios">iPhone</span></a>
+          <a class="btn soft" href="https://play.google.com/apps/testing/com.marekkalivoda.lozenge" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#android"/></svg><span data-t="hero_apk">Android</span></a>
         </div>
-        <p class="soon"><i aria-hidden="true"></i><span data-t="soon">Free to start · Android and web · iPhone coming to the App Store</span></p>
+        <p class="soon"><i aria-hidden="true"></i><span data-t="soon">Free to start · iPhone, Android and web</span></p>
       </div>
 
       <div class="demo" aria-label="Try a question">
@@ -257,7 +264,7 @@ footer p{margin:0;max-width:40rem}
           <div class="ex-name"><b>B2 First</b><small data-t="b2_range">Results 140–190 · pass at 160</small></div>
           <div class="track" role="img" aria-label="B2 First: 140 to 190, pass at 160"><span class="band" style="left:22.22%;width:55.56%;--p:40%"></span><span class="pass" style="left:44.44%"><em data-t="pass">pass</em></span></div>
           <ul class="counts">
-            <li><b>8</b> <span data-t="c_ruoe">Reading & Use of English papers</span></li><li><b>4</b> <span data-t="c_listening">Listening tests</span></li><li><b>34</b> <span data-t="c_writing">Writing tasks</span></li><li><b>7</b> <span data-t="c_speaking">Speaking tests</span></li><li><b>29</b> <span data-t="c_units">lesson units</span></li>
+            <li><b>8</b> <span data-t="c_ruoe">Reading & Use of English papers</span></li><li><b>8</b> <span data-t="c_listening">Listening tests</span></li><li><b>34</b> <span data-t="c_writing">Writing tasks</span></li><li><b>8</b> <span data-t="c_speaking">Speaking tests</span></li><li><b>29</b> <span data-t="c_units">lesson units</span></li>
           </ul>
         </div>
         <div class="ex">
@@ -273,7 +280,7 @@ footer p{margin:0;max-width:40rem}
 
     <section class="block" id="inside">
       <h2 data-t="in_h" data-html>What's <em>inside</em>.</h2>
-      <p class="sub" data-t="in_sub">Over 2,000 exam questions, 740 recordings, 150 listening reels and an AI examiner for Writing and Speaking. Everything is original and written in the exam&#x27;s format.</p>
+      <p class="sub" data-t="in_sub">Over 3,000 exam questions, 840 recordings, 150 listening reels and an AI examiner for Writing and Speaking. Everything is original and written in the exam&#x27;s format.</p>
       <div class="feats">
         <article class="feat"><div class="ic sky"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5.5A2 2 0 0 1 5.5 3.5H11v17H5.5a2 2 0 0 0-2 2zM20.5 5.5a2 2 0 0 0-2-2H13v17h5.5a2 2 0 0 1 2 2z"/></svg></div>
           <h3 data-t="f1_h">Ten minutes a day</h3><p data-t="f1_p">Tap the right word, build the sentence, spot the mistake. Tap “Why?” on a wrong answer and the AI explains it in your language – and your mistakes come back just before you&#x27;d forget them.</p></article>
@@ -303,16 +310,16 @@ footer p{margin:0;max-width:40rem}
         <article class="get-card">
           <div class="ic mint"><svg aria-hidden="true"><use href="#android"/></svg></div>
           <h3>Android</h3>
-          <p data-t="get_android">Download the app and install it straight from the file. Android 8.0 or newer.</p>
-          <a class="btn primary" href="https://github.com/Entexik/lozenge-app/releases/latest/download/Lozenge.apk" target="_blank" rel="noopener"><span data-t="get_android_cta">Download APK</span><svg aria-hidden="true"><use href="#arrow"/></svg></a>
-          <small data-t="get_android_note">Version 1.6 · 8 MB</small>
+          <p data-t="get_android">Join the Google Play test, then install Lozenge from Google Play. Android 8.0 or newer.</p>
+          <a class="btn primary" href="https://play.google.com/apps/testing/com.marekkalivoda.lozenge" target="_blank" rel="noopener"><span data-t="get_android_cta">Join on Google Play</span><svg aria-hidden="true"><use href="#arrow"/></svg></a>
+          <small data-t="get_android_note" data-html>Version 1.8 · or <a href="https://github.com/Entexik/lozenge-app/releases/latest/download/Lozenge.apk" target="_blank" rel="noopener">download the APK</a></small>
         </article>
         <article class="get-card">
           <div class="ic lav"><svg aria-hidden="true"><use href="#apple"/></svg></div>
           <h3>iPhone</h3>
-          <p data-t="get_ios">Coming to the App Store. Until then, the web version works in Safari.</p>
-          <a class="btn soft" href="app/" target="_blank" rel="noopener"><span data-t="get_ios_cta">Open in Safari</span><svg aria-hidden="true"><use href="#arrow"/></svg></a>
-          <small data-t="get_ios_note">App Store: coming soon</small>
+          <p data-t="get_ios">The public beta on TestFlight: install Apple's TestFlight app, then join. Widgets and Apple Watch included.</p>
+          <a class="btn primary" href="https://testflight.apple.com/join/Vr9PM1Qp" target="_blank" rel="noopener"><span data-t="get_ios_cta">Join the beta</span><svg aria-hidden="true"><use href="#arrow"/></svg></a>
+          <small data-t="get_ios_note">App Store: in review</small>
         </article>
         <article class="get-card">
           <div class="ic sky"><svg aria-hidden="true"><use href="#globe"/></svg></div>
@@ -322,7 +329,10 @@ footer p{margin:0;max-width:40rem}
           <small data-t="get_web_note">Free · no account needed</small>
         </article>
       </div>
-      <a class="gh" href="https://github.com/Entexik/lozenge-app" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#github"/></svg><span data-t="gh">Screenshots, release notes and feedback on GitHub</span></a>
+      <div class="links">
+        <a class="gh" href="https://discord.gg/3fZpk2kzp" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#discord"/></svg><span data-t="dc">Join the community on Discord</span></a>
+        <a class="gh" href="https://github.com/Entexik/lozenge-app" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#github"/></svg><span data-t="gh">Screenshots, release notes and feedback on GitHub</span></a>
+      </div>
     </section>
 
     <section class="final">
@@ -336,8 +346,9 @@ footer p{margin:0;max-width:40rem}
 
   <footer>
     <p data-t="legal">Lozenge is an independent practice app and isn't affiliated with Cambridge University Press &amp; Assessment. All texts, recordings and exercises are original.</p>
-    <p><a href="https://github.com/Entexik/lozenge-app" target="_blank" rel="noopener">GitHub</a> · <a href="privacy.html" target="_blank" rel="noopener" data-t="privacy">Privacy policy</a> · © 2026 Lozenge</p>
+    <p><a href="https://discord.gg/3fZpk2kzp" target="_blank" rel="noopener">Discord</a> · <a href="https://github.com/Entexik/lozenge-app" target="_blank" rel="noopener">GitHub</a> · <a href="privacy.html" target="_blank" rel="noopener" data-t="privacy">Privacy policy</a> · © 2026 Lozenge</p>
   </footer>
+  <p class="wordmark" aria-hidden="true">lozenge</p>
 </div>
 
 <script>
@@ -350,10 +361,10 @@ footer p{margin:0;max-width:40rem}
       hero_h: 'Polish your <em>gem</em>. Pass your Cambridge exam.',
       hero_lede: "Ten-minute lessons, timed mock tests and marked Writing and Speaking for all three Cambridge exams. It feels like a game and works like a tutor.",
       hero_cta: "Try it in your browser", hero_note: "Free · no account needed",
-      soon: "Free to start · Android and web · iPhone coming to the App Store", hero_apk: "Android app",
+      soon: "Free to start · iPhone, Android and web", hero_apk: "Android", hero_ios: "iPhone", dc: "Join the community on Discord",
       get_h: "Get <em>Lozenge</em>.", get_sub: "Pick where you learn. Your progress stays on your device.",
-      get_android: "Download the app and install it straight from the file. Android 8.0 or newer.", get_android_cta: "Download APK", get_android_note: "Version 1.6 · 8 MB",
-      get_ios: "Coming to the App Store. Until then, the web version works in Safari.", get_ios_cta: "Open in Safari", get_ios_note: "App Store: coming soon",
+      get_android: "Join the Google Play test, then install Lozenge from Google Play. Android 8.0 or newer.", get_android_cta: "Join on Google Play", get_android_note: 'Version 1.8 · or <a href="https://github.com/Entexik/lozenge-app/releases/latest/download/Lozenge.apk" target="_blank" rel="noopener">download the APK</a>',
+      get_ios: "The public beta on TestFlight: install Apple's TestFlight app, then join. Widgets and Apple Watch included.", get_ios_cta: "Join the beta", get_ios_note: "App Store: in review",
       get_web_h: "In your browser", get_web: "Nothing to install, on any computer or phone. Everything that's free in the app is free here.", get_web_cta: "Try it now", get_web_note: "Free · no account needed",
       gh: "Screenshots, release notes and feedback on GitHub",
       gem_label: "Your gem", gem_note: "Answer right to light the next facet.", gem_done: "Flawless. That's the idea.",
@@ -363,7 +374,7 @@ footer p{margin:0;max-width:40rem}
       c_reading: "Reading papers", c_ruoe: "Reading & Use of English papers", c_listening: "Listening tests", c_writing: "Writing tasks", c_speaking: "Speaking tests", c_units: "lesson units",
       scale_note: "The lighter part of each bar is a result at the level below; the green line is the pass mark. Lozenge shows you where your mock tests land on it.",
       in_h: "What's <em>inside</em>.",
-      in_sub: "Over 2,000 exam questions, 740 recordings, 150 listening reels and an AI examiner for Writing and Speaking. Everything is original and written in the exam's format.",
+      in_sub: "Over 3,000 exam questions, 840 recordings, 150 listening reels and an AI examiner for Writing and Speaking. Everything is original and written in the exam's format.",
       f1_h: "Ten minutes a day", f1_p: "Tap the right word, build the sentence, spot the mistake. Tap “Why?” on a wrong answer and the AI explains it in your language – and your mistakes come back just before you'd forget them.",
       f2_h: "Mock tests and Exam day", f2_p: "Timed papers with the real parts and questions, a score on the Cambridge English Scale for each – or sit a whole test in one go, in the real order with breaks, and get one final grade.",
       f3_h: "Listening reels", f3_p: "150 short scenes with British voices and video: answer a question, then read the transcript and save new words. Plus full Listening tests at exam speed.",
@@ -390,10 +401,10 @@ footer p{margin:0;max-width:40rem}
       hero_h: 'Vybrus svůj <em>drahokam</em>. Slož zkoušku Cambridge.',
       hero_lede: "Desetiminutové lekce, zkušební testy na čas a hodnocené psaní a mluvení pro všechny tři zkoušky Cambridge. Baví jako hra a učí jako lektor.",
       hero_cta: "Vyzkoušet v prohlížeči", hero_note: "Zdarma · bez registrace",
-      soon: "Začátek zdarma · Android a web · iPhone brzy v App Storu", hero_apk: "Aplikace pro Android",
+      soon: "Začátek zdarma · iPhone, Android a web", hero_apk: "Android", hero_ios: "iPhone", dc: "Přidej se ke komunitě na Discordu",
       get_h: "Stáhni si <em>Lozenge</em>.", get_sub: "Vyber si, kde se budeš učit. Tvůj postup zůstává v tvém zařízení.",
-      get_android: "Stáhni si aplikaci a nainstaluj ji přímo ze souboru. Android 8.0 nebo novější.", get_android_cta: "Stáhnout APK", get_android_note: "Verze 1.6 · 8 MB",
-      get_ios: "Brzy v App Storu. Do té doby funguje webová verze v Safari.", get_ios_cta: "Otevřít v Safari", get_ios_note: "App Store: už brzy",
+      get_android: "Přidej se k testu na Google Play a nainstaluj si Lozenge z Google Play. Android 8.0 nebo novější.", get_android_cta: "Přidat se na Google Play", get_android_note: 'Verze 1.8 · nebo <a href="https://github.com/Entexik/lozenge-app/releases/latest/download/Lozenge.apk" target="_blank" rel="noopener">stáhnout APK</a>',
+      get_ios: "Veřejná beta přes TestFlight: nainstaluj si aplikaci TestFlight od Applu a připoj se. I s widgety a Apple Watch.", get_ios_cta: "Připojit se k betě", get_ios_note: "App Store: ve schvalování",
       get_web_h: "V prohlížeči", get_web: "Nic se neinstaluje, funguje na počítači i v mobilu. Všechno, co je v aplikaci zdarma, je zdarma i tady.", get_web_cta: "Vyzkoušet hned", get_web_note: "Zdarma · bez registrace",
       gh: "Screenshoty, poznámky k verzím a zpětná vazba na GitHubu",
       gem_label: "Tvůj drahokam", gem_note: "Správnou odpovědí rozsvítíš další fasetu.", gem_done: "Bez chyby. Přesně o tom to je.",
@@ -403,7 +414,7 @@ footer p{margin:0;max-width:40rem}
       c_reading: "testů čtení", c_ruoe: "testů Reading & Use of English", c_listening: "poslechové testy", c_writing: "zadání na psaní", c_speaking: "testů mluvení", c_units: "kapitol lekcí",
       scale_note: "Světlejší část pruhu znamená výsledek o úroveň níž, zelená čára je hranice pro složení. Lozenge ti ukáže, kam na ní dopadají tvoje zkušební testy.",
       in_h: "Co je <em>uvnitř</em>.",
-      in_sub: "Přes 2 000 otázek ve formátu zkoušky, 740 nahrávek, 150 poslechových reels a AI zkoušející pro psaní a mluvení. Všechno je původní.",
+      in_sub: "Přes 3 000 otázek ve formátu zkoušky, 840 nahrávek, 150 poslechových reels a AI zkoušející pro psaní a mluvení. Všechno je původní.",
       f1_h: "Deset minut denně", f1_p: "Klepni na správné slovo, poskládej větu, najdi chybu. U špatné odpovědi klepni na „Proč?“ a AI ti ji vysvětlí česky – a chyby se vrátí přesně ve chvíli, kdy bys je začal zapomínat.",
       f2_h: "Zkušební testy a Den zkoušky", f2_p: "Testy na čas se skutečnými částmi a otázkami a skóre na Cambridge English Scale – nebo celý test v kuse, ve skutečném pořadí s přestávkami, s jednou výslednou známkou.",
       f3_h: "Poslechové reels", f3_p: "150 krátkých scén s britskými hlasy a videem: odpověz na otázku, přečti si přepis a ulož si nová slovíčka. K tomu celé poslechové testy v tempu zkoušky.",
