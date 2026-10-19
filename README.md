@@ -14,6 +14,7 @@
   <a href="https://play.google.com/apps/testing/com.marekkalivoda.lozenge"><img alt="Android: join the Google Play test" src="https://img.shields.io/badge/Android-Google%20Play%20test-3DDC84?style=for-the-badge&logo=googleplay&logoColor=white"></a>
   <a href="https://lozenge.online/app/"><img alt="Try it in your browser" src="https://img.shields.io/badge/Web-Try%20it%20now-4457FF?style=for-the-badge&logo=googlechrome&logoColor=white"></a>
   <a href="https://testflight.apple.com/join/Vr9PM1Qp"><img alt="iPhone: join the TestFlight beta" src="https://img.shields.io/badge/iPhone-TestFlight%20beta-0B0F2E?style=for-the-badge&logo=apple&logoColor=white"></a>
+  <a href="https://discord.gg/3fZpk2kzp"><img alt="Discord community" src="https://img.shields.io/badge/Discord-community-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
 </p>
 
 <p align="center">
@@ -113,7 +114,7 @@ vysvětlení chyb česky, poslechové reels, průvodci zkouškou a třídy pro u
 
 ## Feedback
 
-If you find a wrong answer in an exercise or something that doesn't work, please [open an issue](https://github.com/Entexik/lozenge-app/issues). It helps a lot.
+If you find a wrong answer in an exercise or something that doesn't work, please [open an issue](https://github.com/Entexik/lozenge-app/issues) or tell us on [Discord](https://discord.gg/3fZpk2kzp). It helps a lot.
 
 ---
 
