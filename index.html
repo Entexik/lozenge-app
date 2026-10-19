@@ -103,6 +103,7 @@ h2 em{font-style:normal;background:linear-gradient(90deg,var(--brand),var(--viol
 .rail::-webkit-scrollbar{display:none}
 .rail img{flex:none;width:clamp(13rem,24vw,17rem);aspect-ratio:645/1398;object-fit:cover;border-radius:1.75rem;scroll-snap-align:center;box-shadow:var(--shadow);background:var(--chip)}
 .rail img{transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.rail video{flex:none;width:clamp(13rem,24vw,17rem);aspect-ratio:9/16;object-fit:cover;border-radius:1.75rem;scroll-snap-align:center;box-shadow:var(--shadow);background:var(--chip);transform:translateY(.75rem)}
 .rail img:nth-child(odd){transform:rotate(-2deg)}
 .rail img:nth-child(even){transform:translateY(1.75rem) rotate(2deg)}
 .rail img:hover{transform:translateY(-.5rem) rotate(0) scale(1.03)}
@@ -193,6 +194,7 @@ footer p{margin:0;max-width:40rem}
     <div class="rail">
       <img src="img/shots/01-home.jpg" alt="Home: your gem and the grade you'd get today" loading="lazy">
       <img src="img/shots/02-tests.jpg" alt="Mock tests timed like the exam" loading="lazy">
+      <video src="img/promo.mp4" poster="img/promo-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Lozenge in 30 seconds"></video>
       <img src="img/shots/06-learn.jpg" alt="Five-minute lessons" loading="lazy">
       <img src="img/shots/03-speaking.jpg" alt="Speaking with real photos" loading="lazy">
       <img src="img/shots/05-guides.jpg" alt="Exam guides, card by card" loading="lazy">
