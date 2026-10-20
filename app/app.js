@@ -1698,7 +1698,7 @@
     tests: ["data-test1.js", "data-test2.js", "data-test3.js", "data-test4.js", "data-test5.js", "data-test6.js", "data-test7.js", "data-test8.js", "data-practice-reading.js"],
     listening: ["data-listening.js", "data-listening2.js", "data-listening3.js", "data-listening4.js", "data-listening5.js", "data-listening6.js", "data-listening7.js", "data-listening8.js", "data-practice-listening.js", "data-practice-listening2.js"],
     papers: ["data-b1-1.js", "data-b1-2.js", "data-b1-3.js", "data-b1-4.js", "data-b1-5.js", "data-b1-6.js", "data-b1-7.js", "data-b1-8.js", "data-b1-9.js", "data-b1-10.js", "data-c1-1.js", "data-c1-2.js", "data-c1-3.js", "data-c1-4.js", "data-c1-5.js", "data-c1-6.js", "data-c1-7.js", "data-c1-8.js", "data-c1-9.js", "data-c1-10.js", "data-b1-practice.js", "data-c1-practice.js"],
-    exl: ["data-b1-l1.js", "data-b1-l2.js", "data-b1-l3.js", "data-b1-l4.js", "data-c1-l1.js", "data-c1-l2.js", "data-c1-l3.js", "data-c1-l4.js", "data-b1-practice-listening.js", "data-c1-practice-listening.js"],
+    exl: ["data-b1-l1.js", "data-b1-l2.js", "data-b1-l3.js", "data-b1-l4.js", "data-c1-l1.js", "data-c1-l2.js", "data-c1-l3.js", "data-c1-l4.js", "data-c1-l5.js", "data-b1-practice-listening.js", "data-c1-practice-listening.js"],
     tracks: ["data-track-b1.js", "data-track-b1b.js", "data-track-c1.js", "data-track-c1b.js", "data-tasks-b1c1.js"],
     ws: ["data-writing-speaking.js", "data-more-ws.js", "data-writing3.js", "data-speaking3.js", "data-speaking-practice.js", "data-ws-b1c1.js", "data-writing4.js", "data-wpapers.js"],
     study: ["data-grammar.js", "data-grammar2.js", "data-grammar3.js", "data-vocab.js"],
@@ -1725,7 +1725,7 @@
   const OPTIONAL = new Set([]);
   LZ.optionalData = OPTIONAL;
   /* How many there will be once loaded – so Home can show the real numbers immediately. */
-  LZ.counts = { tests: 8, listening: 8, writing: 34, wpapers: 8, speaking: 8, grammar: 20, vocab: 130, recordings: 841 };
+  LZ.counts = { tests: 8, listening: 8, writing: 34, wpapers: 8, speaking: 8, grammar: 20, vocab: 130, recordings: 851 };
 
   /* Which groups each screen needs, by the first part of its address. */
   const NEEDS = {

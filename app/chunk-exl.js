@@ -850,6 +850,122 @@ LZ.data.lpapers.c1.push({
 });
 
 
+/* ---- data-c1-l5.js ---- */
+;/* C1 Advanced – Listening Test 5 (original practice material in the exam format). */
+LZ.data.lpapers.c1.push({
+  id: "c1l5", title: "Listening Test 5",
+  topics: "Three conversations · Drystone walling · A food historian · People who influenced us",
+  parts: {
+    1: {
+      extracts: [
+        { ctx: "You hear two colleagues talking about a change to their working arrangements.",
+          script: [["F", "Have you read the email? From next month we're all expected in the office four days a week."],
+            ["M", "I saw it. Honestly, I'm not as bothered as everyone else seems to be. Working from my kitchen table for three years hasn't exactly been glamorous."],
+            ["F", "It's not the office I mind. It's the journey. That's nearly three hours a day I'll be spending on a train, and nobody's offering to pay for the tickets."],
+            ["M", "Fair point. What annoys me is the way they announced it. No consultation, no explanation, just an email on a Friday afternoon. If they'd asked us, most people would probably have agreed to three days."],
+            ["F", "You should say that at the staff meeting."]],
+          qs: [
+            { q: "What is the woman's main objection to the change?", o: ["having to work in the office again", "losing the freedom to choose her hours", "the time and cost of travelling"], a: 2,
+              x: "‘It's not the office I mind. It's the journey… nearly three hours a day… and nobody's offering to pay for the tickets.’" },
+            { q: "What does the man criticise?", o: ["how the decision was communicated", "the number of office days required", "the conditions of working from home"], a: 0,
+              x: "‘What annoys me is the way they announced it. No consultation, no explanation, just an email.’" }
+          ] },
+        { ctx: "You hear two friends discussing a film based on a novel they have both read.",
+          script: [["M", "So, did the film live up to the book?"],
+            ["F", "In some ways it was better. I always found the middle of the novel rather slow, all those chapters about the family's history. The film cut most of that, and it moved along much faster."],
+            ["M", "That's exactly what I missed, though. Those chapters explain why the two brothers can't stand each other. Without them, the big argument at the end just seems to come out of nowhere."],
+            ["F", "Maybe. But you can't expect a two-hour film to include everything."],
+            ["M", "No, but they found time for three car chases that weren't in the book at all."]],
+          qs: [
+            { q: "What did the woman like about the film?", o: ["how closely it followed the novel", "its faster pace", "the way it showed the brothers"], a: 1,
+              x: "‘The film cut most of that, and it moved along much faster.’" },
+            { q: "The man feels that the film", o: ["should have been longer than two hours.", "added scenes that were too violent.", "failed to explain the characters' conflict."], a: 2,
+              x: "‘Without them, the big argument at the end just seems to come out of nowhere.’" }
+          ] },
+        { ctx: "You hear a man and a woman talking about using an app that records their exercise.",
+          script: [["F", "Are you still using that running app?"],
+            ["M", "I deleted it last week. At first I loved it. Seeing the graphs go up every week really got me out of the door. But after a while I was only running to beat my own numbers. I stopped enjoying the actual running."],
+            ["F", "I know what you mean. I've switched off all the notifications on mine. I still record my runs, but I only look at them once a month."],
+            ["M", "That sounds sensible. I might go back to it like that."],
+            ["F", "The bit I'd never give up is the route map, though. I'd be lost in the woods without it."]],
+          qs: [
+            { q: "Why did the man stop using the app?", o: ["It made him focus too much on his performance.", "It pushed him to run more often than he wanted.", "It gave him inaccurate information."], a: 0,
+              x: "‘after a while I was only running to beat my own numbers. I stopped enjoying the actual running.’" },
+            { q: "What does the woman value most about her app?", o: ["its monthly progress reports", "its maps of where she runs", "its reminders to exercise"], a: 1,
+              x: "‘The bit I'd never give up is the route map.’ She has switched off the notifications." }
+          ] }
+      ]
+    },
+    2: {
+      ctx: "You will hear a woman called Kate Morley talking about her work building drystone walls.",
+      script: [["F", "Hi, I'm Kate Morley, and I build drystone walls, mostly in the north of England. A drystone wall is built without any cement at all. The stones hold each other in place by their own weight and the way they're fitted together.\n\nI didn't come from a farming family. I was working as an accountant in Leeds when my brother gave me a weekend course as a birthday present, and by the Sunday evening I'd decided to change my life.\n\nPeople imagine the hardest part is lifting heavy stones. It isn't. The real skill is choosing the right stone for each place without picking it up twice. Experienced wallers say that if you handle a stone more than once, you've wasted your energy.\n\nEvery wall is really two walls leaning against each other, with small stones packed in the middle. We call that filling the hearting, and if it's done badly, the wall will bulge and fall within a few years.\n\nThe most important stones go along the top. They're called copes, and they're set on their edge to stop sheep from climbing over.\n\nA well-built wall can last two hundred years without repair. Surprisingly, the biggest threat isn't the weather. It's tree roots, which slowly push the stones apart from underneath.\n\nI work outdoors in every season except the depths of winter, because frost makes the ground too hard and the stones too slippery to handle safely. On a good day I can build about three metres of wall, which means moving roughly a tonne of stone.\n\nAnd the thing I love most? Finding objects buried in walls I'm repairing. I once found a clay pipe that a waller must have dropped about a hundred and fifty years ago."]],
+      items: [
+        { s: "Before becoming a waller, Kate worked as an {g}.", a: ["accountant"], x: "‘I was working as an accountant in Leeds’" },
+        { s: "Kate's first walling course was a {g} from her brother.", a: ["birthday present", "present"], x: "‘my brother gave me a weekend course as a birthday present’" },
+        { s: "A skilled waller tries not to pick up a stone {g}.", a: ["twice", "more than once"], x: "‘without picking it up twice’" },
+        { s: "The small stones packed inside the wall are called the {g}.", a: ["hearting"], x: "‘We call that filling the hearting’" },
+        { s: "The stones along the top stop {g} from climbing over.", a: ["sheep"], x: "‘set on their edge to stop sheep from climbing over’" },
+        { s: "According to Kate, the biggest threat to a wall is {g}.", a: ["tree roots", "roots"], x: "‘the biggest threat isn't the weather… It's tree roots’" },
+        { s: "Kate stops working in deep winter because of {g}.", a: ["frost"], x: "‘frost makes the ground too hard and the stones too slippery’" },
+        { s: "Inside one old wall, Kate found a {g}.", a: ["clay pipe", "pipe"], x: "‘I once found a clay pipe that a waller must have dropped’" }
+      ]
+    },
+    3: {
+      ctx: "You will hear an interview with a food historian called Marcus Bell.",
+      script: [
+        ["F", "My guest today is Marcus Bell, a food historian who recreates meals from centuries ago. Marcus, how did you get into this?"],
+        ["M", "By accident, really. For my doctorate I was studying letters written by servants in a country house, and I kept coming across descriptions of what they'd cooked. I got curious about whether the dishes would actually work, so I tried one at home. It was a disaster, but I was hooked."],
+        ["F", "What's the hardest thing about following old recipes?"],
+        ["M", "People assume it's finding the ingredients, but most of those are surprisingly easy to get. The real problem is that old recipes leave so much out. They'll say ‘add enough flour’ or ‘bake until it's done’, because the writer assumed you already knew how to cook. So a lot of my work is educated guesswork."],
+        ["F", "Were people's diets in the past as bad as we think?"],
+        ["M", "It depends enormously on who you were. Wealthy families ate huge amounts of meat and sugar, and their teeth suffered terribly. But ordinary farm workers often had a fairly healthy diet: plenty of vegetables, beans and bread. What they lacked was variety, especially in late winter, when the stores were running low."],
+        ["F", "Is there a dish you'd love to bring back?"],
+        ["M", "There's a spiced pudding made with breadcrumbs that was eaten all over the country in the seventeenth century. It's cheap, it uses up stale bread, and it's genuinely delicious. I've served it to guests without telling them how old it is, and they always ask for the recipe."],
+        ["F", "Do people ever react badly to your work?"],
+        ["M", "Occasionally. Some people find it strange that I'll spend three days making a single pie. But the criticism I take more seriously comes from other historians, who point out that I can never truly know how something tasted. They're right, of course. Our sense of taste is shaped by everything else we eat, so even if I follow a recipe perfectly, I'm tasting it as a modern person."],
+        ["F", "Finally, what do you hope people take away from your work?"],
+        ["M", "Mainly, that cooking has always been creative. We tend to imagine people in the past following tradition without question, but the old recipe books are full of crossings-out and notes like ‘better with less salt’. People were experimenting all the time, just as we do."]
+      ],
+      qs: [
+        { q: "How did Marcus become interested in historical food?", o: ["He grew up in a family of professional cooks.", "He was asked to cook for a museum event.", "He came across it during his academic research.", "He inherited a collection of old recipe books."], a: 2,
+          x: "‘For my doctorate I was studying letters… and I kept coming across descriptions of what they'd cooked.’" },
+        { q: "What does Marcus say is the main difficulty with old recipes?", o: ["They don't give precise instructions.", "The ingredients are hard to find today.", "They are written in unfamiliar language.", "They were meant for very large households."], a: 0,
+          x: "‘The real problem is that old recipes leave so much out.’ The ingredients are ‘surprisingly easy to get’." },
+        { q: "What point does Marcus make about the diet of ordinary people in the past?", o: ["It was healthier than most diets today.", "It contained too much sugar.", "It depended on meat from their own animals.", "It was limited in range at certain times of year."], a: 3,
+          x: "‘What they lacked was variety, especially in late winter’. The sugar was eaten by wealthy families." },
+        { q: "Why would Marcus like the spiced pudding to become popular again?", o: ["It has an unusual history.", "It is economical and tastes good.", "It is quicker to make than modern desserts.", "It was a favourite of famous people."], a: 1,
+          x: "‘It's cheap, it uses up stale bread, and it's genuinely delicious.’" },
+        { q: "Which criticism of his work does Marcus accept?", o: ["His methods take too long to be practical.", "He relies on modern equipment.", "He chooses dishes that are too unusual.", "He cannot experience food as people did in the past."], a: 3,
+          x: "‘I can never truly know how something tasted. They're right, of course.’" },
+        { q: "What does Marcus most want people to understand?", o: ["People have always adapted and experimented with recipes.", "Traditional methods produce better results.", "Old recipes should be kept in their original form.", "Modern cooks depend too much on written recipes."], a: 0,
+          x: "‘cooking has always been creative… People were experimenting all the time, just as we do.’" }
+      ]
+    },
+    4: {
+      ctx: "You will hear five short extracts in which people talk about someone who changed the way they work.",
+      tasks: [
+        { prompt: "For questions 21–25, choose from the list (A–H) who influenced each speaker.",
+          options: ["a former teacher", "a neighbour", "a manager", "a customer", "a grandparent", "a younger colleague", "a sports coach", "a stranger"] },
+        { prompt: "For questions 26–30, choose from the list (A–H) what each speaker learnt from this person.",
+          options: ["to ask for help", "to listen more carefully", "to take risks", "to manage money", "to be honest about mistakes", "to say no", "to stay calm under pressure", "to keep things simple"] }
+      ],
+      speakers: [
+        { a: [3, 4], x: ["D: ‘I made a mess of a job for a retired couple’, and the husband spoke to her.", "E: ‘I've owned up straight away ever since.’"],
+          script: [["F", "When I'd just started my own business fitting kitchens, I made a mess of a job for a retired couple. I'd measured one wall wrongly and the units didn't fit. My first instinct was to make excuses about the house being old. But the husband just looked at me and said, ‘Everyone gets things wrong. What people remember is whether you admit it.’ So I did, and I fixed it at my own cost. They've recommended me to about twenty people since, and I've owned up straight away ever since."]] },
+        { a: [5, 1], x: ["F: ‘a graduate joined my team, half my age’.", "B: ‘Now I let people finish, and I hear far more.’"],
+          script: [["M", "I'd been running a team for fifteen years when a graduate joined us, half my age. In meetings I'd always prided myself on being decisive, but she'd sit quietly and then ask one question that showed she'd heard what everyone really meant, not just what they said. My own boss had told me for years that I interrupted too much, and I'd ignored him. Watching her, I finally understood. Now I let people finish, and I hear far more."]] },
+        { a: [0, 2], x: ["A: ‘My old art teacher from school got in touch’.", "C: ‘I'd left my job and gone freelance… I've never regretted jumping.’"],
+          script: [["F", "My old art teacher from school got in touch out of the blue when I was thirty, after seeing some of my drawings online. I was working in insurance, safe and well paid, and she asked me why I'd never tried illustration professionally. My grandmother had always said the same thing, but somehow hearing it from her was different. Within a year I'd left my job and gone freelance. It's been scary at times, but I've never regretted jumping."]] },
+        { a: [6, 6], x: ["G: ‘my swimming coach when I was a teenager’.", "G: ‘I still do it today when the screen is full of planes’."],
+          script: [["M", "I'm an air traffic controller, and people assume my training taught me how to cope with pressure. It helped, but the person who really taught me was my swimming coach when I was a teenager. Before races I used to panic, and she'd make me count my breaths, slowly, in and out. I still do it today when the screen is full of planes and everyone's talking at once. Nobody would ever guess my heart is racing."]] },
+        { a: [1, 5], x: ["B: ‘The woman who lived next door to me’.", "F: ‘she turned down at least half of what she was asked to do… These days I decline things’."],
+          script: [["F", "The woman who lived next door to me when I first moved to the city ran a small charity. She was the busiest person I've ever met, yet she never seemed stressed. I asked her how, and she told me she turned down at least half of what she was asked to do, politely but firmly. I used to agree to every request at work and then stay until nine every night. These days I decline things without feeling guilty, and my evenings are my own again."]] }
+      ]
+    }
+  }
+});
+
+
 /* ---- data-b1-practice-listening.js ---- */
 ;/* B1 Preliminary practice Listening papers, kept for Practice only (practice: true), so the mock tests in
    data-b1-l1..4.js stay new for exam conditions. Practice › Listening lists these part by part. Original scripts
