@@ -11334,8 +11334,11 @@ LZ.data.examGuides = [{"id":"essay","skill":"writing","exams":["b2","c1"],"title
       c.textAlign = "left"; c.fillStyle = "#fff"; c.font = "700 44px " + UI; c.fillText(label, 140, y);
       c.textAlign = "right"; c.font = "800 56px " + DISPLAY; c.fillText(val, W - 140, y);
     });
-    c.textAlign = "center"; c.fillStyle = "#fff"; c.font = "800 46px " + DISPLAY;
-    c.fillText(T("Practising for my Cambridge exam with Lozenge"), W / 2, H - 150);
+    c.textAlign = "center"; c.fillStyle = "#fff";
+    /* long translations shrink to fit the card instead of running off its edges */
+    const line = T("Practising for my Cambridge exam with Lozenge");
+    let fs = 46; do { c.font = "800 " + fs + "px " + DISPLAY; fs -= 2; } while (c.measureText(line).width > W - 160 && fs > 24);
+    c.fillText(line, W / 2, H - 150);
     return cv;
   }
 
