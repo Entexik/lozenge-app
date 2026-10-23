@@ -68,7 +68,7 @@ British voices.
 
 <table>
   <tr>
-    <td align="center"><img src="screenshots/01-home.jpg" width="230" alt="Home: your gem and the grade you'd get today"><br><sub>Home</sub></td>
+    <td align="center"><img src="screenshots/01-home.jpg" width="230" alt="Home: the next lesson, today and the grade you'd get"><br><sub>Home</sub></td>
     <td align="center"><img src="screenshots/02-tests.jpg" width="230" alt="Mock tests: Test 1, Test 2 with all four papers"><br><sub>Mock tests</sub></td>
     <td align="center"><img src="screenshots/03-speaking.jpg" width="230" alt="Speaking with real photos to compare"><br><sub>Speaking</sub></td>
   </tr>
