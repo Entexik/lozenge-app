@@ -1171,7 +1171,7 @@ html.app-android[data-theme="dark"] :is(.toast,.unit-tip){background:rgba(24,28,
 .sx-exam.talking .sx-wave{display:flex}
 .sx-bubble{flex:1;min-width:0;padding:.85rem 1rem;border-radius:4px 22px 22px 22px;background:var(--sx-card);border:1px solid var(--sx-line)}
 .sx-bubble small{display:block;margin-bottom:.3rem;color:var(--sx-ink2);font:700 .75rem/1 var(--f-ui)}
-.sx-bubble p{margin:0;font:700 1.1875rem/1.4 var(--f-ui);color:var(--sx-ink)}
+.sx-bubble p{margin:0;font:600 1.0625rem/1.45 var(--f-ui);color:var(--sx-ink)}
 .sx-body .photo{background:linear-gradient(160deg,#2A3172,#3B1E5A);color:var(--sx-ink);border:1px solid var(--sx-line)}
 .sx-body .mm{background:var(--sx-card);border:1px solid var(--sx-line);color:var(--sx-ink)}
 .sx-body .mm.center{background:linear-gradient(135deg,#FF5C9E,#B14DFF);color:#fff;border-color:transparent}
@@ -1633,8 +1633,8 @@ a.hb-quest{text-decoration:none;color:inherit}
 .u-bar i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#5B7CFF,#7A5BFF)}
 
 /* Shop */
-.sx-head{display:flex;align-items:center;justify-content:space-between;padding:.5rem 0 .875rem}
-.sx-head h1{margin:0;font:800 2.125rem/1 var(--display);letter-spacing:-.04em}
+.shop-head{display:flex;align-items:center;justify-content:space-between;padding:.5rem 0 .875rem}
+.shop-head h1{margin:0;font:800 2.125rem/1 var(--display);letter-spacing:-.04em}
 .sx-stage{position:relative;min-height:15.5rem;padding:1.125rem;border-radius:1.75rem;color:#fff;overflow:hidden;
   background:radial-gradient(60% 60% at 74% 52%,color-mix(in srgb,var(--glow) 70%,transparent),transparent 72%),linear-gradient(160deg,#2A2F86,#141A52 72%);box-shadow:var(--e2)}
 .sx-stage::after{content:"";position:absolute;right:1.25rem;bottom:1.25rem;width:10rem;height:1.75rem;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--glow) 80%,#fff),transparent)}
