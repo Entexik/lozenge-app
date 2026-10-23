@@ -1,0 +1,6 @@
+{
+  "_help": "Season calendar read by the apps (web/season.js). Change start/end (YYYY-MM-DD, inclusive) or set off: true to stop a season early. Only seasons already built into the app can run; new ones need a new build.",
+  "seasons": [
+    { "id": "spooky26", "start": "2026-10-24", "end": "2026-11-08" }
+  ]
+}
