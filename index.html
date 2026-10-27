@@ -87,9 +87,33 @@ h2 em{font-style:normal;background:linear-gradient(transparent 62%,var(--mark) 6
 .store .tile.ios{background:linear-gradient(160deg,#5AC8FA,#0A84FF 55%,#3B5BFF);box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
 .store .tile.ios svg{fill:#fff;width:1.3rem;height:1.3rem;margin-top:-2px}
 .store .tile.play{background:#fff;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
+.store .tile.web{background:linear-gradient(160deg,#7B8CFF,#4457FF);box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
+.store .tile.web svg{fill:#fff;width:1.3rem;height:1.3rem}
 .store span{display:flex;flex-direction:column;text-align:left;font:800 1.1875rem/1.15 var(--ui);letter-spacing:-.01em}
 .store small{font:600 .75rem/1.3 var(--ui);opacity:.7}
 .store.web{background:var(--paper);color:var(--ink);box-shadow:var(--shadow),inset 0 0 0 1px var(--rule)}
+
+/* ---------- 30-second interactive mini-quiz ---------- */
+.try-box{max-width:44rem;margin:2.25rem auto 0;padding:clamp(1.25rem,4vw,2rem);border-radius:1.75rem;background:var(--paper);box-shadow:var(--shadow),inset 0 0 0 1px var(--rule);text-align:left}
+.try-top{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin-bottom:1rem}
+.try-lvl{display:inline-flex;align-items:center;gap:.4rem;padding:.3rem .75rem;border-radius:999px;background:var(--chip);font:800 .8125rem/1.2 var(--ui);color:var(--brand)}
+.try-dots{display:flex;gap:.4rem}
+.try-dots i{width:2rem;height:.4rem;border-radius:999px;background:var(--chip);transition:background .2s}
+.try-dots i.on{background:var(--brand)}
+.try-dots i.ok{background:var(--mint)}
+.try-q{margin:0 0 1.1rem;font:700 clamp(1.125rem,2.4vw,1.375rem)/1.4 var(--display);color:var(--ink)}
+.try-opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.625rem}
+@media (max-width:560px){.try-opts{grid-template-columns:minmax(0,1fr)}}
+.try-opt{display:flex;align-items:center;gap:.65rem;padding:.85rem 1rem;border-radius:1rem;border:1.5px solid var(--rule);background:var(--ground);color:var(--ink);font:700 .95rem/1.3 var(--ui);text-align:left;cursor:pointer;transition:transform .12s,border-color .15s,background .15s}
+.try-opt:hover:not(:disabled){border-color:var(--brand);transform:translateY(-1px)}
+.try-opt b{display:grid;place-items:center;flex:none;width:1.65rem;height:1.65rem;border-radius:.55rem;background:var(--paper);font:800 .8rem/1 var(--ui);color:var(--lead)}
+.try-opt.ok{border-color:var(--mint);background:color-mix(in srgb,var(--mint) 14%,var(--paper))}
+.try-opt.ok b{background:var(--mint);color:#fff}
+.try-opt.bad{border-color:var(--coral);background:color-mix(in srgb,var(--coral) 14%,var(--paper))}
+.try-opt.bad b{background:var(--coral);color:#fff}
+.try-why{margin:1rem 0 0;padding:.9rem 1rem;border-radius:1rem;background:var(--chip);font:600 .9rem/1.5 var(--ui);color:var(--ink-2)}
+.try-foot{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1.1rem}
+.try-btn{padding:.75rem 1.35rem;border-radius:999px;border:0;background:var(--brand);color:#fff;font:800 .9375rem/1 var(--ui);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem}
 .free{margin:1.25rem 0 0;font:600 .875rem/1.4 var(--ui);color:var(--lead)}
 .free i{display:inline-block;width:.5rem;height:.5rem;margin-right:.5rem;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px color-mix(in srgb,var(--mint) 22%,transparent);vertical-align:.08em}
 
@@ -185,6 +209,7 @@ footer p{margin:0;max-width:40rem}
       <div class="stores">
         <a class="store" href="https://testflight.apple.com/join/Vr9PM1Qp" target="_blank" rel="noopener"><i class="tile ios" aria-hidden="true"><svg><use href="#apple"/></svg></i><span><small data-t="st_ios_small">Beta for iPhone</small>TestFlight</span></a>
         <a class="store" href="https://play.google.com/apps/testing/com.marekkalivoda.lozenge" target="_blank" rel="noopener"><i class="tile play" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="#00D3FF" d="M3.6 2.2 13.7 12 3.6 21.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1Z"/><path fill="#00F076" d="m16.8 8.9-3.1 3.1L3.6 2.2c.3-.2.8-.2 1.2 0l12 6.7Z"/><path fill="#FF3A44" d="M16.8 15.1 4.8 21.8c-.4.2-.9.2-1.2 0L13.7 12l3.1 3.1Z"/><path fill="#FFD400" d="M20.4 12c0 .5-.3 1-.7 1.2l-2.9 1.9-3.1-3.1 3.1-3.1 2.9 1.9c.4.2.7.7.7 1.2Z"/></svg></i><span><small data-t="st_and_small">Test for Android</small>Google Play</span></a>
+        <a class="store web" href="app/"><i class="tile web" aria-hidden="true"><svg><use href="#globe"/></svg></i><span><small data-t="st_web_small">No install needed</small><b style="font:inherit" data-t="st_web">Try in browser</b></span></a>
       </div>
     </div>
   </section>
@@ -242,6 +267,11 @@ footer p{margin:0;max-width:40rem}
       <article class="exam reveal" style="--c1:#E0A100"><div class="lvl">C1</div><h3>Advanced</h3><p class="pass" data-t="pass180">Pass from 180</p>
         <ul><li><b>10</b> <span data-t="c_mock">mock papers</span></li><li><b>6</b> <span data-t="c_listen">Listening tests</span></li><li><b>24</b> <span data-t="c_write">Writing tasks</span></li><li><b>20</b> <span data-t="c_units">lesson units</span></li></ul></article>
     </div>
+    <div class="wrap center" style="margin-top:clamp(3rem,6vw,4.5rem)">
+      <p class="eyebrow" data-t="try_eye">30-second taste</p>
+      <h2 data-t="try_h" data-html>Try three real questions <em>right here</em>.</h2>
+      <div class="try-box" id="try-box" aria-live="polite"></div>
+    </div>
   </section>
 
   <section id="faq">
@@ -262,6 +292,7 @@ footer p{margin:0;max-width:40rem}
       <div class="stores">
         <a class="store" href="https://testflight.apple.com/join/Vr9PM1Qp" target="_blank" rel="noopener"><i class="tile ios" aria-hidden="true"><svg><use href="#apple"/></svg></i><span><small data-t="st_ios_small">Beta for iPhone</small>TestFlight</span></a>
         <a class="store" href="https://play.google.com/apps/testing/com.marekkalivoda.lozenge" target="_blank" rel="noopener"><i class="tile play" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="#00D3FF" d="M3.6 2.2 13.7 12 3.6 21.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1Z"/><path fill="#00F076" d="m16.8 8.9-3.1 3.1L3.6 2.2c.3-.2.8-.2 1.2 0l12 6.7Z"/><path fill="#FF3A44" d="M16.8 15.1 4.8 21.8c-.4.2-.9.2-1.2 0L13.7 12l3.1 3.1Z"/><path fill="#FFD400" d="M20.4 12c0 .5-.3 1-.7 1.2l-2.9 1.9-3.1-3.1 3.1-3.1 2.9 1.9c.4.2.7.7.7 1.2Z"/></svg></i><span><small data-t="st_and_small">Test for Android</small>Google Play</span></a>
+        <a class="store web" href="app/"><i class="tile web" aria-hidden="true"><svg><use href="#globe"/></svg></i><span><small data-t="st_web_small">No install needed</small><b style="font:inherit" data-t="st_web">Try in browser</b></span></a>
       </div>
       <div class="social">
         <a href="https://discord.gg/3fZpk2kzp" target="_blank" rel="noopener" aria-label="Discord"><svg aria-hidden="true"><use href="#discord"/></svg></a>
@@ -287,7 +318,8 @@ footer p{margin:0;max-width:40rem}
     cs: {
       nav_features: "Funkce", nav_exams: "Zkoušky",
       tagline: "Slož zkoušku Cambridge. <span>Deset minut denně.</span>",
-      st_ios_small: "Beta pro iPhone", st_and_small: "Test pro Android",
+      st_ios_small: "Beta pro iPhone", st_and_small: "Test pro Android", st_web_small: "Bez instalace", st_web: "Zkusit v prohlížeči",
+      try_eye: "Ochutnávka na 30 sekund", try_h: "Zkus si tři otázky <em>rovnou tady</em>.",
       f_eye: "Co v ní najdeš", f_h: "Všechno, co zkouška <em>chce</em>.",
       r1: "Deset minut v autobuse je jedna lekce.", r1p: "Krátké lekce na každý typ úlohy ze zkoušky: doplňování, tvoření slov, transformace vět. Každá odpověď je vysvětlená, klidně česky.",
       r2: "Zkušební testy na skutečný čas.", r2p: "Celé testy s časem jako u zkoušky a dvěma přehráními každé nahrávky. Dostaneš skóre na Cambridge English Scale a známku, jakou bys měl dnes.",
@@ -327,9 +359,56 @@ footer p{margin:0;max-width:40rem}
     document.querySelectorAll(".lang button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-lang") === lang)); });
   }
   document.querySelectorAll(".lang button").forEach(function (b) {
-    b.addEventListener("click", function () { lang = b.getAttribute("data-lang"); try { localStorage.setItem("lz-site-lang", lang); } catch (e) {} apply(); });
+    b.addEventListener("click", function () { lang = b.getAttribute("data-lang"); try { localStorage.setItem("lz-site-lang", lang); } catch (e) {} apply(); drawQuiz(); });
   });
+  var QS = [
+    { lvl: "B1 Preliminary · Part 5", q: "Take an umbrella ___ it rains on the way home.", o: ["in case", "unless", "so that", "even if"], a: 0,
+      en: "‘in case’ = because it might happen. ‘unless’ means ‘if not’.",
+      cs: "‚in case‘ = pro případ, že začne pršet. ‚unless‘ znamená ‚pokud ne‘." },
+    { lvl: "B2 First · Part 1", q: "She was ___ of stealing the documents, even though there was no proof.", o: ["blamed", "accused", "charged", "faulted"], a: 1,
+      en: "You are ‘accused OF’ something (blamed FOR, charged WITH).",
+      cs: "Po ‚accused‘ následuje předložka ‚of‘ (blamed FOR, charged WITH)." },
+    { lvl: "C1 Advanced · Part 1", q: "No sooner had the curtain gone up ___ the fire alarm went off.", o: ["when", "than", "that", "as"], a: 1,
+      en: "Inversion with ‘No sooner’ always pairs with ‘than’ (Hardly/Scarcely … when).",
+      cs: "Inverze s ‚No sooner‘ se pojí s ‚than‘ (zatímco Hardly/Scarcely s ‚when‘)." }
+  ];
+  var qi = 0, qPick = null, qScore = 0, qDone = [];
+  function drawQuiz() {
+    var box = document.getElementById("try-box");
+    if (!box) return;
+    if (qi >= QS.length) {
+      var msg = lang === "cs"
+        ? "Skóre " + qScore + " / 3! V aplikaci na tebe čeká přes 1 100 dalších úloh s vysvětlením."
+        : "You scored " + qScore + " / 3! Over 1,100 more exercises with instant explanations are waiting inside.";
+      var cta = lang === "cs" ? "Pokračovat v aplikaci →" : "Continue in the app →";
+      var again = lang === "cs" ? "Zkusit znovu" : "Try again";
+      box.innerHTML = '<p class="try-q">' + msg + '</p><div class="try-foot"><button type="button" class="try-opt" style="padding:.6rem 1rem" id="try-reset">' + again + '</button><a class="try-btn" href="app/">' + cta + '</a></div>';
+      document.getElementById("try-reset").onclick = function () { qi = 0; qPick = null; qScore = 0; qDone = []; drawQuiz(); };
+      return;
+    }
+    var item = QS[qi];
+    var dots = QS.map(function (_, idx) { return '<i class="' + (qDone[idx] ? "ok" : idx === qi ? "on" : "") + '"></i>'; }).join("");
+    var opts = item.o.map(function (t, idx) {
+      var cls = qPick == null ? "" : idx === item.a ? " ok" : idx === qPick ? " bad" : "";
+      return '<button type="button" class="try-opt' + cls + '" data-i="' + idx + '"' + (qPick != null ? " disabled" : "") + '><b>' + "ABCD"[idx] + '</b><span>' + t + '</span></button>';
+    }).join("");
+    var why = qPick != null ? '<div class="try-why">' + (qPick === item.a ? "✓ " : "✗ ") + (lang === "cs" ? item.cs : item.en) + '</div>'
+      + '<div class="try-foot"><span></span><button type="button" class="try-btn" id="try-next">' + (qi < 2 ? (lang === "cs" ? "Další otázka →" : "Next question →") : (lang === "cs" ? "Výsledek →" : "See result →")) + '</button></div>' : "";
+    box.innerHTML = '<div class="try-top"><span class="try-lvl">' + item.lvl + '</span><div class="try-dots">' + dots + '</div></div>'
+      + '<p class="try-q">' + item.q + '</p><div class="try-opts">' + opts + '</div>' + why;
+    box.querySelectorAll(".try-opt[data-i]").forEach(function (btn) {
+      btn.onclick = function () {
+        qPick = +btn.getAttribute("data-i");
+        if (qPick === item.a) qScore++;
+        qDone[qi] = true;
+        drawQuiz();
+      };
+    });
+    var nxt = document.getElementById("try-next");
+    if (nxt) nxt.onclick = function () { qi++; qPick = null; drawQuiz(); };
+  }
   apply();
+  drawQuiz();
   // features and exams fade in as they arrive
   document.documentElement.classList.add("js");
   // never leave anything hidden: whatever hasn't faded in after a moment simply shows
