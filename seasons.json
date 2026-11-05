@@ -1,5 +1,5 @@
 {
-  "_help": "Season calendar read by the apps (web/season.js). Change start/end (YYYY-MM-DD, inclusive) or set off: true to stop a season early. Only seasons already built into the app can run; new ones need a new build.",
+  "_help": "Season calendar read by the apps (web/season.js). Change start/end (YYYY-MM-DD, inclusive) or set off: true to stop a season early. Only seasons already built into the app can run; new ones need a new build. offers: store offers the app may show while their dates run (the store must really sell them, e.g. the App Store introductory price).",
   "seasons": [
     {
       "id": "spooky26",
@@ -15,6 +15,18 @@
       "id": "winter26",
       "start": "2026-12-01",
       "end": "2026-12-31"
+    },
+    {
+      "id": "newyear27",
+      "start": "2027-01-01",
+      "end": "2027-01-31"
+    }
+  ],
+  "offers": [
+    {
+      "id": "newyear27",
+      "start": "2027-01-01",
+      "end": "2027-01-07"
     }
   ]
 }
