@@ -3,26 +3,26 @@
 
 :root{
 
-  --ground:#F1F3FC; --paper:#FFFFFF; --paper-2:#E9EDFA; --rule:#E1E6F6; --rule-2:#C9D1EC;
-  --ink:#0B0F2E; --ink-2:#3A4168; --lead:#5C6489;
-  --brand:#4457FF; --brand-edge:#2F3FE0; --brand-ink:#2B3AD6; --brand-soft:#E6E9FF;
-  --right:#14B87A; --right-edge:#0C9A63; --right-soft:#D9F5E9; --wrong:#F2545B; --wrong-edge:#D23A41; --wrong-soft:#FFE2E4;
-  --warn:#C77A05; --warn-soft:#FFEFD1; --flame:#FF8A1F; --flame-soft:#FFEBD8;
-  --plus:#7A5BFF; --plus-edge:#5B3EE0; --plus-soft:#ECE6FF; --gold:#FFC53D; --gold-edge:#E0A518;
-  --p-lav:#E8E0FF; --p-lime:#EAF7C2; --p-sky:#D6EBFF; --p-peach:#FFE3D4; --p-pink:#FFDCEA; --p-mint:#D3F4E5;
-  --glass:rgba(255,255,255,.66); --glass-line:rgba(255,255,255,.8);
+
+  
+  --brand-edge:#2F3FE0; 
+  --wrong-edge:#D23A41; 
+  --warn:#C77A05; --flame:#FF8A1F; --flame-soft:#FFEBD8;
+  --gold:#FFC53D; --gold-edge:#E0A518;
+
+  
   --aur-a:rgba(120,190,255,.50); --aur-b:rgba(170,146,255,.44); --aur-c:rgba(255,190,165,.32);
   --nav:#0D1131; --nav-on:linear-gradient(135deg,#5B7CFF,#7A5BFF); --shadow-obj:rgba(14,22,90,.30);
   --scrim:rgba(11,15,46,.42);
-  --e1:0 1px 0 rgba(255,255,255,.95) inset,0 2px 4px rgba(24,32,96,.04),0 18px 36px -22px rgba(24,32,96,.36);
-  --e2:0 1px 0 rgba(255,255,255,.85) inset,0 10px 22px rgba(24,32,96,.08),0 42px 66px -30px rgba(24,32,96,.52);
-  --blue:#4457FF; --blue-soft:#E6E9FF; --blue-ink:#2B3AD6; --blue-edge:#2F3FE0;
-  --green:#14B87A; --green-soft:#D9F5E9; --green-ink:#0B7C52; --green-edge:#0C9A63;
-  --red:#F2545B; --red-soft:#FFE2E4; --red-ink:#C2333A; --red-edge:#D23A41;
-  --amber:#FFB01F; --amber-soft:#FFEFD1; --amber-ink:#8A5C05; --amber-edge:#E09210;
-  --pink:#FF5C9E; --pink-soft:#FFE0EE; --pink-ink:#C42C6C; --pink-edge:#DE3F81;
-  --teal:#12B5C9; --teal-soft:#D5F4F8; --teal-ink:#0A7E8C; --teal-edge:#0E97A8;
-  --violet:#7A5BFF; --violet-soft:#ECE6FF; --violet-edge:#5B3EE0;
+
+  
+  --blue-edge:#2F3FE0;
+
+  --red-edge:#D23A41;
+  --amber-edge:#E09210;
+  --pink-soft:#FFE0EE; --pink-ink:#C42C6C; --pink-edge:#DE3F81;
+  --teal-soft:#D5F4F8; --teal-ink:#0A7E8C; --teal-edge:#0E97A8;
+  --violet-edge:#5B3EE0;
 
   --r-xl:2rem; --r-lg:1.625rem; --r-md:1.25rem; --r-sm:.875rem; --r-pill:999px;
   --f-ui:"Plus Jakarta Sans",ui-sans-serif,-apple-system,system-ui,sans-serif;
@@ -36,50 +36,50 @@
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
 
-  --ground:#070814; --paper:#131734; --paper-2:#1B2040; --rule:#252B52; --rule-2:#353D6C;
-  --ink:#F3F4FF; --ink-2:#C6CBEC; --lead:#8E96C2;
-  --brand:#7B8CFF; --brand-edge:#5468F0; --brand-ink:#B0BBFF; --brand-soft:#1F2657;
-  --right:#2ED18E; --right-edge:#1FA36F; --right-soft:#0F3428; --wrong:#FF6E74; --wrong-edge:#D9484E; --wrong-soft:#3B1C20;
-  --warn:#E0A83F; --warn-soft:#33281A; --flame:#FF9C3D; --flame-soft:#3A2818;
-  --plus:#A08BFF; --plus-edge:#7A5BFF; --plus-soft:#251F52; --gold:#FFC957; --gold-edge:#E0A518;
-  --p-lav:#231C4A; --p-lime:#222B10; --p-sky:#10284A; --p-peach:#3A2216; --p-pink:#381A2B; --p-mint:#0E3126;
-  --glass:rgba(22,26,60,.62); --glass-line:rgba(255,255,255,.09);
+
+  
+  --brand-edge:#5468F0; 
+  --wrong-edge:#D9484E; 
+  --warn:#E0A83F; --flame:#FF9C3D; --flame-soft:#3A2818;
+  --plus-edge:#7A5BFF; --gold:#FFC957; --gold-edge:#E0A518;
+
+  
   --aur-a:rgba(60,110,255,.30); --aur-b:rgba(130,90,255,.30); --aur-c:rgba(255,120,90,.14);
   --nav:#181D46; --nav-on:linear-gradient(135deg,#6E86FF,#8F6BFF); --shadow-obj:rgba(0,0,0,.55);
   --scrim:rgba(0,0,0,.66);
-  --e1:0 1px 0 rgba(255,255,255,.05) inset,0 2px 6px rgba(0,0,0,.4),0 18px 40px -22px rgba(0,0,0,.85);
-  --e2:0 1px 0 rgba(255,255,255,.06) inset,0 10px 24px rgba(0,0,0,.5),0 44px 72px -30px rgba(0,0,0,.95);
-  --blue:#7B8CFF; --blue-soft:#1F2657; --blue-ink:#B0BBFF; --blue-edge:#5468F0;
-  --green:#2ED18E; --green-soft:#0F3428; --green-ink:#8BE8BF; --green-edge:#1FA36F;
-  --red:#FF6E74; --red-soft:#3B1C20; --red-ink:#FFB0B3; --red-edge:#D9484E;
-  --amber:#FFC957; --amber-soft:#33281A; --amber-ink:#FFDC94; --amber-edge:#E0A518;
-  --pink:#FF80B4; --pink-soft:#3A1A2C; --pink-ink:#FFB2D0; --pink-edge:#DE3F81;
-  --teal:#3FD2E4; --teal-soft:#0E2E34; --teal-ink:#93E8F2; --teal-edge:#1695AE;
-  --violet:#A08BFF; --violet-soft:#251F52; --violet-edge:#7A5BFF;
+
+  
+  --blue-edge:#5468F0;
+
+  --red-edge:#D9484E;
+  --amber-edge:#E0A518;
+  --pink-soft:#3A1A2C; --pink-ink:#FFB2D0; --pink-edge:#DE3F81;
+  --teal-soft:#0E2E34; --teal-ink:#93E8F2; --teal-edge:#1695AE;
+  --violet-edge:#7A5BFF;
 
 }}
 :root[data-theme="dark"]{
 
-  --ground:#070814; --paper:#131734; --paper-2:#1B2040; --rule:#252B52; --rule-2:#353D6C;
-  --ink:#F3F4FF; --ink-2:#C6CBEC; --lead:#8E96C2;
-  --brand:#7B8CFF; --brand-edge:#5468F0; --brand-ink:#B0BBFF; --brand-soft:#1F2657;
-  --right:#2ED18E; --right-edge:#1FA36F; --right-soft:#0F3428; --wrong:#FF6E74; --wrong-edge:#D9484E; --wrong-soft:#3B1C20;
-  --warn:#E0A83F; --warn-soft:#33281A; --flame:#FF9C3D; --flame-soft:#3A2818;
-  --plus:#A08BFF; --plus-edge:#7A5BFF; --plus-soft:#251F52; --gold:#FFC957; --gold-edge:#E0A518;
-  --p-lav:#231C4A; --p-lime:#222B10; --p-sky:#10284A; --p-peach:#3A2216; --p-pink:#381A2B; --p-mint:#0E3126;
-  --glass:rgba(22,26,60,.62); --glass-line:rgba(255,255,255,.09);
+
+  
+  --brand-edge:#5468F0; 
+  --wrong-edge:#D9484E; 
+  --warn:#E0A83F; --flame:#FF9C3D; --flame-soft:#3A2818;
+  --plus-edge:#7A5BFF; --gold:#FFC957; --gold-edge:#E0A518;
+
+  
   --aur-a:rgba(60,110,255,.30); --aur-b:rgba(130,90,255,.30); --aur-c:rgba(255,120,90,.14);
   --nav:#181D46; --nav-on:linear-gradient(135deg,#6E86FF,#8F6BFF); --shadow-obj:rgba(0,0,0,.55);
   --scrim:rgba(0,0,0,.66);
-  --e1:0 1px 0 rgba(255,255,255,.05) inset,0 2px 6px rgba(0,0,0,.4),0 18px 40px -22px rgba(0,0,0,.85);
-  --e2:0 1px 0 rgba(255,255,255,.06) inset,0 10px 24px rgba(0,0,0,.5),0 44px 72px -30px rgba(0,0,0,.95);
-  --blue:#7B8CFF; --blue-soft:#1F2657; --blue-ink:#B0BBFF; --blue-edge:#5468F0;
-  --green:#2ED18E; --green-soft:#0F3428; --green-ink:#8BE8BF; --green-edge:#1FA36F;
-  --red:#FF6E74; --red-soft:#3B1C20; --red-ink:#FFB0B3; --red-edge:#D9484E;
-  --amber:#FFC957; --amber-soft:#33281A; --amber-ink:#FFDC94; --amber-edge:#E0A518;
-  --pink:#FF80B4; --pink-soft:#3A1A2C; --pink-ink:#FFB2D0; --pink-edge:#DE3F81;
-  --teal:#3FD2E4; --teal-soft:#0E2E34; --teal-ink:#93E8F2; --teal-edge:#1695AE;
-  --violet:#A08BFF; --violet-soft:#251F52; --violet-edge:#7A5BFF;
+
+  
+  --blue-edge:#5468F0;
+
+  --red-edge:#D9484E;
+  --amber-edge:#E0A518;
+  --pink-soft:#3A1A2C; --pink-ink:#FFB2D0; --pink-edge:#DE3F81;
+  --teal-soft:#0E2E34; --teal-ink:#93E8F2; --teal-edge:#1695AE;
+  --violet-edge:#7A5BFF;
 
 }
 

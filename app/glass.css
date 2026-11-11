@@ -9,9 +9,9 @@
 
 /* ---------- tokens: light ---------- */
 :root{
-  --ground:#E7ECFF;
+
   --paper:rgba(255,255,255,.60); --paper-2:rgba(255,255,255,.36);
-  --rule:rgba(64,80,180,.13); --rule-2:rgba(64,80,180,.27);
+  --rule-2:rgba(64,80,180,.27);
   --glass:rgba(255,255,255,.52); --glass-line:rgba(255,255,255,.82);
   --rim:inset 0 1px 0 rgba(255,255,255,.96),inset 0 0 0 1px rgba(255,255,255,.56),inset 0 -12px 20px -14px rgba(255,255,255,.7);
   --e1:var(--rim),0 1px 2px rgba(40,52,150,.06),0 16px 30px -16px rgba(40,52,150,.34);
@@ -25,9 +25,9 @@
   --dock-fill:rgba(240,244,255,.72);
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --ground:#060716;
+
   --paper:rgba(38,44,104,.50); --paper-2:rgba(255,255,255,.06);
-  --rule:rgba(255,255,255,.10); --rule-2:rgba(255,255,255,.19);
+  --rule-2:rgba(255,255,255,.19);
   --glass:rgba(40,48,112,.50); --glass-line:rgba(255,255,255,.16);
   --rim:inset 0 1px 0 rgba(255,255,255,.26),inset 0 0 0 1px rgba(255,255,255,.10),inset 0 -12px 20px -14px rgba(255,255,255,.10);
   --e1:var(--rim),0 16px 30px -14px rgba(0,0,0,.62);
@@ -41,9 +41,9 @@
   --dock-fill:rgba(12,14,40,.72);
 }}
 :root[data-theme="dark"]{
-  --ground:#060716;
+
   --paper:rgba(38,44,104,.50); --paper-2:rgba(255,255,255,.06);
-  --rule:rgba(255,255,255,.10); --rule-2:rgba(255,255,255,.19);
+  --rule-2:rgba(255,255,255,.19);
   --glass:rgba(40,48,112,.50); --glass-line:rgba(255,255,255,.16);
   --rim:inset 0 1px 0 rgba(255,255,255,.26),inset 0 0 0 1px rgba(255,255,255,.10),inset 0 -12px 20px -14px rgba(255,255,255,.10);
   --e1:var(--rim),0 16px 30px -14px rgba(0,0,0,.62);
@@ -56,6 +56,12 @@
   --lens-glow:rgba(120,140,255,.5);
   --dock-fill:rgba(12,14,40,.72);
 }
+
+/* BEGIN TOKENS: generated from design/tokens.json by tools/tokens.js – edit the JSON, not this block */
+:root{--ground:#E7ECFF;--ink:#0B0F2E;--ink-2:#3A4168;--lead:#5C6489;--rule:rgba(64,80,180,.13);--brand:#4457FF;--blue:#4457FF;--brand-ink:#2B3AD6;--blue-ink:#2B3AD6;--brand-soft:#E6E9FF;--blue-soft:#E6E9FF;--violet:#7A5BFF;--plus:#7A5BFF;--violet-soft:#ECE6FF;--plus-soft:#ECE6FF;--green:#14B87A;--right:#14B87A;--green-edge:#0C9A63;--right-edge:#0C9A63;--green-soft:#D9F5E9;--right-soft:#D9F5E9;--green-ink:#0B7C52;--red:#F2545B;--wrong:#F2545B;--red-soft:#FFE2E4;--wrong-soft:#FFE2E4;--red-ink:#C2333A;--amber:#FFB01F;--amber-soft:#FFEFD1;--warn-soft:#FFEFD1;--amber-ink:#8A5C05;--pink:#FF5C9E;--teal:#12B5C9;--p-lav:#E8E0FF;--p-lime:#EAF7C2;--p-sky:#D6EBFF;--p-peach:#FFE3D4;--p-pink:#FFDCEA;--p-mint:#D3F4E5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ground:#060716;--ink:#F3F4FF;--ink-2:#C6CBEC;--lead:#8E96C2;--rule:rgba(255,255,255,.1);--brand:#7B8CFF;--blue:#7B8CFF;--brand-ink:#B0BBFF;--blue-ink:#B0BBFF;--brand-soft:#1F2657;--blue-soft:#1F2657;--violet:#A08BFF;--plus:#A08BFF;--violet-soft:#251F52;--plus-soft:#251F52;--green:#2ED18E;--right:#2ED18E;--green-edge:#1FA36F;--right-edge:#1FA36F;--green-soft:#0F3428;--right-soft:#0F3428;--green-ink:#8BE8BF;--red:#FF6E74;--wrong:#FF6E74;--red-soft:#3B1C20;--wrong-soft:#3B1C20;--red-ink:#FFB0B3;--amber:#FFC957;--amber-soft:#33281A;--warn-soft:#33281A;--amber-ink:#FFDC94;--pink:#FF80B4;--teal:#3FD2E4;--p-lav:#231C4A;--p-lime:#222B10;--p-sky:#10284A;--p-peach:#3A2216;--p-pink:#381A2B;--p-mint:#0E3126}}
+:root[data-theme="dark"]{--ground:#060716;--ink:#F3F4FF;--ink-2:#C6CBEC;--lead:#8E96C2;--rule:rgba(255,255,255,.1);--brand:#7B8CFF;--blue:#7B8CFF;--brand-ink:#B0BBFF;--blue-ink:#B0BBFF;--brand-soft:#1F2657;--blue-soft:#1F2657;--violet:#A08BFF;--plus:#A08BFF;--violet-soft:#251F52;--plus-soft:#251F52;--green:#2ED18E;--right:#2ED18E;--green-edge:#1FA36F;--right-edge:#1FA36F;--green-soft:#0F3428;--right-soft:#0F3428;--green-ink:#8BE8BF;--red:#FF6E74;--wrong:#FF6E74;--red-soft:#3B1C20;--wrong-soft:#3B1C20;--red-ink:#FFB0B3;--amber:#FFC957;--amber-soft:#33281A;--warn-soft:#33281A;--amber-ink:#FFDC94;--pink:#FF80B4;--teal:#3FD2E4;--p-lav:#231C4A;--p-lime:#222B10;--p-sky:#10284A;--p-peach:#3A2216;--p-pink:#381A2B;--p-mint:#0E3126}
+/* END TOKENS */
 
 /* ---------- the living background ---------- */
 html{background:var(--ground)}
@@ -1752,3 +1758,40 @@ a.hb-quest{text-decoration:none;color:inherit}
 .sx-pill.on{background:var(--right-soft);color:var(--right-edge)}
 .sx-pill.buy{background:var(--ink);color:var(--ground)}
 .sx-pill .icon{width:.625rem;height:.625rem;color:#7FD8FF}
+
+/* Contrast (audit F3–F5, Nov 2026): same colours, only easier to read.
+   Green buttons: a deeper bottom stop and a soft text shadow, so white text reaches about 3:1. */
+.btn.green:not(.ghost):not(.sm){background:linear-gradient(180deg,#2BC98C,#0B8F5C);text-shadow:0 1px 1px rgba(0,60,30,.35)}
+/* Amber labels on their pale fill: the darker amber ink (5:1 instead of 3:1) */
+.pill.amber,.duo-retry{color:var(--amber-ink)}
+/* Dark mode: white text sits on the deeper brand edge (4.5:1) instead of the light brand (3:1) */
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lv-row.now .lv-node,:root:not([data-theme="light"]) .qnav button.current,:root:not([data-theme="light"]) .parttabs a[aria-current="page"],:root:not([data-theme="light"]) .gap.current .n,:root:not([data-theme="light"]) .sec h3 .k,:root:not([data-theme="light"]) .slim-q .n,:root:not([data-theme="light"]) .opt[aria-pressed="true"] .k,:root:not([data-theme="light"]) .duo-opt.on .k,:root:not([data-theme="light"]) .nudge-ic,:root:not([data-theme="light"]) .league-me,:root:not([data-theme="light"]) .pw-step.now .pw-dot,:root:not([data-theme="light"]) .ins-focus-ic,:root:not([data-theme="light"]) .wpop-btn.main,:root:not([data-theme="light"]) .onb .ex-pick button.on,:root:not([data-theme="light"]) .sh-pack-price{background:var(--brand-edge)}}
+:root[data-theme="dark"] .lv-row.now .lv-node,:root[data-theme="dark"] .qnav button.current,:root[data-theme="dark"] .parttabs a[aria-current="page"],:root[data-theme="dark"] .gap.current .n,:root[data-theme="dark"] .sec h3 .k,:root[data-theme="dark"] .slim-q .n,:root[data-theme="dark"] .opt[aria-pressed="true"] .k,:root[data-theme="dark"] .duo-opt.on .k,:root[data-theme="dark"] .nudge-ic,:root[data-theme="dark"] .league-me,:root[data-theme="dark"] .pw-step.now .pw-dot,:root[data-theme="dark"] .ins-focus-ic,:root[data-theme="dark"] .wpop-btn.main,:root[data-theme="dark"] .onb .ex-pick button.on,:root[data-theme="dark"] .sh-pack-price{background:var(--brand-edge)}
+
+/* Wardrobe tiles show the short bonus ("+10 %", as in the apps); the streak shield has no short form, so it may wrap (audit M1) */
+.sx-tile .u-perk.small.p-shield{white-space:normal;text-align:center;line-height:1.15}
+
+/* Goals 2.0 (plan.js): the catch-up note and how the learner is doing against the plan */
+.pl-note { margin: 0 0 10px; font-size: .86rem; color: var(--ink2); }
+.pl-pace { display: grid; gap: 4px; }
+.pl-pace b { font-size: 1.02rem; }
+.pl-pace small { color: var(--ink2); }
+.pl-pace.ahead b, .pl-pace.reached b, .pl-pace.on b { color: var(--green, #1FA36B); }
+.pl-pace.behind b { color: var(--amber-ink, #A8620A); }
+.pl-pace .btn { justify-self: start; margin-top: 6px; }
+
+/* One big reward in the popup (a video watched, a level): the object, a heading and chips. */
+.rw-hero { display: grid; justify-items: center; gap: 10px; padding: 4px 0 8px; }
+.rw-hero-art { position: relative; display: grid; place-items: center; width: 132px; height: 132px; animation: rw-pop-in .55s cubic-bezier(.2, 1.3, .4, 1) both; }
+.rw-hero-art::before { content: ""; position: absolute; inset: 8px; border-radius: 50%; background: radial-gradient(circle, rgba(255, 193, 61, .38), rgba(255, 193, 61, 0) 68%); }
+.rw-hero-art .obj { position: relative; --s: 7rem !important; }
+.rw-hero h2 { margin: 0; text-align: center; text-wrap: balance; }
+.rw-hero-sub { margin: 0; color: var(--lead); font-weight: 600; }
+.rw-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 2px; }
+.rw-chip { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px 8px 10px; border-radius: 999px; background: var(--paper); box-shadow: var(--e1);
+  opacity: 0; animation: rw-in .45s cubic-bezier(.2, 1.2, .4, 1) both; animation-delay: .35s; }
+.rw-chip + .rw-chip { animation-delay: .5s; }
+.rw-chip b { font: 800 1.125rem/1 var(--display); letter-spacing: -.02em; color: var(--ink); }
+.rw-chip small { font: 700 .875rem/1 var(--f-ui); color: var(--lead); }
+@keyframes rw-pop-in { from { opacity: 0; transform: scale(.6) rotate(-8deg); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .rw-hero-art, .rw-chip { animation: none; opacity: 1; } }
