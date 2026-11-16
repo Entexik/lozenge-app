@@ -7,193 +7,267 @@
 <link rel="canonical" href="https://lozenge.online/">
 <link rel="icon" href="img/icon.png">
 <link rel="apple-touch-icon" href="img/icon.png">
-<meta name="description" content="Lozenge: practice for Cambridge B1 Preliminary, B2 First and C1 Advanced. Ten-minute lessons, timed mock tests, Writing marked by an AI examiner and a live AI Speaking examiner.">
-<meta property="og:title" content="Lozenge · Cambridge exam prep">
+<meta name="description" content="Pass your Cambridge exam. Ten-minute lessons, timed mock tests scored on the Cambridge English Scale, and an AI examiner for Writing and Speaking. B1 Preliminary, B2 First and C1 Advanced.">
+<meta property="og:title" content="Lozenge · Pass your Cambridge exam">
 <meta property="og:description" content="Ten-minute lessons, timed mock tests and an AI examiner for B1, B2 and C1.">
 <meta property="og:image" content="https://lozenge.online/img/shots/01-home.jpg">
 <meta property="og:url" content="https://lozenge.online/">
-<meta name="theme-color" content="#F4F3FC" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#07081A" media="(prefers-color-scheme: dark)">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="apple-itunes-app" content="app-id=6819167082">
+<meta name="theme-color" content="#EEF0FF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#060716" media="(prefers-color-scheme: dark)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Plus+Jakarta+Sans:wght@400..800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Plus+Jakarta+Sans:wght@500..800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Lozenge","operatingSystem":"iOS","applicationCategory":"EducationalApplication","url":"https://lozenge.online/","offers":{"@type":"Offer","price":"0","priceCurrency":"CZK"}}</script>
 <style>
 :root{
-  --ground:#F4F3FC; --paper:#FFFFFF; --ink:#0B0F2E; --ink-2:#3A4168; --lead:#6A7196; --rule:#E2E3F3;
-  --brand:#4457FF; --violet:#7A5BFF; --pink:#FF5C9E; --mint:#14B87A;
-  --chip:#ECEBFA; --btn:#0B0F2E; --btn-ink:#FFFFFF; --mark:#FFD3C4; --coral:#FF6B4A; --sun:#FFC23D;
-  --deboss:#DAD7F0; --lit:rgba(255,255,255,1); --dent:rgba(20,22,70,.3);
-  --shadow:0 1px 0 rgba(255,255,255,.9) inset,0 24px 50px -28px rgba(30,30,110,.45);
+  --ground:#EEF0FF; --paper:#FFFFFF; --ink:#0B0F2E; --ink2:#3A4168; --lead:#5C6489; --rule:rgba(64,80,180,.14);
+  --glass:rgba(255,255,255,.66); --glass2:rgba(255,255,255,.86); --edge:rgba(255,255,255,.9);
+  --brand:#4457FF; --brandFill:#4457FF; --redInk:#C2333A; --brandInk:#2B3AD6; --brandSoft:#E6E9FF; --violet:#7A5BFF; --green:#14B87A; --greenEdge:#0C9A63;
+  --red:#F2545B; --amber:#FFB01F; --teal:#12B5C9; --pink:#FF5C9E;
+  --shadow:0 30px 60px -32px rgba(40,52,160,.45); --shadowS:0 14px 30px -18px rgba(40,52,160,.4);
   --display:"Bricolage Grotesque","Plus Jakarta Sans",ui-sans-serif,system-ui,sans-serif;
   --ui:"Plus Jakarta Sans",ui-sans-serif,-apple-system,system-ui,sans-serif;
+  --read:"Source Serif 4",Georgia,serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --ground:#07081A; --paper:#11132E; --ink:#F3F4FF; --ink-2:#C6CBEC; --lead:#8E95C2; --rule:#20244A;
-  --brand:#7B8CFF; --violet:#A08BFF; --pink:#FF80B4; --chip:#181B3D; --btn:#F3F4FF; --btn-ink:#0B0F2E; --mark:#5A2A2A; --deboss:#2A3070; --lit:rgba(255,255,255,.22); --dent:rgba(0,0,0,.95);
-  --shadow:0 1px 0 rgba(255,255,255,.05) inset,0 24px 50px -24px rgba(0,0,0,.9);
+  --ground:#060716; --paper:#11132E; --ink:#F3F4FF; --ink2:#C6CBEC; --lead:#8E96C2; --rule:rgba(255,255,255,.1);
+  --glass:rgba(40,48,106,.5); --glass2:rgba(42,50,114,.78); --edge:rgba(255,255,255,.14);
+  --brand:#7B8CFF; --brandFill:#3F50E0; --redInk:#FF9297; --brandInk:#B0BBFF; --brandSoft:#1F2657; --shadow:0 30px 60px -30px rgba(0,0,0,.9); --shadowS:0 14px 30px -18px rgba(0,0,0,.8);
 }}
 :root[data-theme="dark"]{
-  --ground:#07081A; --paper:#11132E; --ink:#F3F4FF; --ink-2:#C6CBEC; --lead:#8E95C2; --rule:#20244A;
-  --brand:#7B8CFF; --violet:#A08BFF; --pink:#FF80B4; --chip:#181B3D; --btn:#F3F4FF; --btn-ink:#0B0F2E; --mark:#5A2A2A; --deboss:#2A3070; --lit:rgba(255,255,255,.22); --dent:rgba(0,0,0,.95);
-  --shadow:0 1px 0 rgba(255,255,255,.05) inset,0 24px 50px -24px rgba(0,0,0,.9);
+  --ground:#060716; --paper:#11132E; --ink:#F3F4FF; --ink2:#C6CBEC; --lead:#8E96C2; --rule:rgba(255,255,255,.1);
+  --glass:rgba(40,48,106,.5); --glass2:rgba(42,50,114,.78); --edge:rgba(255,255,255,.14);
+  --brand:#7B8CFF; --brandFill:#3F50E0; --redInk:#FF9297; --brandInk:#B0BBFF; --brandSoft:#1F2657; --shadow:0 30px 60px -30px rgba(0,0,0,.9); --shadowS:0 14px 30px -18px rgba(0,0,0,.8);
 }
 *{box-sizing:border-box}
-html{background:var(--ground);scroll-behavior:smooth}
-body{margin:0;background:var(--ground);color:var(--ink);font:400 1rem/1.6 var(--ui);-webkit-font-smoothing:antialiased;overflow-x:clip}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:12px}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.wrap{max-width:1180px;margin:0 auto;padding-inline:max(16px,4vw)}
-section{padding-block:clamp(3.5rem,9vw,7rem)}
-.eyebrow{margin:0 0 .75rem;font:700 .8125rem/1.2 var(--ui);letter-spacing:.14em;text-transform:uppercase;color:var(--lead)}
-h2{margin:0;font:800 clamp(2.2rem,5.4vw,4rem)/1 var(--display);letter-spacing:-.045em}
-h2 em{font-style:normal;background:linear-gradient(transparent 62%,var(--mark) 62%,var(--mark) 92%,transparent 92%);padding:0 .06em;margin:0 -.06em}
-.sub{margin:1rem 0 0;max-width:38rem;font-size:1.125rem;color:var(--ink-2)}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font:500 17px/1.55 var(--ui);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--brandInk)}
+::selection{background:#FFD45C;color:#1B1440}
+:focus-visible{outline:3px solid #FFD45C;outline-offset:3px;border-radius:12px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);letter-spacing:-.035em;line-height:1.02;margin:0}
+h2{font-size:clamp(34px,5.4vw,58px)}
+.kicker{font:800 13px/1 var(--ui);letter-spacing:.14em;text-transform:uppercase;color:var(--brand)}
+.lead{color:var(--ink2);font-size:clamp(17px,2vw,19px);max-width:620px}
 
-/* ---------- top bar ---------- */
-.bar{position:sticky;top:0;z-index:10;backdrop-filter:saturate(1.6) blur(16px);-webkit-backdrop-filter:saturate(1.6) blur(16px);background:color-mix(in srgb,var(--ground) 72%,transparent)}
-.bar .wrap{display:flex;align-items:center;gap:1rem;height:4rem}
-.logo{display:flex;align-items:center;gap:.5rem;text-decoration:none;font:800 1.25rem/1 var(--display);letter-spacing:-.04em}
-.logo img{width:2rem;height:2rem;border-radius:.6rem}
-.bar nav{margin-left:auto;display:flex;align-items:center;gap:.25rem}
-.bar nav a.link{padding:.5rem .75rem;border-radius:999px;text-decoration:none;font:600 .9375rem/1 var(--ui);color:var(--ink-2)}
-.bar nav a.link:hover{background:var(--chip)}
-.lang{display:flex;padding:3px;border-radius:999px;background:var(--chip)}
-.lang button{border:0;background:none;padding:.375rem .625rem;border-radius:999px;font:700 .75rem/1 var(--ui);color:var(--lead);cursor:pointer}
-.lang button[aria-pressed="true"]{background:var(--paper);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
-@media (max-width:720px){.bar nav a.link{display:none}}
+/* the app's colour orbs, drifting slowly behind everything */
+.orbs{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.orbs i{position:absolute;border-radius:50%;filter:blur(10px);opacity:.75;animation:drift 22s ease-in-out infinite}
+.orbs i:nth-child(1){width:620px;height:620px;left:-200px;top:-160px;background:radial-gradient(circle,rgba(68,87,255,.42),transparent 66%)}
+.orbs i:nth-child(2){width:560px;height:560px;right:-220px;top:260px;background:radial-gradient(circle,rgba(255,92,158,.26),transparent 66%);animation-duration:28s;animation-direction:reverse}
+.orbs i:nth-child(3){width:640px;height:640px;left:20%;bottom:-320px;background:radial-gradient(circle,rgba(18,181,201,.22),transparent 66%);animation-duration:32s}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,30px)}}
 
-/* ---------- hero: the name itself ---------- */
-.hero{position:relative;padding-block:clamp(2rem,6vw,4rem) clamp(3rem,7vw,5rem);text-align:center;isolation:isolate}
-.hero::before{content:"";position:absolute;inset:-10% -20% 0;z-index:-1;pointer-events:none;
-  background:radial-gradient(24% 34% at 18% 30%,color-mix(in srgb,var(--coral) 20%,transparent),transparent 70%),
-             radial-gradient(22% 30% at 82% 22%,color-mix(in srgb,var(--sun) 24%,transparent),transparent 70%),
-             radial-gradient(26% 34% at 70% 78%,color-mix(in srgb,var(--mint) 16%,transparent),transparent 70%)}
-.hero .eyebrow{margin-bottom:0}
-.mark{position:relative;display:inline-block;margin:.5rem 0 0;font:800 clamp(5.5rem,24vw,21rem)/.82 var(--display);letter-spacing:-.07em;padding:0 .04em .06em;
-  color:var(--deboss);text-shadow:0 -.012em .01em var(--dent),0 .014em .006em var(--lit)}
-.mark .sticker{position:absolute;right:-.06em;top:-.02em;width:.34em;height:.34em;border-radius:.09em;transform:rotate(12deg);
-  box-shadow:0 .03em .08em rgba(40,30,120,.35);animation:bob 6s ease-in-out infinite}
-@keyframes bob{50%{transform:rotate(4deg) translateY(-.03em)}}
-.tagline{margin:clamp(1rem,3vw,1.75rem) auto 0;max-width:36rem;font:700 clamp(1.25rem,2.6vw,1.75rem)/1.25 var(--display);letter-spacing:-.02em;color:var(--ink)}
-.tagline span{color:var(--lead);font-weight:600}
-.stores{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin-top:2rem}
-.store{display:flex;align-items:center;gap:.875rem;min-width:14.5rem;padding:.75rem 1.5rem .75rem .75rem;border-radius:1.1rem;text-decoration:none;
-  background:var(--btn);color:var(--btn-ink);box-shadow:0 14px 30px -14px rgba(20,20,80,.55);transition:transform .15s ease}
-.store:hover{transform:translateY(-3px)}
-.store:active{transform:translateY(0) scale(.98)}
-.store .tile{display:grid;place-items:center;flex:none;width:2.5rem;height:2.5rem;border-radius:.75rem}
-.store .tile svg{width:1.4rem;height:1.4rem}
-.store .tile.ios{background:linear-gradient(160deg,#5AC8FA,#0A84FF 55%,#3B5BFF);box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
-.store .tile.ios svg{fill:#fff;width:1.3rem;height:1.3rem;margin-top:-2px}
-.store .tile.play{background:#fff;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
-.store .tile.web{background:linear-gradient(160deg,#7B8CFF,#4457FF);box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
-.store .tile.web svg{fill:#fff;width:1.3rem;height:1.3rem}
-.store span{display:flex;flex-direction:column;text-align:left;font:800 1.1875rem/1.15 var(--ui);letter-spacing:-.01em}
-.store small{font:600 .75rem/1.3 var(--ui);opacity:.7}
-.store.web{background:var(--paper);color:var(--ink);box-shadow:var(--shadow),inset 0 0 0 1px var(--rule)}
+/* header */
+.bar{position:sticky;top:0;z-index:20;transition:background .25s,box-shadow .25s}
+.bar.on{background:color-mix(in srgb,var(--ground) 78%,transparent);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);box-shadow:0 1px 0 var(--rule)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;min-height:68px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:800 25px/1 var(--display);letter-spacing:-.05em}
+.logo img{width:38px;height:38px;border-radius:11px;box-shadow:var(--shadowS)}
+.bar nav{display:flex;align-items:center;gap:6px}
+.bar nav a.link{color:var(--ink2);text-decoration:none;font-weight:700;font-size:15px;padding:10px 12px;border-radius:12px}
+.bar nav a.link:hover{color:var(--ink)}
+.lang{display:flex;padding:3px;border-radius:14px;background:var(--glass);border:1px solid var(--edge)}
+.lang button{border:0;background:none;color:var(--lead);font:800 13px var(--ui);padding:8px 10px;border-radius:11px;cursor:pointer;min-height:36px}
+.lang button[aria-pressed="true"]{background:var(--brandFill);color:#fff}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 22px;border-radius:999px;font:800 16px var(--ui);text-decoration:none;border:0;cursor:pointer;transition:transform .16s cubic-bezier(.3,1.5,.5,1)}
+.pill:active{transform:translateY(4px)}
+.pill.green{background:linear-gradient(#2BC98C,#0B8F5C);color:#fff;box-shadow:0 5px 0 #08734A}
+.pill.dark{background:var(--ink);color:var(--ground);box-shadow:0 5px 0 color-mix(in srgb,var(--ink) 70%,#000)}
+.pill.glass{background:var(--glass2);color:var(--ink);border:1px solid var(--edge);box-shadow:0 5px 0 var(--rule)}
+.pill.small{min-height:44px;padding:0 16px;font-size:15px}
+@media (max-width:760px){.bar nav a.link{display:none}}
 
-/* ---------- 30-second interactive mini-quiz ---------- */
-.try-box{max-width:44rem;margin:2.25rem auto 0;padding:clamp(1.25rem,4vw,2rem);border-radius:1.75rem;background:var(--paper);box-shadow:var(--shadow),inset 0 0 0 1px var(--rule);text-align:left}
-.try-top{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin-bottom:1rem}
-.try-lvl{display:inline-flex;align-items:center;gap:.4rem;padding:.3rem .75rem;border-radius:999px;background:var(--chip);font:800 .8125rem/1.2 var(--ui);color:var(--brand)}
-.try-dots{display:flex;gap:.4rem}
-.try-dots i{width:2rem;height:.4rem;border-radius:999px;background:var(--chip);transition:background .2s}
-.try-dots i.on{background:var(--brand)}
-.try-dots i.ok{background:var(--mint)}
-.try-q{margin:0 0 1.1rem;font:700 clamp(1.125rem,2.4vw,1.375rem)/1.4 var(--display);color:var(--ink)}
-.try-opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.625rem}
-@media (max-width:560px){.try-opts{grid-template-columns:minmax(0,1fr)}}
-.try-opt{display:flex;align-items:center;gap:.65rem;padding:.85rem 1rem;border-radius:1rem;border:1.5px solid var(--rule);background:var(--ground);color:var(--ink);font:700 .95rem/1.3 var(--ui);text-align:left;cursor:pointer;transition:transform .12s,border-color .15s,background .15s}
-.try-opt:hover:not(:disabled){border-color:var(--brand);transform:translateY(-1px)}
-.try-opt b{display:grid;place-items:center;flex:none;width:1.65rem;height:1.65rem;border-radius:.55rem;background:var(--paper);font:800 .8rem/1 var(--ui);color:var(--lead)}
-.try-opt.ok{border-color:var(--mint);background:color-mix(in srgb,var(--mint) 14%,var(--paper))}
-.try-opt.ok b{background:var(--mint);color:#fff}
-.try-opt.bad{border-color:var(--coral);background:color-mix(in srgb,var(--coral) 14%,var(--paper))}
-.try-opt.bad b{background:var(--coral);color:#fff}
-.try-why{margin:1rem 0 0;padding:.9rem 1rem;border-radius:1rem;background:var(--chip);font:600 .9rem/1.5 var(--ui);color:var(--ink-2)}
-.try-foot{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1.1rem}
-.try-btn{padding:.75rem 1.35rem;border-radius:999px;border:0;background:var(--brand);color:#fff;font:800 .9375rem/1 var(--ui);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem}
-.free{margin:1.25rem 0 0;font:600 .875rem/1.4 var(--ui);color:var(--lead)}
-.free i{display:inline-block;width:.5rem;height:.5rem;margin-right:.5rem;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px color-mix(in srgb,var(--mint) 22%,transparent);vertical-align:.08em}
+/* App Store button (Apple's own artwork lives in the store; this is our black button with the Apple logo) */
+.store{display:inline-flex;align-items:center;gap:10px;min-height:58px;padding:0 22px 0 18px;border-radius:16px;background:#000;color:#fff;text-decoration:none;box-shadow:0 5px 0 #333}
+.store svg{width:26px;height:26px;fill:#fff}
+.store small{display:block;font:600 11.5px/1 var(--ui);opacity:.85}
+.store b{display:block;font:700 21px/1.1 -apple-system,system-ui,var(--ui);letter-spacing:-.01em}
+.store:active{transform:translateY(4px);box-shadow:0 1px 0 #333}
 
-/* ---------- screenshots ---------- */
-.gallery{padding-block:0 clamp(3rem,7vw,5rem)}
-.rail{display:flex;gap:clamp(.75rem,2vw,1.25rem);overflow-x:auto;scroll-snap-type:x mandatory;padding:1rem max(16px,calc((100vw - 1180px)/2 + 4vw)) 2rem;scrollbar-width:none}
-.rail::-webkit-scrollbar{display:none}
-.rail img{flex:none;width:clamp(13rem,24vw,17rem);aspect-ratio:645/1398;object-fit:cover;border-radius:1.75rem;scroll-snap-align:center;box-shadow:var(--shadow);background:var(--chip)}
-.rail video{flex:none;width:clamp(13rem,24vw,17rem);aspect-ratio:9/16;object-fit:cover;border-radius:1.75rem;scroll-snap-align:center;box-shadow:var(--shadow);background:var(--chip);transform:translateY(.75rem)}
-.rail img:nth-child(odd){transform:rotate(-2deg)}
-.rail img:nth-child(even){transform:translateY(1.75rem) rotate(2deg)}
+/* hero */
+.hero{padding:40px 0 30px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:center}
+.hero h1{font-size:clamp(50px,8.4vw,96px);letter-spacing:-.05em;margin:16px 0 18px}
+.hero h1 em{font-style:normal;color:var(--brand);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:2%;right:2%;bottom:.04em;height:.14em;border-radius:.1em;background:#FFD45C;z-index:-1}
+.exams{display:flex;flex-wrap:wrap;gap:8px}
+.exams span{font:800 14px var(--ui);padding:8px 12px;border-radius:999px;background:var(--glass);border:1px solid var(--edge);color:var(--ink2)}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:28px}
+.cta .web{font-weight:800;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:8px;min-height:44px}
+.cta .web b{background:#FFD45C;color:#2A1A00;border-radius:999px;padding:3px 9px;font-size:13px}
+.trust{margin-top:22px;color:var(--lead);font-size:14px;font-weight:600}
+/* the phone */
+.stage{position:relative;height:640px;display:flex;justify-content:center;align-items:center}
+.phone{position:relative;width:300px;aspect-ratio:600/1304;border-radius:46px;padding:10px;background:linear-gradient(145deg,#2A2F55,#0B0F2E);box-shadow:0 50px 90px -40px rgba(20,26,90,.7),inset 0 0 0 2px rgba(255,255,255,.12);transform:rotate(-4deg);animation:float 7s ease-in-out infinite}
+.phone img{width:100%;height:100%;object-fit:cover;border-radius:37px}
+@keyframes float{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(-2.5deg) translateY(-12px)}}
+.chip{position:absolute;display:flex;align-items:center;gap:10px;padding:10px 14px 10px 10px;border-radius:20px;background:var(--glass2);border:1px solid var(--edge);box-shadow:var(--shadow);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-weight:800;font-size:15px;white-space:nowrap;animation:bob 6s ease-in-out infinite}
+.chip img{width:36px;height:36px}
+.chip small{display:block;font-size:12px;color:var(--lead);font-weight:700}
+.chip.a{left:0;top:16%}.chip.b{right:-6px;top:40%;animation-delay:-2s}.chip.c{left:4%;bottom:14%;animation-delay:-4s}
+.chip.word{right:2%;bottom:26%;font-family:var(--read);font-weight:600;animation-delay:-1s}
+.chip.word s{color:var(--red);text-decoration-thickness:2px}
+.chip.word ins{color:var(--green);text-decoration:none}
+.lozzy-peek{position:absolute;right:6%;top:2%;width:96px;animation:bob 5s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.stage{height:560px}.phone{width:250px}.chip.a{left:-2%}.chip.b{right:-2%}}
+@media (max-width:420px){.stage{height:520px}.phone{width:226px}.chip{font-size:13px;padding:8px 10px 8px 8px}.chip img{width:28px;height:28px}.chip.word{display:none}}
 
-/* ---------- features: three real screens ---------- */
-.rows{display:grid;gap:clamp(3rem,8vw,6rem);margin-top:clamp(2.5rem,6vw,4.5rem);text-align:left}
-.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(1.5rem,5vw,4.5rem);align-items:center}
-.row:nth-child(even) .shot{order:2}
-@media (max-width:760px){.row{grid-template-columns:minmax(0,1fr)}.row:nth-child(even) .shot{order:0}}
-.row .shot{position:relative;justify-self:center}
-.row .shot img.phone{display:block;width:clamp(13rem,26vw,18rem);aspect-ratio:645/1398;object-fit:cover;border-radius:2rem;box-shadow:var(--shadow);background:var(--chip)}
-.row .shot img.obj{position:absolute;width:clamp(4.5rem,9vw,6.5rem);right:-2.2rem;top:12%;filter:drop-shadow(0 14px 18px rgba(30,20,80,.22))}
-.row:nth-child(even) .shot img.obj{right:auto;left:-2.2rem}
-.row h3{margin:0;font:800 clamp(1.9rem,4vw,3rem)/1.02 var(--display);letter-spacing:-.04em}
-.row p{margin:1rem 0 0;max-width:30rem;font-size:1.0625rem;line-height:1.6;color:var(--ink-2)}
-.row .num{display:flex;flex-wrap:wrap;gap:1.75rem;margin-top:1.5rem}
-.row .num div{font:600 .875rem/1.3 var(--ui);color:var(--lead)}
-.row .num b{display:block;font:800 2rem/1 var(--display);letter-spacing:-.03em;color:var(--ink)}
-.also{max-width:44rem;margin:clamp(3rem,7vw,5rem) auto 0;font:600 1.0625rem/1.7 var(--ui);color:var(--ink-2)}
-.center{text-align:center}.center .sub{margin-inline:auto}
+/* marquee of the papers */
+.papers{margin:36px 0 10px;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.papers ul{display:flex;gap:12px;margin:0;padding:6px 0;list-style:none;width:max-content;animation:marq 40s linear infinite}
+.papers li{display:flex;align-items:center;gap:10px;padding:8px 18px 8px 8px;border-radius:18px;background:var(--glass);border:1px solid var(--edge);font-weight:800;color:var(--ink2)}
+.papers li img{width:38px;height:38px}
+@keyframes marq{to{transform:translateX(-50%)}}
 
-/* ---------- exams ---------- */
-.exams{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:2.5rem}
-@media (max-width:860px){.exams{grid-template-columns:minmax(0,1fr)}}
-.exam{position:relative;overflow:hidden;padding:1.75rem;border-radius:1.75rem;background:var(--paper);box-shadow:var(--shadow),inset 0 0 0 1px var(--rule)}
-.exam .lvl{font:800 4.5rem/.9 var(--display);letter-spacing:-.06em;color:var(--c1)}
-.exam h3{margin:.75rem 0 .25rem;font:800 1.375rem/1.15 var(--display);letter-spacing:-.025em}
-.exam .pass{margin:0;font:600 .9375rem/1.4 var(--ui);color:var(--lead)}
-.exam ul{display:flex;flex-wrap:wrap;gap:.375rem;margin:1.25rem 0 0;padding:0;list-style:none}
-.exam li{padding:.3rem .65rem;border-radius:999px;background:var(--chip);font:600 .8125rem/1.3 var(--ui);color:var(--ink-2)}
-.exam li b{color:var(--ink)}
+section{padding:90px 0}
+.head{text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px;margin-bottom:44px}
+.head .lead{margin:0 auto;text-align:center}
+.card{background:var(--glass);border:1px solid var(--edge);border-radius:30px;box-shadow:var(--shadow);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
 
-/* ---------- FAQ ---------- */
-.faq{max-width:46rem;margin:2.5rem auto 0;text-align:left}
-.faq details{border-bottom:1px solid var(--rule)}
-.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:1rem;padding:1.25rem 0;font:700 1.125rem/1.35 var(--ui)}
+/* try a question */
+.try{display:grid;grid-template-columns:minmax(0,1fr);max-width:640px;margin:0 auto;padding:26px}
+.tabs{display:flex;gap:6px;padding:4px;border-radius:18px;background:var(--brandSoft);margin-bottom:22px}
+.tabs button{flex:1;border:0;background:none;font:800 15px var(--ui);color:var(--ink2);min-height:44px;border-radius:14px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--brandFill);color:#fff;box-shadow:0 4px 0 var(--brandInk)}
+.q-kicker{font:800 12.5px var(--ui);letter-spacing:.1em;text-transform:uppercase;color:var(--lead)}
+.q-text{font:600 clamp(21px,3vw,26px)/1.4 var(--read);margin:10px 0 20px}
+.q-text .gap{display:inline-block;min-width:110px;border-bottom:3px solid var(--brand);color:var(--brandInk);text-align:center}
+.opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.opts button{display:flex;align-items:center;gap:12px;min-height:58px;padding:10px 14px;border-radius:18px;border:2px solid var(--rule);background:var(--glass2);color:var(--ink);font:700 16px var(--ui);text-align:left;cursor:pointer;box-shadow:0 4px 0 var(--rule);transition:transform .15s}
+.opts button:active{transform:translateY(3px)}
+.opts button i{flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font:800 13px var(--ui);font-style:normal;background:var(--rule);color:var(--lead)}
+.opts button.right{border-color:var(--green);background:color-mix(in srgb,var(--green) 14%,var(--paper))}
+.opts button.right i{background:var(--green);color:#fff}
+.opts button.wrong{border-color:var(--red);background:color-mix(in srgb,var(--red) 12%,var(--paper))}
+.opts button.wrong i{background:var(--red);color:#fff}
+.verdict{margin-top:16px;padding:14px 16px;border-radius:18px;font-weight:700;display:none}
+.verdict.show{display:block;animation:rise .35s cubic-bezier(.2,.9,.25,1.15) both}
+.verdict.ok{background:color-mix(in srgb,var(--green) 14%,var(--paper));color:var(--greenEdge)}
+.verdict.no{background:color-mix(in srgb,var(--red) 12%,var(--paper));color:var(--redInk)}
+.verdict small{display:block;color:var(--ink2);font-weight:600;margin-top:4px}
+.q-foot{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;margin-top:18px}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (max-width:520px){.opts{grid-template-columns:1fr}}
+
+/* inside the app: a row of real screens */
+.inside{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 20px 34px;scrollbar-width:none}
+.inside::-webkit-scrollbar{display:none}
+.inside figure{flex:0 0 250px;margin:0;scroll-snap-align:center;display:flex;flex-direction:column;gap:14px;align-items:center;text-align:center}
+.inside .ph{width:250px;aspect-ratio:600/1304;border-radius:38px;padding:8px;background:linear-gradient(145deg,#2A2F55,#0B0F2E);box-shadow:0 30px 60px -32px rgba(20,26,90,.7)}
+.inside .ph img{width:100%;height:100%;object-fit:cover;border-radius:31px}
+.inside figcaption b{display:block;font:800 19px var(--display);letter-spacing:-.02em}
+.inside figcaption span{color:var(--lead);font-size:15px}
+@media (min-width:1100px){.inside{justify-content:center;flex-wrap:nowrap}}
+
+/* three features */
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.feat{padding:26px}
+.feat img{width:64px;height:64px;margin-bottom:16px}
+.feat h3{font-size:24px;margin-bottom:8px}
+.feat p{margin:0;color:var(--ink2)}
+@media (max-width:860px){.grid3{grid-template-columns:1fr}}
+
+/* honest scores */
+.scores{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
+.score-card{padding:28px}
+.score-card .big{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.score-card .big b{font:800 64px/1 var(--display);letter-spacing:-.04em}
+.grade{background:var(--amber);color:#2A1A00;font-weight:800;border-radius:999px;padding:5px 12px;font-size:15px}
+.meter{position:relative;height:14px;border-radius:7px;background:var(--rule);margin:20px 0 6px;overflow:visible}
+.meter i{position:absolute;inset:0 auto 0 0;width:72%;border-radius:7px;background:linear-gradient(90deg,var(--violet),var(--pink))}
+.meter u{position:absolute;left:60%;top:-6px;bottom:-6px;width:3px;background:var(--ink);border-radius:2px}
+.marks{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.marks div{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;border-radius:16px;background:var(--glass2);font-weight:700}
+.marks div b{color:var(--redInk);white-space:nowrap}
+.sample{font-size:13px;color:var(--lead);margin-top:12px}
+@media (max-width:860px){.scores{grid-template-columns:1fr}}
+
+/* the four papers */
+.grid4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.paper{padding:26px;display:flex;gap:18px;align-items:flex-start}
+.paper img{width:60px;height:60px;flex:none}
+.paper h3{font-size:24px;margin-bottom:6px}
+.paper p{margin:0;color:var(--ink2)}
+.numbers{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px}
+.numbers div{padding:14px 20px;border-radius:20px;background:var(--glass);border:1px solid var(--edge);text-align:center}
+.numbers b{display:block;font:800 30px/1 var(--display);letter-spacing:-.03em}
+.numbers span{font-size:14px;color:var(--lead);font-weight:700}
+.original{text-align:center;color:var(--lead);margin-top:18px;font-weight:600}
+@media (max-width:760px){.grid4{grid-template-columns:1fr}}
+
+/* the winter band */
+.winter{position:relative;overflow:hidden;border-radius:36px;padding:44px;color:#fff;background:linear-gradient(140deg,#151A55,#2A3AB8 60%,#3B5BE6);box-shadow:var(--shadow);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:30px;align-items:center}
+.winter h2{color:#fff}
+.winter p{color:#DDE3FF;max-width:520px}
+.winter .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.winter .tags span{background:rgba(255,255,255,.14);border-radius:999px;padding:8px 14px;font-weight:800;font-size:14px}
+.winter .art{position:relative;display:flex;justify-content:center}
+.winter .art img.l{width:190px;animation:bob 5s ease-in-out infinite}
+.winter .art img.o{position:absolute;width:76px}
+.flake{position:absolute;color:#fff;opacity:.55;font-size:14px;animation:fall linear infinite}
+@keyframes fall{from{transform:translateY(-40px)}to{transform:translateY(520px)}}
+@media (max-width:760px){.winter{grid-template-columns:1fr;padding:30px}}
+
+/* Plus */
+.plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:900px;margin:0 auto}
+.plan{padding:28px;display:flex;flex-direction:column;gap:14px}
+.plan h3{font-size:28px}
+.price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.price b{font:800 52px/1 var(--display);letter-spacing:-.04em}
+.price span{color:var(--lead);font-weight:700}
+.price s{color:var(--lead);font-weight:700}
+.plan ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.plan li{display:flex;gap:10px;align-items:flex-start;font-weight:600}
+.plan li::before{content:"";flex:none;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/14px no-repeat}
+.plan.plus{background:linear-gradient(150deg,#5B3CF0,#7A5BFF 45%,#FF5C9E);color:#fff;border:0}
+.plan.plus .price span,.plan.plus .price s,.plan.plus .note{color:rgba(255,255,255,.85)}
+.plan.plus li::before{background-color:rgba(255,255,255,.25)}
+.save{align-self:flex-start;background:#FFD45C;color:#2A1A00;border-radius:999px;padding:5px 12px;font-weight:800;font-size:14px}
+.note{font-size:14px;color:var(--lead);font-weight:600}
+.plan .pill{margin-top:auto}
+@media (max-width:760px){.plans{grid-template-columns:1fr}}
+
+/* FAQ */
+.faq{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.faq details{padding:0 22px;border-radius:22px}
+.faq summary{list-style:none;cursor:pointer;font:800 18px var(--ui);padding:20px 0;display:flex;justify-content:space-between;gap:12px;align-items:center}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";flex:none;font:500 1.5rem/1 var(--ui);color:var(--lead);transition:transform .2s}
+.faq summary::after{content:"+";font:700 26px/1 var(--ui);color:var(--brand);transition:transform .2s}
 .faq details[open] summary::after{transform:rotate(45deg)}
-.faq p{margin:0 0 1.25rem;color:var(--ink-2)}
+.faq details p{margin:0 0 20px;color:var(--ink2)}
 
-/* ---------- end ---------- */
+/* end */
 .end{text-align:center}
-.social{display:flex;justify-content:center;gap:.5rem;margin-top:2.5rem}
-.social a{display:grid;place-items:center;width:2.75rem;height:2.75rem;border-radius:.9rem;background:var(--chip);color:var(--ink-2)}
-.social svg{width:1.25rem;height:1.25rem;fill:currentColor}
-footer{padding-block:2rem 0;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:.75rem 2rem;justify-content:space-between;font:500 .8125rem/1.6 var(--ui);color:var(--lead)}
-footer p{margin:0;max-width:40rem}
-.echo{margin:1.5rem 0 0;height:.56em;overflow:hidden;text-align:center;font:800 clamp(5rem,24vw,21rem)/.78 var(--display);letter-spacing:-.07em;user-select:none;
-  color:var(--deboss);text-shadow:0 -.012em .01em var(--dent),0 .014em .006em var(--lit);-webkit-mask-image:linear-gradient(#000 40%,transparent);mask-image:linear-gradient(#000 40%,transparent)}
+.end .card{padding:56px 24px;display:flex;flex-direction:column;align-items:center;gap:18px}
+.end img.l{width:120px;animation:bob 5s ease-in-out infinite}
+footer{padding:40px 0 60px;color:var(--lead);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+footer a{color:var(--ink2);text-decoration:none;font-weight:700;margin-right:16px}
 
-/* gentle entrance */
-.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
-.js .reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.mark .sticker,.mark::after{animation:none}html{scroll-behavior:auto}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.9,.25,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
+<div class="orbs" aria-hidden="true"><i></i><i></i><i></i></div>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="apple" viewBox="0 0 24 24"><path d="M16.37 12.62c-.02-2.3 1.88-3.4 1.96-3.46a4.24 4.24 0 0 0-3.34-1.8c-1.42-.14-2.77.83-3.5.83-.72 0-1.83-.81-3.01-.79a4.46 4.46 0 0 0-3.77 2.29c-1.61 2.79-.41 6.92 1.16 9.18.77 1.1 1.68 2.35 2.88 2.3 1.16-.05 1.6-.75 3-.75s1.79.75 3.01.72c1.25-.02 2.04-1.12 2.8-2.23a9.9 9.9 0 0 0 1.27-2.6 4.04 4.04 0 0 1-2.46-3.69ZM14.07 5.86a4.1 4.1 0 0 0 .94-2.94 4.18 4.18 0 0 0-2.7 1.4 3.9 3.9 0 0 0-.97 2.83 3.45 3.45 0 0 0 2.73-1.29Z"/></symbol>
-  <symbol id="android" viewBox="0 0 24 24"><path d="M17.6 9.48 19.44 6.3a.38.38 0 0 0-.66-.38l-1.87 3.23a11.43 11.43 0 0 0-9.82 0L5.22 5.92a.38.38 0 0 0-.66.38L6.4 9.48A10.78 10.78 0 0 0 1 18h22a10.78 10.78 0 0 0-5.4-8.52ZM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5Zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5Z"/></symbol>
-  <symbol id="globe" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 6h-2.95a15.6 15.6 0 0 0-1.38-3.56A8.03 8.03 0 0 1 18.9 8ZM12 4.04A13.9 13.9 0 0 1 13.91 8h-3.82A13.9 13.9 0 0 1 12 4.04ZM4.26 14a8.2 8.2 0 0 1 0-4h3.38a16.5 16.5 0 0 0 0 4H4.26Zm.82 2h2.95a15.6 15.6 0 0 0 1.38 3.56A8 8 0 0 1 5.08 16Zm2.95-8H5.08a8 8 0 0 1 4.33-3.56A15.6 15.6 0 0 0 8.03 8ZM12 19.96A13.9 13.9 0 0 1 10.09 16h3.82A13.9 13.9 0 0 1 12 19.96ZM14.34 14H9.66a14.7 14.7 0 0 1 0-4h4.68a14.7 14.7 0 0 1 0 4Zm.25 5.56A15.6 15.6 0 0 0 15.97 16h2.95a8.03 8.03 0 0 1-4.33 3.56ZM16.36 14a16.5 16.5 0 0 0 0-4h3.38a8.2 8.2 0 0 1 0 4h-3.38Z"/></symbol>
-  <symbol id="discord" viewBox="0 0 24 24"><path d="M19.6 5.3A18 18 0 0 0 15.2 4l-.2.4a16 16 0 0 1 3.8 1.9 14 14 0 0 0-13.6 0A16 16 0 0 1 9 4.4L8.8 4a18 18 0 0 0-4.4 1.3C1.6 9.4.9 13.4 1.2 17.4a18 18 0 0 0 5.4 2.7l1.2-1.9a11 11 0 0 1-1.8-.9l.4-.3a12.8 12.8 0 0 0 11.2 0l.4.3a11 11 0 0 1-1.8.9l1.2 1.9a18 18 0 0 0 5.4-2.7c.4-4.6-.7-8.6-3.2-12.1ZM8.7 15c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2Zm6.6 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2Z"/></symbol>
-  <symbol id="github" viewBox="0 0 24 24"><path d="M12 1.5a10.5 10.5 0 0 0-3.32 20.46c.53.1.72-.23.72-.51v-1.8c-2.92.64-3.54-1.4-3.54-1.4-.48-1.22-1.17-1.54-1.17-1.54-.95-.65.07-.64.07-.64 1.06.08 1.61 1.09 1.61 1.09.94 1.6 2.46 1.14 3.06.87.1-.68.37-1.14.66-1.4-2.33-.26-4.78-1.16-4.78-5.19 0-1.15.41-2.08 1.08-2.82-.11-.26-.47-1.33.1-2.78 0 0 .88-.28 2.89 1.08a10 10 0 0 1 5.26 0c2-1.36 2.89-1.08 2.89-1.08.57 1.45.21 2.52.1 2.78.67.74 1.08 1.67 1.08 2.82 0 4.04-2.46 4.93-4.8 5.19.38.33.71.97.71 1.96v2.9c0 .28.19.62.73.51A10.5 10.5 0 0 0 12 1.5Z"/></symbol>
 </svg>
 
-<header class="bar">
+<header class="bar" id="bar">
   <div class="wrap">
     <a class="logo" href="#top"><img src="img/icon.png" alt="">lozenge</a>
     <nav>
-      <a class="link" href="#features" data-t="nav_features">Features</a>
-      <a class="link" href="#exams" data-t="nav_exams">Exams</a>
+      <a class="link" href="#try" data-t="nav_try">Try a question</a>
+      <a class="link" href="#papers" data-t="nav_papers">The four papers</a>
+      <a class="link" href="#plus">Plus</a>
       <a class="link" href="#faq">FAQ</a>
       <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="cs" aria-pressed="false">CZ</button></div>
     </nav>
@@ -201,222 +275,341 @@ footer p{margin:0;max-width:40rem}
 </header>
 
 <main id="top">
-  <section class="hero">
-    <div class="wrap">
-      <p class="eyebrow">B1 Preliminary · B2 First · C1 Advanced</p>
-      <h1 class="mark">lozenge<img class="sticker" src="img/icon.png" alt=""><span class="sr">, Cambridge exam prep</span></h1>
-      <p class="tagline" data-t="tagline" data-html>Pass your Cambridge exam. <span>Ten minutes a day.</span></p>
-      <div class="stores">
-        <a class="store" href="https://apps.apple.com/app/id6819167082" target="_blank" rel="noopener"><i class="tile ios" aria-hidden="true"><svg><use href="#apple"/></svg></i><span><small data-t="st_ios_small">Download on the</small>App Store</span></a>
-        <a class="store" href="https://play.google.com/apps/testing/com.marekkalivoda.lozenge" target="_blank" rel="noopener"><i class="tile play" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="#00D3FF" d="M3.6 2.2 13.7 12 3.6 21.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1Z"/><path fill="#00F076" d="m16.8 8.9-3.1 3.1L3.6 2.2c.3-.2.8-.2 1.2 0l12 6.7Z"/><path fill="#FF3A44" d="M16.8 15.1 4.8 21.8c-.4.2-.9.2-1.2 0L13.7 12l3.1 3.1Z"/><path fill="#FFD400" d="M20.4 12c0 .5-.3 1-.7 1.2l-2.9 1.9-3.1-3.1 3.1-3.1 2.9 1.9c.4.2.7.7.7 1.2Z"/></svg></i><span><small data-t="st_and_small">Test for Android</small>Google Play</span></a>
-        <a class="store web" href="app/"><i class="tile web" aria-hidden="true"><svg><use href="#globe"/></svg></i><span><small data-t="st_web_small">No install needed</small><b style="font:inherit" data-t="st_web">Try in browser</b></span></a>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="exams"><span>B1 Preliminary</span><span>B2 First</span><span>C1 Advanced</span></div>
+      <h1 data-t="h1">Pass your <em>Cambridge</em> exam.</h1>
+      <p class="lead" data-t="hero_sub">Ten minutes a day with Lozzy. Mock tests scored on the Cambridge English Scale, and an AI examiner for your writing and speaking.</p>
+      <div class="cta">
+        <a class="store" href="https://apps.apple.com/app/id6819167082" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#apple"/></svg><span><small data-t="store_small">Download on the</small><b>App Store</b></span></a>
+        <a class="web" href="plus.html"><span data-t="hero_web">Plus on the web</span> <b data-t="save_100">save 100 Kč</b></a>
       </div>
+      <p class="trust" data-t="trust">Free to start. Original exam-style material, never copied from real papers.</p>
     </div>
-  </section>
-
-  <div class="gallery" aria-label="Screenshots">
-    <div class="rail">
-      <img src="img/shots/01-home.jpg" alt="Home: the next lesson, today and the grade you'd get" loading="lazy">
-      <img src="img/shots/02-tests.jpg" alt="Mock tests timed like the exam" loading="lazy">
-      <video src="img/promo.mp4" poster="img/promo-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Lozenge in 30 seconds"></video>
-      <img src="img/shots/06-learn.jpg" alt="Five-minute lessons" loading="lazy">
-      <img src="img/shots/03-speaking.jpg" alt="Speaking with real photos" loading="lazy">
-      <img src="img/shots/05-guides.jpg" alt="Exam guides, card by card" loading="lazy">
+    <div class="stage" aria-hidden="true">
+      <img class="lozzy-peek" src="img/v24/lozzy-santa.webp" alt="">
+      <div class="phone"><img src="img/v24/01-home.webp" alt=""></div>
+      <div class="chip a"><img src="img/v24/star.webp" alt=""><span>+18 XP<small data-t="chip_lesson">Lesson done</small></span></div>
+      <div class="chip b"><img src="img/v24/trophy.webp" alt=""><span>168 · Grade C<small data-t="chip_score">If you sat B2 First today</small></span></div>
+      <div class="chip c"><img src="img/v24/flame.webp" alt=""><span data-t="chip_streak">12-day streak</span></div>
+      <div class="chip word"><span><s>inable</s> → <ins>unable</ins></span></div>
     </div>
   </div>
+  <div class="papers" aria-hidden="true"><ul id="marq"></ul></div>
+</section>
 
-  <section id="features" class="center">
-    <div class="wrap">
-      <p class="eyebrow" data-t="f_eye">What's inside</p>
-      <h2 data-t="f_h" data-html>Everything the exam <em>asks for</em>.</h2>
-      <div class="rows">
-        <div class="row reveal">
-          <div class="shot"><img class="phone" src="img/shots/06-learn.jpg" alt="The lesson path" loading="lazy"><img class="obj" src="img/obj/book.png" alt=""></div>
-          <div><h3 data-t="r1">Ten minutes on the bus is a lesson.</h3>
-            <p data-t="r1p">Short lessons for every task type in the exam: gap fills, word formation, key word transformations. Every answer is explained, in your language if you like.</p>
-            <div class="num"><div><b>69</b><span data-t="n_units">lesson units</span></div><div><b>1,100+</b><span data-t="n_ex">exercises</span></div></div></div>
-        </div>
-        <div class="row reveal">
-          <div class="shot"><img class="phone" src="img/shots/02-tests.jpg" alt="Mock tests" loading="lazy"><img class="obj" src="img/obj/trophy.png" alt=""></div>
-          <div><h3 data-t="r2">Mock tests on the real clock.</h3>
-            <p data-t="r2p">Whole papers with the exam's timing and two plays per recording. You get a score on the Cambridge English Scale and the grade you'd get today.</p>
-            <div class="num"><div><b>28</b><span data-t="n_mock">mock papers</span></div><div><b>19</b><span data-t="n_listen">Listening tests</span></div><div><b>876</b><span data-t="n_rec">recordings</span></div></div></div>
-        </div>
-        <div class="row reveal">
-          <div class="shot"><img class="phone" src="img/shots/04-live-examiner.jpg" alt="The live examiner" loading="lazy"><img class="obj" src="img/obj/mic.png" alt=""></div>
-          <div><h3 data-t="r3">An examiner who actually listens.</h3>
-            <p data-t="r3p">Talk to Anna in the Speaking test, out loud, then see how you did. Your essays come back marked on the four official criteria, with a better version to learn from.</p>
-            <div class="num"><div><b>73</b><span data-t="n_write">Writing tasks</span></div><div><b>4</b><span data-t="n_crit">marking criteria</span></div></div></div>
-        </div>
+<section id="try">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="kicker" data-t="try_kicker">No sign-up, no install</span>
+      <h2 data-t="try_h">Answer one question. Right now.</h2>
+      <p class="lead" data-t="try_sub">This is what a lesson feels like. One question, one tap, and a reason you'll actually remember.</p>
+    </div>
+    <div class="card try reveal">
+      <div class="tabs" role="tablist" aria-label="Exam">
+        <button type="button" role="tab" data-ex="b1" aria-selected="false">B1</button>
+        <button type="button" role="tab" data-ex="b2" aria-selected="true">B2</button>
+        <button type="button" role="tab" data-ex="c1" aria-selected="false">C1</button>
       </div>
-      <p class="also" data-t="also">Also inside: exam guides card by card, short listening reels, streaks and gems, and the whole app in 16 languages.</p>
-    </div>
-  </section>
-
-  <section id="exams">
-    <div class="wrap center">
-      <p class="eyebrow" data-t="e_eye">Three exams</p>
-      <h2 data-t="e_h" data-html>Pick yours. <em>The app follows.</em></h2>
-      <p class="sub" data-t="e_sub">Lessons, mock tests and your daily plan all follow the exam you choose.</p>
-    </div>
-    <div class="wrap exams">
-      <article class="exam reveal" style="--c1:#14B87A"><div class="lvl">B1</div><h3>Preliminary</h3><p class="pass" data-t="pass140">Pass from 140</p>
-        <ul><li><b>10</b> <span data-t="c_mock">mock papers</span></li><li><b>5</b> <span data-t="c_listen">Listening tests</span></li><li><b>15</b> <span data-t="c_write">Writing tasks</span></li><li><b>20</b> <span data-t="c_units">lesson units</span></li></ul></article>
-      <article class="exam reveal" style="--c1:#FF6B4A"><div class="lvl">B2</div><h3>First</h3><p class="pass" data-t="pass160">Pass from 160</p>
-        <ul><li><b>8</b> <span data-t="c_mock">mock papers</span></li><li><b>8</b> <span data-t="c_listen">Listening tests</span></li><li><b>34</b> <span data-t="c_write">Writing tasks</span></li><li><b>29</b> <span data-t="c_units">lesson units</span></li></ul></article>
-      <article class="exam reveal" style="--c1:#E0A100"><div class="lvl">C1</div><h3>Advanced</h3><p class="pass" data-t="pass180">Pass from 180</p>
-        <ul><li><b>10</b> <span data-t="c_mock">mock papers</span></li><li><b>6</b> <span data-t="c_listen">Listening tests</span></li><li><b>24</b> <span data-t="c_write">Writing tasks</span></li><li><b>20</b> <span data-t="c_units">lesson units</span></li></ul></article>
-    </div>
-    <div class="wrap center" style="margin-top:clamp(3rem,6vw,4.5rem)">
-      <p class="eyebrow" data-t="try_eye">30-second taste</p>
-      <h2 data-t="try_h" data-html>Try three real questions <em>right here</em>.</h2>
-      <div class="try-box" id="try-box" aria-live="polite"></div>
-    </div>
-  </section>
-
-  <section id="faq">
-    <div class="wrap center">
-      <h2>FAQ</h2>
-      <div class="faq">
-        <details><summary data-t="q1">Is Lozenge free?</summary><p data-t="a1">Yes. Lessons, practice and the first mock test of every paper are free. Plus unlocks every mock test, unlimited practice and the live AI examiner.</p></details>
-        <details><summary data-t="q2">Is this the official Cambridge app?</summary><p data-t="a2">No. Lozenge is an independent practice app. Every text, recording and exercise is original, written in the format of the real exam.</p></details>
-        <details><summary data-t="q3">Which exams does it cover?</summary><p data-t="a3">B1 Preliminary, B2 First and C1 Advanced: Reading, Use of English, Listening, Writing and Speaking.</p></details>
-        <details><summary data-t="q4">Do I need an account?</summary><p data-t="a4">No. You can start straight away and your progress stays on your device. A free account syncs it and unlocks AI marking.</p></details>
+      <div class="q-kicker" id="qk"></div>
+      <p class="q-text" id="qt"></p>
+      <div class="opts" id="qo"></div>
+      <div class="verdict" id="qv" role="status" aria-live="polite"></div>
+      <div class="q-foot">
+        <button class="pill glass small" type="button" id="qn" data-t="try_next">Another one</button>
+        <a class="pill green small" href="https://apps.apple.com/app/id6819167082" target="_blank" rel="noopener" data-t="try_app">Keep going in the app</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="end">
-    <div class="wrap">
-      <h2 data-t="end_h" data-html>Your first lesson takes <em>five minutes</em>.</h2>
-      <div class="stores">
-        <a class="store" href="https://apps.apple.com/app/id6819167082" target="_blank" rel="noopener"><i class="tile ios" aria-hidden="true"><svg><use href="#apple"/></svg></i><span><small data-t="st_ios_small">Download on the</small>App Store</span></a>
-        <a class="store" href="https://play.google.com/apps/testing/com.marekkalivoda.lozenge" target="_blank" rel="noopener"><i class="tile play" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="#00D3FF" d="M3.6 2.2 13.7 12 3.6 21.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1Z"/><path fill="#00F076" d="m16.8 8.9-3.1 3.1L3.6 2.2c.3-.2.8-.2 1.2 0l12 6.7Z"/><path fill="#FF3A44" d="M16.8 15.1 4.8 21.8c-.4.2-.9.2-1.2 0L13.7 12l3.1 3.1Z"/><path fill="#FFD400" d="M20.4 12c0 .5-.3 1-.7 1.2l-2.9 1.9-3.1-3.1 3.1-3.1 2.9 1.9c.4.2.7.7.7 1.2Z"/></svg></i><span><small data-t="st_and_small">Test for Android</small>Google Play</span></a>
-        <a class="store web" href="app/"><i class="tile web" aria-hidden="true"><svg><use href="#globe"/></svg></i><span><small data-t="st_web_small">No install needed</small><b style="font:inherit" data-t="st_web">Try in browser</b></span></a>
+<section id="inside" style="padding-top:20px">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="kicker" data-t="in_kicker">Inside the app</span>
+      <h2 data-t="in_h">Calm, clear, and actually fun.</h2>
+      <p class="lead" data-t="in_sub">The next step is always waiting on Home. Everything else is one tap away.</p>
+    </div>
+  </div>
+  <div class="inside reveal">
+    <figure><div class="ph"><img src="img/v24/08-learn.webp" alt="" loading="lazy"></div><figcaption><b data-t="s_learn">A road of lessons</b><span data-t="s_learn2">Unit by unit, each ending with a real exam task</span></figcaption></figure>
+    <figure><div class="ph"><img src="img/v24/04-lesson.webp" alt="" loading="lazy"></div><figcaption><b data-t="s_lesson">One question at a time</b><span data-t="s_lesson2">And why the answer is right</span></figcaption></figure>
+    <figure><div class="ph"><img src="img/v24/06-tests.webp" alt="" loading="lazy"></div><figcaption><b data-t="s_tests">Mock tests on the clock</b><span data-t="s_tests2">Ten of every paper for each exam</span></figcaption></figure>
+    <figure><div class="ph"><img src="img/v24/09-album.webp" alt="" loading="lazy"></div><figcaption><b data-t="s_album">A word album</b><span data-t="s_album2">Collect words as you learn</span></figcaption></figure>
+    <figure><div class="ph"><img src="img/v24/10-me.webp" alt="" loading="lazy"></div><figcaption><b data-t="s_me">Your level and your score</b><span data-t="s_me2">See where you stand every week</span></figcaption></figure>
+  </div>
+</section>
+
+<section style="padding-top:30px">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="kicker" data-t="d_kicker">The daily ten minutes</span>
+      <h2 data-t="d_h">Short enough to do. Smart enough to matter.</h2>
+    </div>
+    <div class="grid3">
+      <div class="card feat reveal"><img src="img/v24/star.webp" alt=""><h3 data-t="d1">One thing to do today</h3><p data-t="d1p">Open the app and the next step is waiting. No plan to build, no list to choose from.</p></div>
+      <div class="card feat reveal"><img src="img/v24/review.webp" alt=""><h3 data-t="d2">Mistakes come back</h3><p data-t="d2p">A day later, then two, four, eight. Right before you'd forget them.</p></div>
+      <div class="card feat reveal"><img src="img/v24/flame.webp" alt=""><h3 data-t="d3">A streak worth keeping</h3><p data-t="d3p">Lozzy reminds you, and stops as soon as you've practised. Every level pays gems.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap scores">
+    <div class="reveal">
+      <span class="kicker" data-t="sc_kicker">Honest scores</span>
+      <h2 style="margin:14px 0 16px" data-t="sc_h">Know your grade before exam day.</h2>
+      <p class="lead" data-t="sc_p">Timed mock tests in the real format, converted with the tables Cambridge publishes for practice tests. Then the app shows where your marks went, and lets you practise exactly that.</p>
+    </div>
+    <div class="card score-card reveal">
+      <div class="q-kicker" data-t="sc_card">If you sat B2 First today</div>
+      <div class="big"><b>165–173</b><span class="grade">Grade C</span></div>
+      <div class="meter" aria-hidden="true"><i></i><u></u></div>
+      <div class="sample" data-t="sc_pass">The line is the pass mark, 160.</div>
+      <div class="marks">
+        <div><span data-t="m1">Word formation: negative prefixes</span><b data-t="m4n">4 marks</b></div>
+        <div><span data-t="m2">Gapped text: reference words</span><b data-t="m4n">4 marks</b></div>
+        <div><span data-t="m3">Ran out of time in Part 7</span><b data-t="m3n">3 marks</b></div>
       </div>
-      <div class="social">
-        <a href="https://discord.gg/3fZpk2kzp" target="_blank" rel="noopener" aria-label="Discord"><svg aria-hidden="true"><use href="#discord"/></svg></a>
-        <a href="https://github.com/Entexik/lozenge-app" target="_blank" rel="noopener" aria-label="GitHub"><svg aria-hidden="true"><use href="#github"/></svg></a>
+      <div class="sample" data-t="sc_sample">A sample learner, from 3 of 5 papers.</div>
+    </div>
+  </div>
+</section>
+
+<section id="papers">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="kicker" data-t="p_kicker">All four papers, one app</span>
+      <h2 data-t="p_h">Everything the exam asks of you.</h2>
+    </div>
+    <div class="grid4">
+      <div class="card paper reveal"><img src="img/v24/book.webp" alt=""><div><h3 data-t="p1">Reading and Use of English</h3><p data-t="p1p">Ten full mock papers per exam, and every part on its own. Sit it timed like the real paper, or part by part with hints.</p></div></div>
+      <div class="card paper reveal"><img src="img/v24/headphones.webp" alt=""><div><h3 data-t="p2">Listening</h3><p data-t="p2p">Original recordings in British voices. Two plays, like the real thing, then the full transcript and the reason behind every answer.</p></div></div>
+      <div class="card paper reveal"><img src="img/v24/pen.webp" alt=""><div><h3 data-t="p3">Writing</h3><p data-t="p3p">An AI examiner marks your essay on the four Cambridge criteria and rewrites your own answer the way a top-band candidate would.</p></div></div>
+      <div class="card paper reveal"><img src="img/v24/mic.webp" alt=""><div><h3 data-t="p4">Speaking</h3><p data-t="p4p">Talk to a live voice examiner. All four parts, with a partner in Part 3. Marks, corrections from what you actually said, and the transcript.</p></div></div>
+    </div>
+    <div class="numbers reveal">
+      <div><b>10</b><span data-t="n1">mock tests of every paper</span></div>
+      <div><b>1,397</b><span data-t="n2">original recordings</span></div>
+      <div><b>78</b><span data-t="n3">lesson units</span></div>
+      <div><b>16</b><span data-t="n4">interface languages</span></div>
+    </div>
+    <p class="original reveal" data-t="orig">All original. Written in the exam format, never copied from real papers.</p>
+  </div>
+</section>
+
+<section id="winter" style="padding-top:20px" hidden>
+  <div class="wrap">
+    <div class="winter reveal">
+      <div>
+        <span class="kicker" style="color:#FFD45C" data-t="w_kicker">1 to 31 December</span>
+        <h2 style="margin:14px 0 14px" data-t="w_h">Winter Season</h2>
+        <p data-t="w_p">An advent calendar with a present behind every door, winter lessons for double XP, a word album to fill and the Winter King waiting at the end of the road.</p>
+        <div class="tags"><span data-t="w_t1">Advent calendar</span><span data-t="w_t2">Word album</span><span data-t="w_t3">Double XP on New Year's Eve</span></div>
+      </div>
+      <div class="art"><img class="l" src="img/v24/lozzy-santa.webp" alt=""><img class="o" src="img/v24/gift.webp" alt="" style="left:6%;bottom:0"><img class="o" src="img/v24/snowflake.webp" alt="" style="right:8%;top:0"></div>
+    </div>
+  </div>
+</section>
+
+<section id="plus">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="kicker">Lozenge Plus</span>
+      <h2 data-t="plus_h">Buy it here and keep the difference.</h2>
+      <p class="lead" data-t="plus_sub">The same Plus as in the app, for a year, for less. It turns on in the app as soon as you sign in.</p>
+    </div>
+    <div class="plans">
+      <div class="card plan reveal">
+        <h3 data-t="free">Free</h3>
+        <div class="price"><b>0 Kč</b></div>
+        <ul>
+          <li data-t="f1">Every lesson and Smart review</li>
+          <li data-t="f2">Mock Test 1 of every paper, for every exam</li>
+          <li data-t="f3">One AI marking a week</li>
+          <li data-t="f4">Streaks, seasons, the word album and Lozzy</li>
+        </ul>
+        <a class="pill glass" href="https://apps.apple.com/app/id6819167082" target="_blank" rel="noopener" data-t="free_btn">Download the app</a>
+      </div>
+      <div class="card plan plus reveal">
+        <span class="save" data-t="save_web">Web price · save 100 Kč</span>
+        <h3>Plus</h3>
+        <div class="price"><b>890 Kč</b><span data-t="per_year">a year</span><s data-t="app_price">990 Kč in the app</s></div>
+        <ul>
+          <li data-t="pl1">All 10 mock tests of every paper</li>
+          <li data-t="pl2">AI examiner for Writing, 5 markings a day</li>
+          <li data-t="pl3">Live Speaking examiner</li>
+          <li data-t="pl4">Unlimited energy and every season pass</li>
+        </ul>
+        <a class="pill green" href="plus.html" data-t="plus_btn">Get Plus on the web</a>
+        <span class="note" data-t="plus_note">One payment a year. Cancel any time.</span>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:20px">
+  <div class="wrap">
+    <div class="head reveal"><h2 data-t="faq_h">Fair questions</h2></div>
+    <div class="faq">
+      <details class="card"><summary data-t="q1">Why is Plus cheaper on the web?</summary><p data-t="a1">The App Store keeps a share of every purchase made inside an app. When you buy here, there is no such share, so the price is lower. You get exactly the same Plus.</p></details>
+      <details class="card"><summary data-t="q2">I bought on the web. How do I get Plus in the app?</summary><p data-t="a2">Sign in to the app with the same Apple or Google account you used here. Plus turns on by itself, on every device.</p></details>
+      <details class="card"><summary data-t="q3">Is this an official Cambridge app?</summary><p data-t="a3">No. Lozenge is an independent app for people preparing for Cambridge English exams. It is not affiliated with or endorsed by Cambridge University Press &amp; Assessment.</p></details>
+      <details class="card"><summary data-t="q4">How close is the score to the real one?</summary><p data-t="a4">Mock papers are converted with the tables Cambridge publishes for practice tests, so the scale is the same. It is still an estimate from practice papers.</p></details>
+      <details class="card"><summary data-t="q5">What happens to my essays and my voice?</summary><p data-t="a5">An essay is sent for marking only after you agree, and your voice goes to the examiner service only during a Speaking test. The privacy page lists every service by name.</p></details>
+      <details class="card"><summary data-t="q6">Is there an Android version?</summary><p data-t="a6">Not yet. Lozenge is on iPhone and iPad.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="end">
+  <div class="wrap">
+    <div class="card reveal">
+      <img class="l" src="img/v24/lozzy-wink.webp" alt="">
+      <h2 data-t="end_h">Your exam has a date. Start today.</h2>
+      <div class="cta" style="justify-content:center;margin-top:6px">
+        <a class="store" href="https://apps.apple.com/app/id6819167082" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#apple"/></svg><span><small data-t="store_small">Download on the</small><b>App Store</b></span></a>
+        <a class="pill dark" href="plus.html" data-t="end_web">Get Plus on the web</a>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
 
-<div class="wrap">
-  <footer>
-    <p data-t="legal">Lozenge is an independent practice app and isn't affiliated with Cambridge University Press &amp; Assessment. All texts, recordings and exercises are original.</p>
-    <p><a href="privacy.html" data-t="privacy">Privacy policy</a> · <a href="https://discord.gg/3fZpk2kzp" target="_blank" rel="noopener">Discord</a> · © 2026 Lozenge</p>
-  </footer>
-  <p class="echo" aria-hidden="true">lozenge</p>
-</div>
+<footer>
+  <div class="wrap">
+    <div><a href="privacy.html" data-t="privacy">Privacy</a><a href="mailto:skalivoda70@gmail.com" data-t="contact">Contact</a><a href="app/" data-t="webapp">Web version</a></div>
+    <div data-t="indep">Lozenge is independent and not affiliated with Cambridge University Press &amp; Assessment. © 2026</div>
+  </div>
+</footer>
 
 <script>
 (function () {
-  "use strict";
-  var T = {
-    en: {},
-    cs: {
-      nav_features: "Funkce", nav_exams: "Zkoušky",
-      tagline: "Slož zkoušku Cambridge. <span>Deset minut denně.</span>",
-      st_ios_small: "Stáhnout z", st_and_small: "Test pro Android", st_web_small: "Bez instalace", st_web: "Zkusit v prohlížeči",
-      try_eye: "Ochutnávka na 30 sekund", try_h: "Zkus si tři otázky <em>rovnou tady</em>.",
-      f_eye: "Co v ní najdeš", f_h: "Všechno, co zkouška <em>chce</em>.",
-      r1: "Deset minut v autobuse je jedna lekce.", r1p: "Krátké lekce na každý typ úlohy ze zkoušky: doplňování, tvoření slov, transformace vět. Každá odpověď je vysvětlená, klidně česky.",
-      r2: "Zkušební testy na skutečný čas.", r2p: "Celé testy s časem jako u zkoušky a dvěma přehráními každé nahrávky. Dostaneš skóre na Cambridge English Scale a známku, jakou bys měl dnes.",
-      r3: "Zkoušející, který opravdu poslouchá.", r3p: "Mluv nahlas s Annou v ústní části a pak uvidíš, jak jsi dopadl. Slohy ti přijdou ohodnocené podle čtyř oficiálních kritérií, s lepší verzí, ze které se poučíš.",
-      n_units: "kapitol lekcí", n_ex: "cvičení", n_mock: "zkušebních testů", n_listen: "poslechových testů", n_rec: "nahrávek", n_write: "zadání na psaní", n_crit: "kritéria hodnocení",
-      also: "A k tomu: průvodci zkouškou kartu po kartě, krátké poslechové reels, série a drahokamy a celá aplikace v 16 jazycích.",
-      f1: "Desetiminutové lekce", f1p: "Každý typ úlohy ze zkoušky, pár minut denně.",
-      f2: "Testy na čas", f2p: "Skutečné části, skutečný čas, skóre na Cambridge škále.",
-      f3: "Živý AI zkoušející", f3p: "Mluv s Annou jako u zkoušky. Pak tě ohodnotí.",
-      f4: "Hodnocené psaní", f4p: "Čtyři oficiální kritéria, opravy a lepší verze textu.",
-      f5: "Britské hlasy", f5p: "Celé poslechové testy a 150 krátkých reels.",
-      f6: "Znej svou známku", f6p: "Uvidíš, jakou známku bys dostal, kdyby zkouška byla dnes.",
-      f7: "Série a drahokamy", f7p: "Malý důvod vrátit se i zítra.",
-      f8: "Ve tvém jazyce", f8p: "16 jazyků a chyby vysvětlené česky.",
-      e_eye: "Tři zkoušky", e_h: "Vyber si. <em>Aplikace se přizpůsobí.</em>", e_sub: "Lekce, zkušební testy i denní plán se řídí zkouškou, kterou si vybereš.",
-      pass140: "Složeno od 140", pass160: "Složeno od 160", pass180: "Složeno od 180",
-      c_mock: "zkušebních testů", c_listen: "poslechových testů", c_write: "zadání na psaní", c_units: "kapitol lekcí",
-      q1: "Je Lozenge zdarma?", a1: "Ano. Lekce, procvičování a první zkušební test z každé části jsou zdarma. Plus odemkne všechny testy, neomezené procvičování a živého AI zkoušejícího.",
-      q2: "Je to oficiální aplikace Cambridge?", a2: "Ne. Lozenge je nezávislá aplikace na procvičování. Všechny texty, nahrávky a cvičení jsou původní, ve formátu skutečné zkoušky.",
-      q3: "Na které zkoušky je?", a3: "B1 Preliminary, B2 First a C1 Advanced: Reading, Use of English, Listening, Writing i Speaking.",
-      q4: "Potřebuju účet?", a4: "Ne. Začneš hned a postup zůstává v zařízení. Účet zdarma ho synchronizuje a odemkne AI hodnocení.",
-      end_h: "První lekce ti zabere <em>pět minut</em>.",
-      legal: "Lozenge je nezávislá aplikace na procvičování a není spojená s Cambridge University Press & Assessment. Všechny texty, nahrávky a cvičení jsou původní.",
-      privacy: "Ochrana soukromí"
-    }
+  /* Czech next to English; everything else in the page is English */
+  var CS = {
+    nav_try:"Vyzkoušej otázku", nav_papers:"Čtyři části zkoušky",
+    h1:"Slož svou <em>Cambridge</em> zkoušku.", hero_sub:"Deset minut denně s Lozzym. Zkušební testy hodnocené na Cambridge English Scale a AI zkoušející pro psaní i mluvení.",
+    store_small:"Stáhnout v", hero_web:"Plus na webu", save_100:"o 100 Kč levněji",
+    trust:"Začni zdarma. Vlastní úlohy ve formátu zkoušky, nikdy kopírované z ostrých testů.",
+    chip_lesson:"Lekce hotová", chip_score:"Kdybys psal B2 First dnes", chip_streak:"Série 12 dní",
+    try_kicker:"Bez registrace a instalace", try_h:"Odpověz na jednu otázku. Hned teď.", try_sub:"Takhle vypadá lekce. Jedna otázka, jedno klepnutí a vysvětlení, které si zapamatuješ.",
+    try_next:"Další otázka", try_app:"Pokračuj v aplikaci",
+    in_kicker:"Uvnitř aplikace", in_h:"Klidná, přehledná a opravdu zábavná.", in_sub:"Na Domů tě vždycky čeká další krok. Všechno ostatní je na jedno klepnutí.",
+    s_learn:"Cesta lekcí", s_learn2:"Jednotka po jednotce, každá končí úlohou ze zkoušky", s_lesson:"Jedna otázka po druhé", s_lesson2:"A proč je odpověď správně",
+    s_tests:"Testy na čas", s_tests2:"Deset od každé části pro každou zkoušku", s_album:"Album slovíček", s_album2:"Sbírej slovíčka, zatímco se učíš", s_me:"Tvoje úroveň a skóre", s_me2:"Každý týden víš, kde stojíš",
+    d_kicker:"Deset minut denně", d_h:"Dost krátké, aby se to dalo. Dost chytré, aby to mělo smysl.",
+    d1:"Jedna věc na dnešek", d1p:"Otevřeš aplikaci a další krok tě čeká. Žádné plánování, žádné vybírání.",
+    d2:"Chyby se vracejí", d2p:"Za den, pak za dva, čtyři, osm. Těsně předtím, než bys je zapomněl.",
+    d3:"Série, která stojí za to", d3p:"Lozzy ti připomene a přestane, jakmile si procvičíš. Každá úroveň dá drahokamy.",
+    sc_kicker:"Poctivé skóre", sc_h:"Znej svou známku dřív než u zkoušky.", sc_p:"Zkušební testy na čas ve skutečném formátu, převedené podle tabulek, které Cambridge zveřejňuje pro cvičné testy. Pak uvidíš, kde ti utekly body, a procvičíš přesně to.",
+    sc_card:"Kdybys psal B2 First dnes", sc_pass:"Čára je hranice úspěchu, 160.", m1:"Tvoření slov: záporné předpony", m2:"Text s mezerami: odkazovací slova", m3:"Nestihnutá část 7", m4n:"4 body", m3n:"3 body", sc_sample:"Ukázkový student, ze 3 z 5 částí.",
+    p_kicker:"Všechny čtyři části v jedné aplikaci", p_h:"Všechno, co po tobě zkouška chce.",
+    p1:"Čtení a Use of English", p1p:"Deset celých zkušebních testů pro každou zkoušku a každá část zvlášť. Na čas jako u zkoušky, nebo po částech s nápovědou.",
+    p2:"Poslech", p2p:"Vlastní nahrávky s britskými hlasy. Dvakrát, jako naostro, pak celý přepis a vysvětlení každé odpovědi.",
+    p3:"Psaní", p3p:"AI zkoušející ohodnotí tvou práci podle čtyř kritérií Cambridge a přepíše tvou vlastní odpověď tak, jak by ji napsal nejlepší kandidát.",
+    p4:"Mluvení", p4p:"Mluv s živým hlasovým zkoušejícím. Všechny čtyři části, v části 3 s partnerem. Body, opravy z toho, co jsi opravdu řekl, a přepis.",
+    n1:"zkušebních testů od každé části", n2:"vlastních nahrávek", n3:"jednotek lekcí", n4:"jazyků rozhraní", orig:"Všechno vlastní. Psané ve formátu zkoušky, nikdy kopírované z ostrých testů.",
+    w_kicker:"1. až 31. prosince", w_h:"Zimní sezóna", w_p:"Adventní kalendář s dárkem za každým okénkem, zimní lekce za dvojnásobek XP, album slovíček k vyplnění a na konci cesty Zimní král.",
+    w_t1:"Adventní kalendář", w_t2:"Album slovíček", w_t3:"Dvojnásobek XP na Silvestra",
+    plus_h:"Kup ho tady a rozdíl si nech.", plus_sub:"Stejné Plus jako v aplikaci, na rok a levněji. V aplikaci se zapne, jakmile se přihlásíš.",
+    free:"Zdarma", f1:"Všechny lekce a chytré opakování", f2:"Zkušební test 1 od každé části pro každou zkoušku", f3:"Jedno AI hodnocení týdně", f4:"Série, sezóny, album slovíček a Lozzy", free_btn:"Stáhnout aplikaci",
+    save_web:"Cena na webu · o 100 Kč méně", per_year:"za rok", app_price:"v aplikaci 990 Kč",
+    pl1:"Všech 10 zkušebních testů od každé části", pl2:"AI zkoušející pro psaní, 5 hodnocení denně", pl3:"Živý zkoušející pro mluvení", pl4:"Neomezená energie a každý sezónní pass",
+    plus_btn:"Koupit Plus na webu", plus_note:"Jedna platba za rok. Zrušit můžeš kdykoli.",
+    faq_h:"Férové otázky", q1:"Proč je Plus na webu levnější?", a1:"App Store si bere podíl z každého nákupu v aplikaci. Když koupíš tady, žádný takový podíl není, takže je cena nižší. Dostaneš úplně stejné Plus.",
+    q2:"Koupil jsem na webu. Jak dostanu Plus do aplikace?", a2:"Přihlas se v aplikaci stejným účtem Apple nebo Google, který jsi použil tady. Plus se zapne samo, na všech zařízeních.",
+    q3:"Je to oficiální aplikace Cambridge?", a3:"Ne. Lozenge je nezávislá aplikace pro přípravu na zkoušky Cambridge English. Není spojená s Cambridge University Press & Assessment ani jimi schválená.",
+    q4:"Jak přesné je skóre?", a4:"Zkušební testy se převádějí podle tabulek, které Cambridge zveřejňuje pro cvičné testy, takže škála je stejná. Pořád je to ale odhad z cvičných testů.",
+    q5:"Co se děje s mými texty a hlasem?", a5:"Text se pošle k ohodnocení, jen když souhlasíš, a hlas jde ke službě zkoušejícího jen během testu z mluvení. Zásady ochrany soukromí uvádějí každou službu jménem.",
+    q6:"Je verze pro Android?", a6:"Zatím ne. Lozenge je na iPhonu a iPadu.",
+    end_h:"Tvoje zkouška má datum. Začni dnes.", end_web:"Koupit Plus na webu",
+    privacy:"Ochrana soukromí", contact:"Kontakt", webapp:"Webová verze", indep:"Lozenge je nezávislá aplikace, není spojená s Cambridge University Press & Assessment. © 2026"
   };
-  // English comes from the page itself, so it never drifts from what is written there.
-  document.querySelectorAll("[data-t]").forEach(function (el) { T.en[el.getAttribute("data-t")] = el.hasAttribute("data-html") ? el.innerHTML : el.textContent; });
+  var nodes = document.querySelectorAll("[data-t]"), EN = {};
+  nodes.forEach(function (n) { EN[n.getAttribute("data-t")] = n.innerHTML; });
   var lang = "en";
-  try { var saved = localStorage.getItem("lz-site-lang"); lang = saved === "cs" || saved === "en" ? saved : /^(cs|sk)/i.test(navigator.language || "") ? "cs" : "en"; } catch (e) {}
+  try { lang = localStorage.getItem("lz-site-lang") || ((navigator.language || "").slice(0, 2) === "cs" || (navigator.language || "").slice(0, 2) === "sk" ? "cs" : "en"); } catch (e) {}
   function apply() {
     document.documentElement.lang = lang;
-    document.querySelectorAll("[data-t]").forEach(function (el) {
-      var v = (T[lang] && T[lang][el.getAttribute("data-t")]) || T.en[el.getAttribute("data-t")];
-      if (el.hasAttribute("data-html")) el.innerHTML = v; else el.textContent = v;
-    });
+    nodes.forEach(function (n) { var k = n.getAttribute("data-t"); n.innerHTML = lang === "cs" && CS[k] ? CS[k] : EN[k]; });
     document.querySelectorAll(".lang button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-lang") === lang)); });
   }
   document.querySelectorAll(".lang button").forEach(function (b) {
-    b.addEventListener("click", function () { lang = b.getAttribute("data-lang"); try { localStorage.setItem("lz-site-lang", lang); } catch (e) {} apply(); drawQuiz(); });
+    b.addEventListener("click", function () { lang = b.getAttribute("data-lang"); try { localStorage.setItem("lz-site-lang", lang); } catch (e) {} apply(); draw(); });
   });
-  var QS = [
-    { lvl: "B1 Preliminary · Part 5", q: "Take an umbrella ___ it rains on the way home.", o: ["in case", "unless", "so that", "even if"], a: 0,
-      en: "‘in case’ = because it might happen. ‘unless’ means ‘if not’.",
-      cs: "‚in case‘ = pro případ, že začne pršet. ‚unless‘ znamená ‚pokud ne‘." },
-    { lvl: "B2 First · Part 1", q: "She was ___ of stealing the documents, even though there was no proof.", o: ["blamed", "accused", "charged", "faulted"], a: 1,
-      en: "You are ‘accused OF’ something (blamed FOR, charged WITH).",
-      cs: "Po ‚accused‘ následuje předložka ‚of‘ (blamed FOR, charged WITH)." },
-    { lvl: "C1 Advanced · Part 1", q: "No sooner had the curtain gone up ___ the fire alarm went off.", o: ["when", "than", "that", "as"], a: 1,
-      en: "Inversion with ‘No sooner’ always pairs with ‘than’ (Hardly/Scarcely … when).",
-      cs: "Inverze s ‚No sooner‘ se pojí s ‚than‘ (zatímco Hardly/Scarcely s ‚when‘)." }
-  ];
-  var qi = 0, qPick = null, qScore = 0, qDone = [];
-  function drawQuiz() {
-    var box = document.getElementById("try-box");
-    if (!box) return;
-    if (qi >= QS.length) {
-      var msg = lang === "cs"
-        ? "Skóre " + qScore + " / 3! V aplikaci na tebe čeká přes 1 100 dalších úloh s vysvětlením."
-        : "You scored " + qScore + " / 3! Over 1,100 more exercises with instant explanations are waiting inside.";
-      var cta = lang === "cs" ? "Pokračovat v aplikaci →" : "Continue in the app →";
-      var again = lang === "cs" ? "Zkusit znovu" : "Try again";
-      box.innerHTML = '<p class="try-q">' + msg + '</p><div class="try-foot"><button type="button" class="try-opt" style="padding:.6rem 1rem" id="try-reset">' + again + '</button><a class="try-btn" href="app/">' + cta + '</a></div>';
-      document.getElementById("try-reset").onclick = function () { qi = 0; qPick = null; qScore = 0; qDone = []; drawQuiz(); };
-      return;
-    }
-    var item = QS[qi];
-    var dots = QS.map(function (_, idx) { return '<i class="' + (qDone[idx] ? "ok" : idx === qi ? "on" : "") + '"></i>'; }).join("");
-    var opts = item.o.map(function (t, idx) {
-      var cls = qPick == null ? "" : idx === item.a ? " ok" : idx === qPick ? " bad" : "";
-      return '<button type="button" class="try-opt' + cls + '" data-i="' + idx + '"' + (qPick != null ? " disabled" : "") + '><b>' + "ABCD"[idx] + '</b><span>' + t + '</span></button>';
-    }).join("");
-    var why = qPick != null ? '<div class="try-why">' + (qPick === item.a ? "✓ " : "✗ ") + (lang === "cs" ? item.cs : item.en) + '</div>'
-      + '<div class="try-foot"><span></span><button type="button" class="try-btn" id="try-next">' + (qi < 2 ? (lang === "cs" ? "Další otázka →" : "Next question →") : (lang === "cs" ? "Výsledek →" : "See result →")) + '</button></div>' : "";
-    box.innerHTML = '<div class="try-top"><span class="try-lvl">' + item.lvl + '</span><div class="try-dots">' + dots + '</div></div>'
-      + '<p class="try-q">' + item.q + '</p><div class="try-opts">' + opts + '</div>' + why;
-    box.querySelectorAll(".try-opt[data-i]").forEach(function (btn) {
-      btn.onclick = function () {
-        qPick = +btn.getAttribute("data-i");
-        if (qPick === item.a) qScore++;
-        qDone[qi] = true;
-        drawQuiz();
-      };
+
+  /* the papers strip, twice for a seamless loop */
+  var P = [["book", "Reading"], ["uoe", "Use of English"], ["headphones", "Listening"], ["pen", "Writing"], ["mic", "Speaking"], ["trophy", "Mock tests"], ["review", "Smart review"], ["flame", "Streaks"], ["gem", "Levels"]];
+  var ul = document.getElementById("marq");
+  [0, 1].forEach(function () { P.forEach(function (p) { var li = document.createElement("li"); li.innerHTML = '<img src="img/v24/' + p[0] + '.webp" alt="">' + p[1]; ul.appendChild(li); }); });
+
+  /* try a question: original items in the exam format, one defensible answer each */
+  var Q = {
+    b1: [
+      { k: "Reading Part 5", s: "I'm really looking forward ___ you next week.", o: ["to see", "to seeing", "seeing", "see"], a: 1, x: "look forward to + -ing: the 'to' is a preposition, so the verb takes -ing.", xc: "look forward to + -ing: „to“ je tu předložka, proto sloveso s -ing." },
+      { k: "Reading Part 6", s: "We stayed at home ___ it was raining all day.", o: ["because", "although", "so", "but"], a: 0, x: "because gives the reason: the rain is why we stayed in.", xc: "because uvádí důvod: kvůli dešti jsme zůstali doma." },
+      { k: "Reading Part 5", s: "She's been learning English ___ she was six.", o: ["for", "since", "from", "during"], a: 1, x: "since + a point in time (she was six); for + a length of time.", xc: "since + okamžik (když jí bylo šest); for + doba trvání." }
+    ],
+    b2: [
+      { k: "Use of English Part 3", s: "The ending of the film was completely ___ (PREDICT).", o: ["unpredictable", "unpredicted", "predictable", "unpredictably"], a: 0, x: "After 'was completely' we need an adjective, and the meaning is negative: un + predict + able.", xc: "Po „was completely“ potřebujeme přídavné jméno se záporným významem: un + predict + able." },
+      { k: "Use of English Part 1", s: "It took me ages to ___ up my mind about the course.", o: ["make", "do", "take", "get"], a: 0, x: "make up your mind = decide. It's a fixed phrase.", xc: "make up your mind = rozhodnout se. Je to ustálené spojení." },
+      { k: "Use of English Part 2", s: "Hardly ___ we arrived when it started to snow.", o: ["had", "did", "have", "were"], a: 0, x: "Hardly + had + subject + past participle: inversion after a negative adverb.", xc: "Hardly + had + podmět + příčestí: inverze po záporném příslovci." }
+    ],
+    c1: [
+      { k: "Use of English Part 1", s: "The new policy came ___ heavy criticism from teachers.", o: ["under", "into", "over", "across"], a: 0, x: "come under criticism = be criticised. A fixed collocation.", xc: "come under criticism = být kritizován. Pevná kolokace." },
+      { k: "Use of English Part 4", s: "Not until the results came out ___ how well she had done.", o: ["did she realise", "she realised", "she did realise", "had realised she"], a: 0, x: "Not until… at the start needs inversion: did she realise.", xc: "Not until… na začátku věty vyžaduje inverzi: did she realise." },
+      { k: "Use of English Part 3", s: "His ___ to compromise ended the talks. (WILLING)", o: ["unwillingness", "willingness", "unwilling", "unwillingly"], a: 0, x: "A noun after 'His', and the meaning is negative: the talks ended.", xc: "Po „His“ potřebujeme podstatné jméno se záporným významem: jednání skončilo." }
+    ]
+  };
+  var ex = "b2", qi = 0, done = false;
+  function draw() {
+    var q = Q[ex][qi]; done = false;
+    document.getElementById("qk").textContent = q.k;
+    document.getElementById("qt").innerHTML = q.s.replace("___", '<span class="gap">&nbsp;</span>');
+    var box = document.getElementById("qo"); box.innerHTML = "";
+    q.o.forEach(function (t, i) {
+      var b = document.createElement("button"); b.type = "button";
+      b.innerHTML = "<i>" + "ABCD"[i] + "</i>" + t;
+      b.addEventListener("click", function () { pick(i); });
+      box.appendChild(b);
     });
-    var nxt = document.getElementById("try-next");
-    if (nxt) nxt.onclick = function () { qi++; qPick = null; drawQuiz(); };
+    var v = document.getElementById("qv"); v.className = "verdict"; v.innerHTML = "";
   }
-  apply();
-  drawQuiz();
-  // features and exams fade in as they arrive
-  document.documentElement.classList.add("js");
-  // never leave anything hidden: whatever hasn't faded in after a moment simply shows
-  setTimeout(function () { document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); }); }, 2500);
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, { rootMargin: "0px 0px -8% 0px" });
-    document.querySelectorAll(".reveal").forEach(function (el, i) { el.style.transitionDelay = (i % 4) * 60 + "ms"; io.observe(el); });
-  } else document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
+  function pick(i) {
+    if (done) return; done = true;
+    var q = Q[ex][qi], bs = document.querySelectorAll("#qo button");
+    bs[q.a].classList.add("right"); if (i !== q.a) bs[i].classList.add("wrong");
+    document.querySelector("#qt .gap").textContent = q.o[q.a];
+    var v = document.getElementById("qv"), ok = i === q.a;
+    v.className = "verdict show " + (ok ? "ok" : "no");
+    v.innerHTML = (ok ? (lang === "cs" ? "Správně!" : "Correct!") : (lang === "cs" ? "Skoro. Správně je: " : "Nearly. It's: ") + q.o[q.a]) + "<small>" + (lang === "cs" ? q.xc : q.x) + "</small>";
+  }
+  document.querySelectorAll(".tabs button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      ex = b.getAttribute("data-ex"); qi = 0;
+      document.querySelectorAll(".tabs button").forEach(function (x) { x.setAttribute("aria-selected", String(x === b)); });
+      draw();
+    });
+  });
+  document.getElementById("qn").addEventListener("click", function () { qi = (qi + 1) % Q[ex].length; draw(); });
+
+  /* the Winter Season band from 17 November to 31 December */
+  var d = new Date(), md = (d.getMonth() + 1) * 100 + d.getDate();
+  if (md >= 1117 && md <= 1231) {
+    var w = document.getElementById("winter"); w.hidden = false;
+    var band = w.querySelector(".winter");
+    for (var i = 0; i < 18; i++) { var f = document.createElement("span"); f.className = "flake"; f.textContent = "❄"; f.setAttribute("aria-hidden", "true");
+      f.style.left = (Math.random() * 100) + "%"; f.style.top = "-20px"; f.style.animationDuration = (6 + Math.random() * 8) + "s"; f.style.animationDelay = (-Math.random() * 10) + "s"; f.style.fontSize = (10 + Math.random() * 10) + "px"; band.appendChild(f); }
+  }
+
+  /* the header gets its glass once the page scrolls, things rise in as they arrive */
+  var bar = document.getElementById("bar");
+  addEventListener("scroll", function () { bar.classList.toggle("on", scrollY > 10); }, { passive: true });
+  var io = "IntersectionObserver" in window ? new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, { rootMargin: "0px 0px -8% 0px" }) : null;
+  document.querySelectorAll(".reveal").forEach(function (el) { if (io) io.observe(el); else el.classList.add("in"); });
+
+  apply(); draw();
 })();
 </script>
 </body>
