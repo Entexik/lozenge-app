@@ -104,9 +104,10 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
 
   <div class="soon" role="status" data-t="soon">Paying on the web opens in a few days. Until then you can get Plus in the app, with a 7-day free trial.</div>
   <div class="btns"><a class="btn apple" href="https://apps.apple.com/app/id6819167082" target="_blank" rel="noopener" data-t="store">Get Lozenge on the App Store</a></div>
+  <p class="small">Marek Kalivoda, IČO 30276268, Cihlářská 7, 695 01 Hodonín. <a href="terms.html">Terms</a> · Refunds within 14 days of the first payment.</p>
   <p class="small" data-t="fine">Prices include VAT. Lozenge is independent and not affiliated with Cambridge University Press &amp; Assessment.</p>
 
-  <footer><a href="./" data-t="home">Home</a><a href="privacy.html" data-t="privacy">Privacy</a><a href="mailto:skalivoda70@gmail.com" data-t="contact">Contact</a></footer>
+  <footer><a href="./" data-t="home">Home</a><a href="privacy.html" data-t="privacy">Privacy</a><a href="terms.html" data-t="terms">Terms</a><a href="mailto:support@lozenge.online" data-t="contact">Contact</a></footer>
 </div>
 <script>
 (function () {
@@ -118,7 +119,7 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
     s3:"Otevři aplikaci", s3p:"Plus se zapne samo, jakmile jsi přihlášený. Na každém iPhonu a iPadu, který používáš.",
     soon:"Placení na webu spustíme během pár dní. Do té doby si Plus koupíš v aplikaci, se 7 dny zdarma.", store:"Stáhnout Lozenge v App Store",
     fine:"Ceny jsou včetně DPH. Lozenge je nezávislá aplikace, není spojená s Cambridge University Press & Assessment.",
-    home:"Domů", privacy:"Ochrana soukromí", contact:"Kontakt"
+    home:"Domů", terms:"Obchodní podmínky", privacy:"Ochrana soukromí", contact:"Kontakt"
   };
   var nodes = document.querySelectorAll("[data-t]"), EN = {}, lang = "en";
   nodes.forEach(function (n) { EN[n.getAttribute("data-t")] = n.innerHTML; });
