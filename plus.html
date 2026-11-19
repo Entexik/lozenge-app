@@ -51,6 +51,7 @@ ul.perks li::before{content:"✓";flex:none;width:22px;height:22px;border-radius
 .btn svg{width:20px;height:20px}
 .soon{margin-top:18px;padding:16px 18px;border-radius:20px;background:#FFF4CC;color:#4A3500;font-weight:700}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .soon{background:#3A2F0A;color:#FFE58A}}
+.checkout-frame{margin-top:16px;border-radius:22px;overflow:hidden;background:#fff;padding:6px}
 .small{font-size:14px;color:var(--lead);margin-top:14px}
 footer{text-align:center;color:var(--lead);font-size:14px;margin-top:30px}
 footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
@@ -60,7 +61,7 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
 <div class="wrap">
   <div class="top">
     <a class="logo" href="./"><img src="img/icon.png" alt="">lozenge</a>
-    <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="cs" aria-pressed="false">CZ</button></div>
+    
   </div>
 
   <div class="card hero">
@@ -82,8 +83,8 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
       <p data-t="s1p">Use the same Apple or Google account you use in the app. That is how Plus finds you.</p>
     </div></div>
     <div class="btns">
-      <button class="btn apple" type="button" disabled><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M16.37 12.62c-.02-2.3 1.88-3.4 1.96-3.46a4.24 4.24 0 0 0-3.34-1.8c-1.42-.14-2.77.83-3.5.83-.72 0-1.83-.81-3.01-.79a4.46 4.46 0 0 0-3.77 2.29c-1.61 2.79-.41 6.92 1.16 9.18.77 1.1 1.68 2.35 2.88 2.3 1.16-.05 1.6-.75 3-.75s1.79.75 3.01.72c1.25-.02 2.04-1.12 2.8-2.23a9.9 9.9 0 0 0 1.27-2.6 4.04 4.04 0 0 1-2.46-3.69ZM14.07 5.86a4.1 4.1 0 0 0 .94-2.94 4.18 4.18 0 0 0-2.7 1.4 3.9 3.9 0 0 0-.97 2.83 3.45 3.45 0 0 0 2.73-1.29Z"/></svg><span data-t="apple">Continue with Apple</span></button>
-      <button class="btn google" type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.5 12.27c0-.79-.07-1.54-.2-2.27H12v4.3h5.9a5.05 5.05 0 0 1-2.2 3.3v2.75h3.55c2.08-1.92 3.25-4.74 3.25-8.08Z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.76c-.98.66-2.24 1.06-3.72 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.07H2.18a11 11 0 0 0 0 9.87l3.66-2.84Z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15A10.57 10.57 0 0 0 12 1 11 11 0 0 0 2.18 7.07l3.66 2.84C6.71 7.3 9.14 5.38 12 5.38Z"/></svg><span data-t="google">Continue with Google</span></button>
+      <button class="btn apple" type="button" id="in-apple" disabled><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M16.37 12.62c-.02-2.3 1.88-3.4 1.96-3.46a4.24 4.24 0 0 0-3.34-1.8c-1.42-.14-2.77.83-3.5.83-.72 0-1.83-.81-3.01-.79a4.46 4.46 0 0 0-3.77 2.29c-1.61 2.79-.41 6.92 1.16 9.18.77 1.1 1.68 2.35 2.88 2.3 1.16-.05 1.6-.75 3-.75s1.79.75 3.01.72c1.25-.02 2.04-1.12 2.8-2.23a9.9 9.9 0 0 0 1.27-2.6 4.04 4.04 0 0 1-2.46-3.69ZM14.07 5.86a4.1 4.1 0 0 0 .94-2.94 4.18 4.18 0 0 0-2.7 1.4 3.9 3.9 0 0 0-.97 2.83 3.45 3.45 0 0 0 2.73-1.29Z"/></svg><span data-t="apple">Continue with Apple</span></button>
+      <button class="btn google" type="button" id="in-google" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.5 12.27c0-.79-.07-1.54-.2-2.27H12v4.3h5.9a5.05 5.05 0 0 1-2.2 3.3v2.75h3.55c2.08-1.92 3.25-4.74 3.25-8.08Z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.76c-.98.66-2.24 1.06-3.72 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.07H2.18a11 11 0 0 0 0 9.87l3.66-2.84Z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15A10.57 10.57 0 0 0 12 1 11 11 0 0 0 2.18 7.07l3.66 2.84C6.71 7.3 9.14 5.38 12 5.38Z"/></svg><span data-t="google">Continue with Google</span></button>
     </div>
   </div>
 
@@ -92,7 +93,10 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
       <h2 data-t="s2">Pay 890 Kč</h2>
       <p data-t="s2p">Card, Apple Pay or Google Pay. One payment for a year. Cancel any time and Plus runs to the end of the year you paid for.</p>
     </div></div>
-    <div class="btns"><button class="btn green" type="button" disabled data-t="pay">Pay 890 Kč</button></div>
+    <p class="small" id="who" hidden></p>
+    <label class="small" style="display:flex;gap:10px;align-items:flex-start"><input type="checkbox" id="waive" style="margin-top:4px;width:20px;height:20px"><span data-t="waive">Turn Plus on right away. I understand that once it starts I lose the 14-day right to withdraw, but I can still ask for a refund within 14 days as the refund policy says.</span></label>
+    <div class="btns"><button class="btn green" type="button" id="pay" disabled data-t="pay">Pay 890 Kč</button></div>
+    <div id="checkout" class="checkout-frame" hidden></div>
   </div>
 
   <div class="card">
@@ -102,7 +106,7 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
     </div></div>
   </div>
 
-  <div class="soon" role="status" data-t="soon">Paying on the web opens in a few days. Until then you can get Plus in the app, with a 7-day free trial.</div>
+  <div class="soon" role="status" id="soon" data-t="soon">Paying on the web opens in a few days. Until then you can get Plus in the app, with a 7-day free trial.</div>
   <div class="btns"><a class="btn apple" href="https://apps.apple.com/app/id6819167082" target="_blank" rel="noopener" data-t="store">Get Lozenge on the App Store</a></div>
   <p class="small">Marek Kalivoda, IČO 30276268, Cihlářská 7, 695 01 Hodonín. <a href="terms.html">Terms</a> · Refunds within 14 days of the first payment.</p>
   <p class="small" data-t="fine">Prices include VAT. Lozenge is independent and not affiliated with Cambridge University Press &amp; Assessment.</p>
@@ -115,7 +119,7 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
     save:"Cena na webu · o 100 Kč méně", year:"za rok", app:"v aplikaci 990 Kč",
     p1:"Všech 10 zkušebních testů od každé části, pro B1, B2 i C1", p2:"AI tipy k psaní, 5 denně", p3:"AI partner na procvičení mluvení", p4:"Neomezená energie a každý sezónní pass",
     s1:"Přihlas se", s1p:"Stejným účtem Apple nebo Google, jaký máš v aplikaci. Podle něj tě Plus najde.", apple:"Pokračovat přes Apple", google:"Pokračovat přes Google",
-    s2:"Zaplať 890 Kč", s2p:"Kartou, Apple Pay nebo Google Pay. Jedna platba na rok. Zrušit můžeš kdykoli a Plus ti poběží do konce zaplaceného roku.", pay:"Zaplatit 890 Kč",
+    s2:"Zaplať 890 Kč", s2p:"Kartou, Apple Pay nebo Google Pay. Jedna platba na rok. Zrušit můžeš kdykoli a Plus ti poběží do konce zaplaceného roku.", pay:"Zaplatit 890 Kč", waive:"Zapnout Plus hned. Beru na vědomí, že po zapnutí ztrácím 14denní lhůtu na odstoupení, o vrácení peněz ale můžu do 14 dnů požádat podle pravidel vracení.",
     s3:"Otevři aplikaci", s3p:"Plus se zapne samo, jakmile jsi přihlášený. Na každém iPhonu a iPadu, který používáš.",
     soon:"Placení na webu spustíme během pár dní. Do té doby si Plus koupíš v aplikaci, se 7 dny zdarma.", store:"Stáhnout Lozenge v App Store",
     fine:"Ceny jsou včetně DPH. Lozenge je nezávislá aplikace, není spojená s Cambridge University Press & Assessment.",
@@ -123,7 +127,7 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
   };
   var nodes = document.querySelectorAll("[data-t]"), EN = {}, lang = "en";
   nodes.forEach(function (n) { EN[n.getAttribute("data-t")] = n.innerHTML; });
-  try { lang = localStorage.getItem("lz-site-lang") || (/^(cs|sk)/.test(navigator.language || "") ? "cs" : "en"); } catch (e) {}
+  lang = "en";
   function apply() {
     document.documentElement.lang = lang;
     nodes.forEach(function (n) { var k = n.getAttribute("data-t"); n.innerHTML = lang === "cs" && CS[k] ? CS[k] : EN[k]; });
@@ -131,6 +135,45 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
   }
   document.querySelectorAll(".lang button").forEach(function (b) { b.addEventListener("click", function () { lang = b.getAttribute("data-lang"); try { localStorage.setItem("lz-site-lang", lang); } catch (e) {} apply(); }); });
   apply();
+})();
+</script>
+<!-- web checkout: Supabase sign-in, then Paddle. Stays switched off until PADDLE.token is set. -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+<script>
+(function () {
+  var PADDLE = { env: "production", token: "", price: "pri_01m7j4xp5g126nkrahe053fe5k" };   /* live token goes in once Paddle approves; sandbox: token test_cc8ff6d7c70b3cb51177d91ba98, price pri_01m7ser90z6bydtzq40ggnkrhq */           /* client-side token and price from the Paddle dashboard */
+  var SB = { url: "https://nnslmfuoswqxltjqgvzg.supabase.co", key: "sb_publishable_POu9kAO20GgUBD7gX20glQ_6PO2Cmga" };
+  if (!PADDLE.token || !PADDLE.price || !window.supabase || !window.Paddle) return;
+  var sb = window.supabase.createClient(SB.url, SB.key), user = null;
+  var $ = function (id) { return document.getElementById(id); };
+  document.getElementById("soon").hidden = true;
+  if (PADDLE.env === "sandbox") Paddle.Environment.set("sandbox");
+  Paddle.Initialize({ token: PADDLE.token, eventCallback: function (e) {
+    if (e.name === "checkout.completed") { $("who").hidden = false; $("who").textContent = document.documentElement.lang === "cs" ? "Hotovo! Otevři aplikaci, přihlas se stejným účtem a Plus se zapne." : "Done! Open the app, sign in with the same account and Plus turns on."; }
+  } });
+  function refresh() {
+    $("in-apple").disabled = !!user; $("in-google").disabled = !!user;
+    $("pay").disabled = !user || !$("waive").checked;
+    if (user) { $("who").hidden = false; $("who").textContent = (document.documentElement.lang === "cs" ? "Přihlášen jako " : "Signed in as ") + (user.email || "your account"); }
+  }
+  function signIn(provider) { sb.auth.signInWithOAuth({ provider: provider, options: { redirectTo: location.origin + location.pathname } }); }
+  $("in-apple").addEventListener("click", function () { signIn("apple"); });
+  $("in-google").addEventListener("click", function () { signIn("google"); });
+  $("waive").addEventListener("change", refresh);
+  $("pay").addEventListener("click", function () {
+    if (!user) return;
+    Paddle.Checkout.open({ items: [{ priceId: PADDLE.price, quantity: 1 }], customData: { user_id: user.id, lang: document.documentElement.lang === "cs" ? "cs" : "en" },
+      customer: user.email ? { email: user.email } : undefined,
+      settings: { locale: document.documentElement.lang === "cs" ? "cs" : "en", displayMode: "inline", variant: "one-page",
+        frameTarget: "checkout-frame", frameInitialHeight: 450,
+        frameStyle: "width:100%;min-width:280px;background-color:transparent;border:none;" } });
+    $("checkout").hidden = false; $("pay").hidden = true;
+    setTimeout(function () { $("checkout").scrollIntoView({ behavior: "smooth", block: "start" }); }, 300);
+  });
+  sb.auth.getSession().then(function (r) { user = r.data && r.data.session ? r.data.session.user : null; refresh(); });
+  sb.auth.onAuthStateChange(function (_e, s) { user = s ? s.user : null; refresh(); });
+  $("in-apple").disabled = false; $("in-google").disabled = false;
 })();
 </script>
 </body>

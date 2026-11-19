@@ -269,7 +269,7 @@ footer a{color:var(--ink2);text-decoration:none;font-weight:700;margin-right:16p
       <a class="link" href="#papers" data-t="nav_papers">The four papers</a>
       <a class="link" href="#plus">Plus</a>
       <a class="link" href="#faq">FAQ</a>
-      <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="cs" aria-pressed="false">CZ</button></div>
+      
     </nav>
   </div>
 </header>
@@ -529,7 +529,7 @@ footer a{color:var(--ink2);text-decoration:none;font-weight:700;margin-right:16p
   var nodes = document.querySelectorAll("[data-t]"), EN = {};
   nodes.forEach(function (n) { EN[n.getAttribute("data-t")] = n.innerHTML; });
   var lang = "en";
-  try { lang = localStorage.getItem("lz-site-lang") || ((navigator.language || "").slice(0, 2) === "cs" || (navigator.language || "").slice(0, 2) === "sk" ? "cs" : "en"); } catch (e) {}
+  lang = "en";
   function apply() {
     document.documentElement.lang = lang;
     nodes.forEach(function (n) { var k = n.getAttribute("data-t"); n.innerHTML = lang === "cs" && CS[k] ? CS[k] : EN[k]; });
