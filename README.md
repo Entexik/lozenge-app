@@ -7,18 +7,20 @@
 <p align="center">
   <b>Practice for the Cambridge English exams, a few minutes at a time.</b><br>
   <a href="https://lozenge.online/">lozenge.online</a><br>
-  B1 Preliminary · B2 First · C1 Advanced
+  B1 Preliminary · B2 First · C1 Advanced<br>
+  <sub>Version 2.4.1 · November 2026</sub>
 </p>
 
 <p align="center">
   <a href="https://play.google.com/apps/testing/com.marekkalivoda.lozenge"><img alt="Android: join the Google Play test" src="https://img.shields.io/badge/Android-Google%20Play%20test-3DDC84?style=for-the-badge&logo=googleplay&logoColor=white"></a>
   <a href="https://lozenge.online/app/"><img alt="Try it in your browser" src="https://img.shields.io/badge/Web-Try%20it%20now-4457FF?style=for-the-badge&logo=googlechrome&logoColor=white"></a>
   <a href="https://testflight.apple.com/join/Vr9PM1Qp"><img alt="iPhone: join the TestFlight beta" src="https://img.shields.io/badge/iPhone-TestFlight%20beta-0B0F2E?style=for-the-badge&logo=apple&logoColor=white"></a>
+  <a href="https://apps.apple.com/app/id6819167082"><img alt="Download on the App Store" src="https://img.shields.io/badge/App%20Store-Download-0D96F6?style=for-the-badge&logo=appstore&logoColor=white"></a>
   <a href="https://discord.gg/3fZpk2kzp"><img alt="Discord community" src="https://img.shields.io/badge/Discord-community-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
 </p>
 
 <p align="center">
-  <img src="assets/banner.png" width="100%" alt="Lozenge on iPhone: the lesson path, Home and Lozzy's wardrobe">
+  <img src="assets/banner.png" width="100%" alt="Lozenge on iPhone: the lesson path, Home and a reward chest opening">
 </p>
 
 Lozenge is a practice app for the Cambridge English exams, made by a student from Czechia. Most apps
@@ -38,13 +40,25 @@ You pick one exam and the lessons, tests and daily plan follow it.
 
 | | Reading &amp; Use of English | Listening | Writing | Speaking | Lesson units | Pass mark |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **B1 Preliminary** | 10 mock papers + 4 practice sets | 4 tests + 2 practice sets | 4 papers · 12 tasks | 6 tests | 20 | 140 |
-| **B2 First** | 8 mock papers + 8 practice sets | 8 tests + 5 practice sets | 8 papers · 34 tasks | 8 tests + 6 practice sets | 29 | 160 |
-| **C1 Advanced** | 10 mock papers + 4 practice sets | 4 tests + 2 practice sets | 4 papers · 16 tasks | 6 tests | 20 | 180 |
+| **B1 Preliminary** | 10 mock papers + practice sets | 10 tests + practice sets | 10 papers · 32 tasks | 10 tests | 23 | 140 |
+| **B2 First** | 10 mock papers + practice sets | 10 tests + practice sets | 10 papers · 45 tasks | 10 tests + practice sets | 32 | 160 |
+| **C1 Advanced** | 10 mock papers + practice sets | 10 tests + practice sets | 10 papers · 42 tasks | 10 tests | 23 | 180 |
 
-Over 3,000 exam-style questions, 840 recordings and 150 listening reels. All the texts and exercises are
-written from scratch in the exam format; nothing is copied from Cambridge. The recordings use synthetic
+Over 4,000 exam-style questions, about 1,400 recordings and 150 listening reels. All the texts and exercises
+are written from scratch in the exam format; nothing is copied from Cambridge. The recordings use synthetic
 British voices.
+
+**New in 2.4.1**
+
+- **Works offline.** On Wi-Fi the app downloads every recording, video and photo by itself, so lessons and
+  tests work on a plane or underground. Lessons you finish offline stay done.
+- **Reward chests.** Tap the chest, watch it open, then tap again for each reward: gems, boosts, streak
+  freezes, golden words, examiner's secrets, golden tickets and outfits for Lozzy you can only find in chests.
+  Your finds are kept in the Treasure collection.
+- **A chest for tomorrow.** Finish your first day and a chest waits for you the next morning.
+- **Seasons.** Winter Season with an advent calendar, a road of rewards and a word album to fill.
+
+**Everything else**
 
 - **Mock tests and Exam day** – timed papers with the real parts and questions, or a whole test in one go,
   in the real order with breaks, ending with one overall grade. A strict exam mode runs it like the real day.
@@ -68,14 +82,16 @@ British voices.
 
 <table>
   <tr>
-    <td align="center"><img src="screenshots/01-home.jpg" width="230" alt="Home: the next lesson, today and the grade you'd get"><br><sub>Home</sub></td>
-    <td align="center"><img src="screenshots/02-tests.jpg" width="230" alt="Mock tests: Test 1, Test 2 with all four papers"><br><sub>Mock tests</sub></td>
-    <td align="center"><img src="screenshots/03-speaking.jpg" width="230" alt="Speaking with real photos to compare"><br><sub>Speaking</sub></td>
+    <td align="center"><img src="screenshots/01-home.jpg" width="200" alt="Home: the next lesson, the season and the grade you'd get"><br><sub>Home</sub></td>
+    <td align="center"><img src="screenshots/02-learn.jpg" width="200" alt="Learn: one road through every unit"><br><sub>Your path</sub></td>
+    <td align="center"><img src="screenshots/03-lesson.jpg" width="200" alt="A lesson question in the exam format"><br><sub>Lessons</sub></td>
+    <td align="center"><img src="screenshots/04-chest.jpg" width="200" alt="A reward chest: tap it for each reward"><br><sub>Reward chests</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="screenshots/04-live-examiner.jpg" width="230" alt="Talk to a live AI examiner"><br><sub>Live examiner</sub></td>
-    <td align="center"><img src="screenshots/05-guides.jpg" width="230" alt="Exam guides, card by card"><br><sub>Exam guides</sub></td>
-    <td align="center"><img src="screenshots/06-learn.jpg" width="230" alt="Learn: units and five-minute lessons"><br><sub>Your path</sub></td>
+    <td align="center"><img src="screenshots/05-tests.jpg" width="200" alt="Mock tests: every paper, timed"><br><sub>Mock tests</sub></td>
+    <td align="center"><img src="screenshots/06-shop.jpg" width="200" alt="Shop: boosts and Lozzy's wardrobe"><br><sub>Shop</sub></td>
+    <td align="center"><img src="screenshots/07-advent.jpg" width="200" alt="The advent calendar of the Winter Season"><br><sub>Advent calendar</sub></td>
+    <td align="center"><img src="screenshots/08-me.jpg" width="200" alt="Me: level, streak and the grade you'd get today"><br><sub>Your progress</sub></td>
   </tr>
 </table>
 
@@ -92,8 +108,8 @@ Use the same Google account for both steps. Rather not use Google Play? Download
 (Android 8.0 or newer); uninstall it before you install the Google Play version.
 
 **iPhone** – join the public beta on TestFlight: [testflight.apple.com/join/Vr9PM1Qp](https://testflight.apple.com/join/Vr9PM1Qp)
-(install Apple's TestFlight app first). The App Store version is in review. Widgets, Live Activities and an
-Apple Watch app are included.
+(install Apple's TestFlight app first), or get it from the [App Store](https://apps.apple.com/app/id6819167082).
+Widgets, Live Activities and an Apple Watch app are included.
 
 **Anything else** – there's a web version here: [lozenge.online/app](https://lozenge.online/app/).
 
@@ -107,7 +123,8 @@ What changed in each version: [releases](https://github.com/Entexik/lozenge-app/
 Lozenge je aplikace na přípravu ke zkouškám Cambridge B1 Preliminary, B2 First a C1 Advanced. Dělá ji
 student z Česka. Jsou v ní krátké lekce, zkušební testy na čas a Den zkoušky s celkovou známkou, živý
 AI zkoušející (i s druhým kandidátem v Part 3), psaní s hodnocením (i z fotky ručně psaného textu),
-vysvětlení chyb česky, poslechové reels, průvodci zkouškou a třídy pro učitele. Rozhraní je česky.
+vysvětlení chyb česky, poslechové reels, průvodci zkouškou a třídy pro učitele. Funguje i offline,
+nahrávky se stáhnou na Wi‑Fi. Rozhraní je česky.
 [iPhone (TestFlight)](https://testflight.apple.com/join/Vr9PM1Qp) ·
 [APK pro Android](https://github.com/Entexik/lozenge-app/releases/latest/download/Lozenge.apk) ·
 [verze do prohlížeče](https://lozenge.online/app/)
