@@ -56,6 +56,16 @@ ul.perks li::before{content:"✓";flex:none;width:22px;height:22px;border-radius
 footer{text-align:center;color:var(--lead);font-size:14px;margin-top:30px}
 footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
 [hidden]{display:none!important}
+.paybox{margin-top:16px;border-radius:26px;background:#fff;color:#0B0F2E;padding:14px 10px 10px;box-shadow:0 24px 50px -28px rgba(40,52,160,.5),inset 0 0 0 1px rgba(68,87,255,.14);animation:payin .35s cubic-bezier(.3,1.2,.5,1)}
+@keyframes payin{from{opacity:0;transform:translateY(12px) scale(.98)}}
+.paytop{display:flex;align-items:center;gap:12px;padding:4px 8px 12px;border-bottom:1px solid #ECEEFB;margin-bottom:6px}
+.paytop img{width:46px;height:46px}
+.paytop b{display:block;font:800 18px "Bricolage Grotesque",sans-serif;letter-spacing:-.02em}
+.paytop span{font-size:14px;color:#545C82;font-weight:600}
+.paytop button{margin-left:auto;width:38px;height:38px;border-radius:50%;border:0;background:#EEF0FF;color:#3A4168;font-size:16px;cursor:pointer}
+#checkout{min-height:420px}
+.secure{text-align:center;font-size:13px;color:#545C82;margin:8px 0 2px;font-weight:600}
+@media (prefers-reduced-motion:reduce){.paybox{animation:none}}
 .auth .step h2{padding-right:76px}
 .auth{position:relative;overflow:visible;padding-top:30px}
 .auth .peek{position:absolute;right:22px;top:-46px;width:92px;filter:drop-shadow(0 12px 18px rgba(40,52,160,.35));pointer-events:none}
@@ -146,6 +156,8 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
     <p class="small" id="who" hidden></p>
     <label class="small" style="display:flex;gap:10px;align-items:flex-start"><input type="checkbox" id="waive" style="margin-top:4px;width:20px;height:20px"><span data-t="waive">Turn Plus on right away. I understand that once it starts I lose the 14-day right to withdraw, but I can still ask for a refund within 14 days as the refund policy says.</span></label>
     <div class="btns"><button class="btn green" type="button" id="pay" disabled data-t="pay">Pay 990 Kč</button></div>
+    <div class="msg" id="paymsg" role="status" hidden></div>
+    <div class="paybox" id="paybox" hidden><div class="paytop"><img src="img/lozzy-clear-512.png" alt=""><div><b>Lozenge Plus</b><span data-t="paysub">990 Kč a year, VAT included</span></div><button type="button" id="payclose" aria-label="Close">✕</button></div><div id="checkout"></div><p class="secure" data-t="secure">Secure payment by Stripe. Lozenge never sees your card.</p></div>
       </div>
 
   <div class="card">
@@ -168,7 +180,7 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
     save:"Cena na webu · o 300 Kč méně", year:"za rok", app:"v aplikaci 1 290 Kč",
     p1:"Všech 10 zkušebních testů od každé části, pro B1, B2 i C1", p2:"AI tipy k psaní, 5 denně", p3:"AI partner na procvičení mluvení", p4:"Neomezená energie a každý sezónní pass",
     s1:"Přihlas se", s1p:"Stejným účtem, jaký máš v aplikaci: Apple, Google nebo účet Lozenge. Podle něj tě Plus najde.", or:"nebo účtem Lozenge", tlogin:"Přihlásit se", tsignup:"Založit účet", lname:"Tvoje jméno", lemail:"E-mail", lpass:"Heslo", blogin:"Přihlásit se", forgot:"Zapomenuté heslo?", signed:"Jsi přihlášený", out:"Odhlásit", apple:"Pokračovat přes Apple", google:"Pokračovat přes Google",
-    s2:"Zaplať 990 Kč", s2p:"Kartou, Apple Pay nebo Google Pay. Jedna platba na rok. Zrušit můžeš kdykoli a Plus ti poběží do konce zaplaceného roku.", pay:"Zaplatit 990 Kč", waive:"Zapnout Plus hned. Beru na vědomí, že po zapnutí ztrácím 14denní lhůtu na odstoupení, o vrácení peněz ale můžu do 14 dnů požádat podle pravidel vracení.",
+    s2:"Zaplať 990 Kč", s2p:"Kartou, Apple Pay nebo Google Pay. Jedna platba na rok. Zrušit můžeš kdykoli a Plus ti poběží do konce zaplaceného roku.", pay:"Zaplatit 990 Kč", paysub:"990 Kč na rok, včetně DPH", secure:"Bezpečná platba přes Stripe. Lozenge tvou kartu nikdy nevidí.", waive:"Zapnout Plus hned. Beru na vědomí, že po zapnutí ztrácím 14denní lhůtu na odstoupení, o vrácení peněz ale můžu do 14 dnů požádat podle pravidel vracení.",
     s3:"Otevři aplikaci", s3p:"Plus se zapne samo, jakmile jsi přihlášený. Na každém telefonu a tabletu, který používáš, s iOS i Androidem.",
     soon:"Placení na webu spustíme během pár dní. Do té doby si Plus koupíš v aplikaci, se 7 dny zdarma.", store:"Stáhnout Lozenge v App Store", store_g:"Stáhnout Lozenge na Google Play",
     fine:"Ceny jsou včetně DPH. Lozenge je nezávislá aplikace, není spojená s Cambridge University Press & Assessment.",
@@ -261,11 +273,37 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
   $("in-apple").addEventListener("click", function () { signIn("apple"); });
   $("in-google").addEventListener("click", function () { signIn("google"); });
   $("waive").addEventListener("change", refresh);
-  $("pay").addEventListener("click", function () {
-    if (!user) return;
+  var embedded = null;
+  function loadStripeJs() {
+    return new Promise(function (ok, bad) {
+      if (window.Stripe) return ok();
+      var el = document.createElement("script"); el.src = "https://js.stripe.com/v3/"; el.onload = ok; el.onerror = bad; document.head.appendChild(el);
+    });
+  }
+  function payMsg(t, good) { var m = $("paymsg"); m.hidden = !t; m.textContent = t || ""; m.className = "msg " + (good ? "ok" : "err"); }
+  function hostedFallback() {
     var q = "client_reference_id=" + encodeURIComponent(user.id) + (user.email ? "&prefilled_email=" + encodeURIComponent(user.email) : "") + "&locale=" + (cs() ? "cs" : "en");
     location.href = STRIPE.link + (STRIPE.link.indexOf("?") < 0 ? "?" : "&") + q;
+  }
+  $("pay").addEventListener("click", async function () {
+    if (!user || busy) return;
+    var b = $("pay"); busy = true; b.disabled = true; payMsg("");
+    try {
+      var r = await sb.functions.invoke("checkout", { body: { lang: cs() ? "cs" : "en" } });
+      var status = r.error && r.error.context ? r.error.context.status : (r.error ? 0 : 200);
+      if (status === 409) { payMsg(T("You already have Plus on the web. Open the app and sign in with this account.", "Plus na webu už máš. Otevři aplikaci a přihlas se tímhle účtem."), true); return; }
+      if (status !== 200 || !r.data || !r.data.client_secret) { hostedFallback(); return; }
+      await loadStripeJs();
+      var stripe = window.Stripe(r.data.pk);
+      if (embedded) { embedded.destroy(); embedded = null; }
+      embedded = await stripe.initEmbeddedCheckout({ fetchClientSecret: function () { return Promise.resolve(r.data.client_secret); } });
+      $("paybox").hidden = false; b.hidden = true;
+      embedded.mount("#checkout");
+      $("paybox").scrollIntoView({ behavior: "smooth", block: "start" });
+    } catch (e) { console.error(e); hostedFallback(); }
+    finally { busy = false; b.disabled = !user || !$("waive").checked; }
   });
+  $("payclose").addEventListener("click", function () { if (embedded) { embedded.destroy(); embedded = null; } $("paybox").hidden = true; $("pay").hidden = false; });
   sb.auth.getSession().then(function (r) { user = r.data && r.data.session ? r.data.session.user : null; refresh(); });
   sb.auth.onAuthStateChange(function (_e, s) { user = s ? s.user : null; refresh(); });
   $("in-apple").disabled = false; $("in-google").disabled = false;
