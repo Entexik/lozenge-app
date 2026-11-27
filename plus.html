@@ -292,7 +292,8 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
       var r = await sb.functions.invoke("checkout", { body: { lang: cs() ? "cs" : "en" } });
       var status = r.error && r.error.context ? r.error.context.status : (r.error ? 0 : 200);
       if (status === 409) { payMsg(T("You already have Plus on the web. Open the app and sign in with this account.", "Plus na webu už máš. Otevři aplikaci a přihlas se tímhle účtem."), true); return; }
-      if (status !== 200 || !r.data || !r.data.client_secret) { hostedFallback(); return; }
+      if (status === 503) { hostedFallback(); return; }
+      if (status !== 200 || !r.data || !r.data.client_secret) { payMsg(T("Payment couldn't start. Try again in a moment.", "Platbu se nepodařilo spustit. Zkus to za chvilku znovu.")); return; }
       await loadStripeJs();
       var stripe = window.Stripe(r.data.pk);
       if (embedded) { embedded.destroy(); embedded = null; }
@@ -300,7 +301,7 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
       $("paybox").hidden = false; b.hidden = true;
       embedded.mount("#checkout");
       $("paybox").scrollIntoView({ behavior: "smooth", block: "start" });
-    } catch (e) { console.error(e); hostedFallback(); }
+    } catch (e) { console.error(e); payMsg(T("Payment couldn't start. Try again in a moment.", "Platbu se nepodařilo spustit. Zkus to za chvilku znovu.")); }
     finally { busy = false; b.disabled = !user || !$("waive").checked; }
   });
   $("payclose").addEventListener("click", function () { if (embedded) { embedded.destroy(); embedded = null; } $("paybox").hidden = true; $("pay").hidden = false; });
