@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Plus+Jakarta+Sans:wght@500..800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Lozenge","operatingSystem":"iOS","applicationCategory":"EducationalApplication","url":"https://lozenge.online/","offers":{"@type":"Offer","price":"0","priceCurrency":"CZK"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Lozenge","operatingSystem":"iOS","applicationCategory":"EducationalApplication","url":"https://lozenge.online/","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}</script>
 <style>
 :root{
   --ground:#EEF0FF; --paper:#FFFFFF; --ink:#0B0F2E; --ink2:#3A4168; --lead:#5C6489; --rule:rgba(64,80,180,.14);
@@ -101,11 +101,22 @@ h2{font-size:clamp(34px,5.4vw,58px)}
 .cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:28px}
 .cta .web{font-weight:800;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:8px;min-height:44px}
 .cta .web b{background:#FFD45C;color:#2A1A00;border-radius:999px;padding:3px 9px;font-size:13px}
+.webplus{position:relative;display:flex;align-items:center;gap:16px;margin-top:22px;max-width:560px;padding:18px 22px 18px 16px;border-radius:26px;text-decoration:none;color:#fff;background:linear-gradient(135deg,#4B2FD8,#6E4FF2 52%,#E8468D);box-shadow:0 6px 0 #3420A6,0 30px 50px -30px rgba(91,60,240,.8);transition:transform .16s cubic-bezier(.3,1.5,.5,1)}
+.webplus:active{transform:translateY(4px);box-shadow:0 2px 0 #3420A6}
+.webplus img{flex:none;width:64px;height:64px;filter:drop-shadow(0 8px 10px rgba(20,10,80,.35))}
+.wp-txt{display:flex;flex-direction:column;gap:2px;min-width:0}
+.wp-txt small{font:800 13px var(--ui);letter-spacing:.08em;text-transform:uppercase;opacity:.9}
+.wp-txt b{font:800 30px/1.05 var(--display);letter-spacing:-.03em}
+.wp-txt b i{font:700 15px var(--ui);font-style:normal;opacity:.85;letter-spacing:0}
+.wp-txt em{font-style:normal;font-weight:600;font-size:14px;opacity:.9}
+.wp-save{position:absolute;top:-12px;right:18px;background:#FFD45C;color:#2A1A00;border-radius:999px;padding:5px 12px;font:800 13px var(--ui);box-shadow:0 3px 0 #D9A82B}
+.wp-go{margin-left:auto;flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.2);font:800 20px var(--ui)}
+@media (max-width:420px){.webplus{gap:12px;padding:16px 16px 16px 12px}.webplus img{width:52px;height:52px}.wp-txt b{font-size:26px}.wp-go{display:none}}
 .trust{margin-top:22px;color:var(--lead);font-size:14px;font-weight:600}
 /* the phone */
 .stage{position:relative;height:640px;display:flex;justify-content:center;align-items:center}
-.phone{position:relative;width:300px;aspect-ratio:600/1304;border-radius:46px;padding:10px;background:linear-gradient(145deg,#2A2F55,#0B0F2E);box-shadow:0 50px 90px -40px rgba(20,26,90,.7),inset 0 0 0 2px rgba(255,255,255,.12);transform:rotate(-4deg);animation:float 7s ease-in-out infinite}
-.phone img{width:100%;height:100%;object-fit:cover;border-radius:37px}
+.phone{position:relative;width:310px;transform:rotate(-4deg);animation:float 7s ease-in-out infinite}
+.phone img{width:100%;height:auto;filter:drop-shadow(0 40px 50px rgba(20,26,90,.45))}
 @keyframes float{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(-2.5deg) translateY(-12px)}}
 .chip{position:absolute;display:flex;align-items:center;gap:10px;padding:10px 14px 10px 10px;border-radius:20px;background:var(--glass2);border:1px solid var(--edge);box-shadow:var(--shadow);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-weight:800;font-size:15px;white-space:nowrap;animation:bob 6s ease-in-out infinite}
 .chip img{width:36px;height:36px}
@@ -160,8 +171,8 @@ section{padding:90px 0}
 .inside{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 20px 34px;scrollbar-width:none}
 .inside::-webkit-scrollbar{display:none}
 .inside figure{flex:0 0 250px;margin:0;scroll-snap-align:center;display:flex;flex-direction:column;gap:14px;align-items:center;text-align:center}
-.inside .ph{width:250px;aspect-ratio:600/1304;border-radius:38px;padding:8px;background:linear-gradient(145deg,#2A2F55,#0B0F2E);box-shadow:0 30px 60px -32px rgba(20,26,90,.7)}
-.inside .ph img{width:100%;height:100%;object-fit:cover;border-radius:31px}
+.inside .ph{width:250px}
+.inside .ph img{width:100%;height:auto;filter:drop-shadow(0 26px 30px rgba(20,26,90,.35))}
 .inside figcaption b{display:block;font:800 19px var(--display);letter-spacing:-.02em}
 .inside figcaption span{color:var(--lead);font-size:15px}
 @media (min-width:1100px){.inside{justify-content:center;flex-wrap:nowrap}}
@@ -286,13 +297,18 @@ footer a{color:var(--ink2);text-decoration:none;font-weight:700;margin-right:16p
       <div class="cta">
         <a class="store" href="https://apps.apple.com/app/id6819167082" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#apple"/></svg><span><small data-t="store_small">Download on the</small><b>App Store</b></span></a>
         <a class="store" href="https://play.google.com/store/apps/details?id=com.marekkalivoda.lozenge" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#gplay"/></svg><span><small data-t="store_small_g">Get it on</small><b>Google Play</b></span></a>
-        <a class="web" href="plus.html"><span data-t="hero_web">Plus on the web</span> <b data-t="save_100">save 300 Kč</b></a>
       </div>
+      <a class="webplus" href="plus.html">
+        <img src="img/lozzy-clear-512.png" alt="">
+        <span class="wp-txt"><small data-t="hero_web">Lozenge Plus on the web</small><b><span>€39.99</span> <i data-t="per_year">a year</i></b><em data-t="hero_web2">Everything unlocked, for a year. Cheaper than in the app.</em></span>
+        <span class="wp-save" data-t="save_100">save €10</span>
+        <span class="wp-go" aria-hidden="true">→</span>
+      </a>
       <p class="trust" data-t="trust">Free to start. Original exam-style material, never copied from real papers.</p>
     </div>
     <div class="stage" aria-hidden="true">
       <img class="lozzy-peek" src="img/v24/lozzy-santa.webp" alt="">
-      <div class="phone"><img src="img/v24/01-home.webp" alt=""></div>
+      <div class="phone"><img src="img/mock/01-home.webp" alt="" width="426" height="880"></div>
       <div class="chip a"><img src="img/v24/star.webp" alt=""><span>+18 XP<small data-t="chip_lesson">Lesson done</small></span></div>
       <div class="chip b"><img src="img/v24/trophy.webp" alt=""><span>168 · Grade C<small data-t="chip_score">If you sat B2 First today</small></span></div>
       <div class="chip c"><img src="img/v24/flame.webp" alt=""><span data-t="chip_streak">12-day streak</span></div>
@@ -336,11 +352,11 @@ footer a{color:var(--ink2);text-decoration:none;font-weight:700;margin-right:16p
     </div>
   </div>
   <div class="inside reveal">
-    <figure><div class="ph"><img src="img/v24/08-learn.webp" alt="" loading="lazy"></div><figcaption><b data-t="s_learn">A road of lessons</b><span data-t="s_learn2">Unit by unit, each ending with a real exam task</span></figcaption></figure>
-    <figure><div class="ph"><img src="img/v24/04-lesson.webp" alt="" loading="lazy"></div><figcaption><b data-t="s_lesson">One question at a time</b><span data-t="s_lesson2">And why the answer is right</span></figcaption></figure>
-    <figure><div class="ph"><img src="img/v24/06-tests.webp" alt="" loading="lazy"></div><figcaption><b data-t="s_tests">Mock tests on the clock</b><span data-t="s_tests2">Ten of every paper for each exam</span></figcaption></figure>
-    <figure><div class="ph"><img src="img/v24/09-album.webp" alt="" loading="lazy"></div><figcaption><b data-t="s_album">A word album</b><span data-t="s_album2">Collect words as you learn</span></figcaption></figure>
-    <figure><div class="ph"><img src="img/v24/10-me.webp" alt="" loading="lazy"></div><figcaption><b data-t="s_me">Your level and your score</b><span data-t="s_me2">See where you stand every week</span></figcaption></figure>
+    <figure><div class="ph"><img src="img/mock/08-learn.webp" alt="" width="426" height="880" loading="lazy"></div><figcaption><b data-t="s_learn">A road of lessons</b><span data-t="s_learn2">Unit by unit, each ending with a real exam task</span></figcaption></figure>
+    <figure><div class="ph"><img src="img/mock/02-season.webp" alt="" width="426" height="880" loading="lazy"></div><figcaption><b data-t="s_lesson">A season every month</b><span data-t="s_lesson2">A road of rewards, new lessons and looks for Lozzy</span></figcaption></figure>
+    <figure><div class="ph"><img src="img/mock/06-tests.webp" alt="" width="426" height="880" loading="lazy"></div><figcaption><b data-t="s_tests">Mock tests on the clock</b><span data-t="s_tests2">Ten of every paper for each exam</span></figcaption></figure>
+    <figure><div class="ph"><img src="img/mock/05-advent.webp" alt="" width="426" height="880" loading="lazy"></div><figcaption><b data-t="s_album">Something new every day</b><span data-t="s_album2">Calendars, chests and a word album to fill</span></figcaption></figure>
+    <figure><div class="ph"><img src="img/mock/10-me.webp" alt="" width="426" height="880" loading="lazy"></div><figcaption><b data-t="s_me">Your level and your score</b><span data-t="s_me2">See where you stand every week</span></figcaption></figure>
   </div>
 </section>
 
@@ -402,16 +418,16 @@ footer a{color:var(--ink2);text-decoration:none;font-weight:700;margin-right:16p
   </div>
 </section>
 
-<section id="winter" style="padding-top:20px" hidden>
+<section id="season" style="padding-top:20px" hidden>
   <div class="wrap">
-    <div class="winter reveal">
+    <div class="winter reveal" id="sn">
       <div>
-        <span class="kicker" style="color:#FFD45C" data-t="w_kicker">1 to 31 December</span>
-        <h2 style="margin:14px 0 14px" data-t="w_h">Winter Season</h2>
-        <p data-t="w_p">An advent calendar with a present behind every door, winter lessons for double XP, a word album to fill and the Winter King waiting at the end of the road.</p>
-        <div class="tags"><span data-t="w_t1">Advent calendar</span><span data-t="w_t2">Word album</span><span data-t="w_t3">Double XP on New Year's Eve</span></div>
+        <span class="kicker" style="color:#FFD45C" id="sn-k"></span>
+        <h2 style="margin:14px 0 14px" id="sn-h"></h2>
+        <p id="sn-p"></p>
+        <div class="tags" id="sn-t"></div>
       </div>
-      <div class="art"><img class="l" src="img/v24/lozzy-santa.webp" alt=""><img class="o" src="img/v24/gift.webp" alt="" style="left:6%;bottom:0"><img class="o" src="img/v24/snowflake.webp" alt="" style="right:8%;top:0"></div>
+      <div class="art"><img class="l" id="sn-l" src="img/v24/lozzy-wink.webp" alt=""><img class="o" id="sn-o1" src="" alt="" style="left:6%;bottom:0"><img class="o" id="sn-o2" src="" alt="" style="right:8%;top:0"></div>
     </div>
   </div>
 </section>
@@ -426,7 +442,7 @@ footer a{color:var(--ink2);text-decoration:none;font-weight:700;margin-right:16p
     <div class="plans">
       <div class="card plan reveal">
         <h3 data-t="free">Free</h3>
-        <div class="price"><b>0 Kč</b></div>
+        <div class="price"><b>€0</b></div>
         <ul>
           <li data-t="f1">Every lesson and Smart review</li>
           <li data-t="f2">Mock Test 1 of every paper, for every exam</li>
@@ -436,9 +452,9 @@ footer a{color:var(--ink2);text-decoration:none;font-weight:700;margin-right:16p
         <a class="pill glass" href="links/" data-t="free_btn">Download the app</a>
       </div>
       <div class="card plan plus reveal">
-        <span class="save" data-t="save_web">Web price · save 300 Kč</span>
+        <span class="save" data-t="save_web">Web price · save €10</span>
         <h3>Plus</h3>
-        <div class="price"><b>990 Kč</b><span data-t="per_year">a year</span><s data-t="app_price">1 290 Kč in the app</s></div>
+        <div class="price"><b>€39.99</b><span data-t="per_year">a year</span><s data-t="app_price">€49.99 in the app</s></div>
         <ul>
           <li data-t="pl1">All 10 mock tests of every paper</li>
           <li data-t="pl2">AI writing tips, 5 a day</li>
@@ -457,7 +473,7 @@ footer a{color:var(--ink2);text-decoration:none;font-weight:700;margin-right:16p
     <div class="head reveal"><h2 data-t="faq_h">Fair questions</h2></div>
     <div class="faq">
       <details class="card"><summary data-t="q1">Why is Plus cheaper on the web?</summary><p data-t="a1">The App Store keeps a share of every purchase made inside an app. When you buy here, there is no such share, so the price is lower. You get exactly the same Plus.</p></details>
-      <details class="card"><summary data-t="q2">I bought on the web. How do I get Plus in the app?</summary><p data-t="a2">Sign in to the app with the same Apple or Google account you used here. Plus turns on by itself, on every device.</p></details>
+      <details class="card"><summary data-t="q2">I bought on the web. How do I get Plus in the app?</summary><p data-t="a2">Sign in to the app with the same account you used here: Apple, Google or your Lozenge account. Plus turns on by itself, on every device.</p></details>
       <details class="card"><summary data-t="q3">Is this an official Cambridge app?</summary><p data-t="a3">No. Lozenge is an independent app for people preparing for Cambridge English exams. It is not affiliated with or endorsed by Cambridge University Press &amp; Assessment.</p></details>
       <details class="card"><summary data-t="q4">How close is the score to the real one?</summary><p data-t="a4">Mock papers are converted with the tables Cambridge publishes for practice tests, so the scale is the same. It is still an estimate from practice papers.</p></details>
       <details class="card"><summary data-t="q5">What happens to my essays and my voice?</summary><p data-t="a5">An essay is sent to the AI tutor only after you agree, and your voice goes to the speaking service only while you practise Speaking. The privacy page lists every service by name.</p></details>
@@ -494,14 +510,14 @@ footer a{color:var(--ink2);text-decoration:none;font-weight:700;margin-right:16p
   var CS = {
     nav_try:"Vyzkoušej otázku", nav_papers:"Čtyři části zkoušky",
     h1:"Slož svou <em>Cambridge</em> zkoušku.", hero_sub:"Deset minut denně s Lozzym. Zkušební testy na čas ve skutečném formátu a AI tipy, jak napsat tvou odpověď líp.",
-    store_small:"Stáhnout v", store_small_g:"Stáhnout na", hero_web:"Plus na webu", save_100:"o 300 Kč levněji",
+    store_small:"Stáhnout v", store_small_g:"Stáhnout na", hero_web:"Lozenge Plus na webu", hero_web2:"Všechno odemčené na rok. Levněji než v aplikaci.", save_100:"o 10 € levněji",
     trust:"Začni zdarma. Vlastní úlohy ve formátu zkoušky, nikdy kopírované z ostrých testů.",
     chip_lesson:"Lekce hotová", chip_score:"Kdybys psal B2 First dnes", chip_streak:"Série 12 dní",
     try_kicker:"Bez registrace a instalace", try_h:"Odpověz na jednu otázku. Hned teď.", try_sub:"Takhle vypadá lekce. Jedna otázka, jedno klepnutí a vysvětlení, které si zapamatuješ.",
     try_next:"Další otázka", try_app:"Pokračuj v aplikaci",
     in_kicker:"Uvnitř aplikace", in_h:"Klidná, přehledná a opravdu zábavná.", in_sub:"Na Domů tě vždycky čeká další krok. Všechno ostatní je na jedno klepnutí.",
-    s_learn:"Cesta lekcí", s_learn2:"Jednotka po jednotce, každá končí úlohou ze zkoušky", s_lesson:"Jedna otázka po druhé", s_lesson2:"A proč je odpověď správně",
-    s_tests:"Testy na čas", s_tests2:"Deset od každé části pro každou zkoušku", s_album:"Album slovíček", s_album2:"Sbírej slovíčka, zatímco se učíš", s_me:"Tvoje úroveň a skóre", s_me2:"Každý týden víš, kde stojíš",
+    s_learn:"Cesta lekcí", s_learn2:"Jednotka po jednotce, každá končí úlohou ze zkoušky", s_lesson:"Každý měsíc sezóna", s_lesson2:"Cesta odměn, nové lekce a vzhledy pro Lozzyho",
+    s_tests:"Testy na čas", s_tests2:"Deset od každé části pro každou zkoušku", s_album:"Každý den něco nového", s_album2:"Kalendáře, truhly a album slovíček", s_me:"Tvoje úroveň a skóre", s_me2:"Každý týden víš, kde stojíš",
     d_kicker:"Deset minut denně", d_h:"Dost krátké, aby se to dalo. Dost chytré, aby to mělo smysl.",
     d1:"Jedna věc na dnešek", d1p:"Otevřeš aplikaci a další krok tě čeká. Žádné plánování, žádné vybírání.",
     d2:"Chyby se vracejí", d2p:"Za den, pak za dva, čtyři, osm. Těsně předtím, než bys je zapomněl.",
@@ -514,11 +530,9 @@ footer a{color:var(--ink2);text-decoration:none;font-weight:700;margin-right:16p
     p3:"Psaní", p3p:"Napiš odpověď a AI lektor ti dá tipy: co funguje, co opravit a tvou vlastní odpověď přepsanou lepší angličtinou. Jen na procvičení, nikdy oficiální hodnocení.",
     p4:"Mluvení", p4p:"Procvič všechny čtyři části nahlas s AI partnerem, v části 3 s dalším mluvčím. Pak dostaneš přepis a tipy k tomu, co jsi řekl.",
     n1:"zkušebních testů od každé části", n2:"vlastních nahrávek", n3:"jednotek lekcí", n4:"jazyků rozhraní", orig:"Všechno vlastní. Psané ve formátu zkoušky, nikdy kopírované z ostrých testů.",
-    w_kicker:"1. až 31. prosince", w_h:"Zimní sezóna", w_p:"Adventní kalendář s dárkem za každým okénkem, zimní lekce za dvojnásobek XP, album slovíček k vyplnění a na konci cesty Zimní král.",
-    w_t1:"Adventní kalendář", w_t2:"Album slovíček", w_t3:"Dvojnásobek XP na Silvestra",
-    plus_h:"Kup ho tady a rozdíl si nech.", plus_sub:"Stejné Plus jako v aplikaci, na rok a levněji. V aplikaci se zapne, jakmile se přihlásíš.",
+        plus_h:"Kup ho tady a rozdíl si nech.", plus_sub:"Stejné Plus jako v aplikaci, na rok a levněji. V aplikaci se zapne, jakmile se přihlásíš.",
     free:"Zdarma", f1:"Všechny lekce a chytré opakování", f2:"Zkušební test 1 od každé části pro každou zkoušku", f3:"AI tipy k psaní jednou týdně", f4:"Série, sezóny, album slovíček a Lozzy", free_btn:"Stáhnout aplikaci",
-    save_web:"Cena na webu · o 300 Kč méně", per_year:"za rok", app_price:"v aplikaci 1 290 Kč",
+    save_web:"Cena na webu · o 10 € méně", per_year:"za rok", app_price:"v aplikaci 49,99 €",
     pl1:"Všech 10 zkušebních testů od každé části", pl2:"AI tipy k psaní, 5 denně", pl3:"AI partner na procvičení mluvení", pl4:"Neomezená energie a každý sezónní pass",
     plus_btn:"Koupit Plus na webu", plus_note:"Jedna platba za rok. Zrušit můžeš kdykoli.",
     faq_h:"Férové otázky", q1:"Proč je Plus na webu levnější?", a1:"App Store si bere podíl z každého nákupu v aplikaci. Když koupíš tady, žádný takový podíl není, takže je cena nižší. Dostaneš úplně stejné Plus.",
@@ -598,14 +612,49 @@ footer a{color:var(--ink2);text-decoration:none;font-weight:700;margin-right:16p
   });
   document.getElementById("qn").addEventListener("click", function () { qi = (qi + 1) % Q[ex].length; draw(); });
 
-  /* the Winter Season band from 17 November to 31 December */
-  var d = new Date(), md = (d.getMonth() + 1) * 100 + d.getDate();
-  if (md >= 1117 && md <= 1231) {
-    var w = document.getElementById("winter"); w.hidden = false;
-    var band = w.querySelector(".winter");
-    for (var i = 0; i < 18; i++) { var f = document.createElement("span"); f.className = "flake"; f.textContent = "❄"; f.setAttribute("aria-hidden", "true");
-      f.style.left = (Math.random() * 100) + "%"; f.style.top = "-20px"; f.style.animationDuration = (6 + Math.random() * 8) + "s"; f.style.animationDelay = (-Math.random() * 10) + "s"; f.style.fontSize = (10 + Math.random() * 10) + "px"; band.appendChild(f); }
+  /* the season band: the season running now, or the next one if it starts within three weeks.
+     Dates come from seasons.json (the same calendar the apps read); a season with no entry here stays hidden. */
+  var SEASONS = {
+    spooky26: { h: "Spooky Season", p: "Halloween lessons for double XP, a road of spooky looks for Lozzy and the Pumpkin King waiting at the end.", t: ["Season road", "Spooky lessons", "Pumpkin King"],
+      bg: "linear-gradient(140deg,#1B0F3A,#4A1F7A 55%,#E0672A)", l: "img/v24/lozzy-wink.webp", o: ["img/season/pumpkin.webp", "img/season/bat.webp"], fall: "" },
+    autumn26: { h: "Autumn Season", p: "Cosy autumn lessons for double XP, a road of rewards and the Leaf crown for Lozzy at the end.", t: ["Season road", "Cosy lessons", "Leaf crown"],
+      bg: "linear-gradient(140deg,#3A1A0E,#A8461C 55%,#F0A23A)", l: "img/v24/lozzy-wink.webp", o: ["img/season/leaf.webp", "img/season/tea.webp"], fall: "img/season/leaf.webp" },
+    winter26: { h: "Winter Season", p: "An advent calendar with a present behind every door, winter lessons for double XP, a word album to fill and the Winter King waiting at the end of the road.", t: ["Advent calendar", "Word album", "Double XP on New Year's Eve"],
+      bg: "linear-gradient(140deg,#151A55,#2A3AB8 60%,#3B5BE6)", l: "img/v24/lozzy-santa.webp", o: ["img/v24/gift.webp", "img/v24/snowflake.webp"], fall: "snow" },
+    newyear27: { h: "New Year Season", p: "Plans and promises: lessons about the future, a 21-day habit challenge and the Astronaut helmet at the end of the road.", t: ["21-day habit challenge", "Double XP on 1 January", "Season road"],
+      bg: "linear-gradient(140deg,#0B0F2E,#3A2A8C 55%,#C98A1E)", l: "img/v24/lozzy-wink.webp", o: ["img/season/rocket.webp", "img/season/fireworks.webp"], fall: "" }
+  };
+  var CAL = [["spooky26", "2026-10-24", "2026-10-31"], ["autumn26", "2026-11-01", "2026-11-30"], ["winter26", "2026-12-01", "2026-12-31"], ["newyear27", "2027-01-01", "2027-01-31"]];
+  var MON = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  function day(x) { var a = x.split("-"); return new Date(+a[0], a[1] - 1, +a[2]); }
+  function showSeason(cal) {
+    var now = new Date(); now.setHours(0, 0, 0, 0);
+    var pick = null, soon = false;
+    cal.forEach(function (c) { if (!SEASONS[c[0]] || c[3]) return; var st = day(c[1]), en = day(c[2]);
+      if (now >= st && now <= en && !pick) { pick = c; soon = false; } });
+    /* the current season is nearly over and the next starts within a week: show the next one */
+    if (pick && day(pick[2]) - now <= 5 * 864e5) cal.forEach(function (c) { if (!SEASONS[c[0]] || c[3] || c === pick) return; var st = day(c[1]);
+      if (st > now && st - day(pick[2]) <= 7 * 864e5 && soon === false && pick[0] !== c[0]) { pick = c; soon = true; } });
+    if (!pick) cal.forEach(function (c) { if (!SEASONS[c[0]] || c[3] || pick) return; var st = day(c[1]);
+      if (st > now && st - now <= 21 * 864e5) { pick = c; soon = true; } });
+    if (!pick) return;
+    var S = SEASONS[pick[0]], st = day(pick[1]), en = day(pick[2]), $ = function (i) { return document.getElementById(i); };
+    var same = st.getMonth() === en.getMonth();
+    $("sn-k").textContent = soon ? "Coming soon · starts " + st.getDate() + " " + MON[st.getMonth()]
+      : (same ? st.getDate() + " to " + en.getDate() + " " + MON[en.getMonth()] : st.getDate() + " " + MON[st.getMonth()] + " to " + en.getDate() + " " + MON[en.getMonth()]);
+    $("sn-h").textContent = S.h; $("sn-p").textContent = S.p;
+    $("sn-t").innerHTML = ""; S.t.forEach(function (t) { var e = document.createElement("span"); e.textContent = t; $("sn-t").appendChild(e); });
+    $("sn-l").src = S.l; $("sn-o1").src = S.o[0]; $("sn-o2").src = S.o[1];
+    var band = $("sn"); band.style.background = S.bg; $("season").hidden = false;
+    if (S.fall) for (var i = 0; i < 16; i++) {
+      var f; if (S.fall === "snow") { f = document.createElement("span"); f.textContent = "❄"; } else { f = document.createElement("img"); f.src = S.fall; f.alt = ""; f.style.width = (14 + Math.random() * 14) + "px"; }
+      f.className = "flake"; f.setAttribute("aria-hidden", "true"); f.style.left = (Math.random() * 100) + "%"; f.style.top = "-30px";
+      f.style.animationDuration = (6 + Math.random() * 8) + "s"; f.style.animationDelay = (-Math.random() * 10) + "s"; f.style.fontSize = (10 + Math.random() * 10) + "px"; band.appendChild(f);
+    }
   }
+  fetch("seasons.json", { cache: "no-cache" }).then(function (r) { return r.json(); })
+    .then(function (j) { showSeason((j.seasons || []).map(function (x) { return [x.id, x.start, x.end, x.off]; })); })
+    .catch(function () { showSeason(CAL); });
 
   /* the header gets its glass once the page scrolls, things rise in as they arrive */
   var bar = document.getElementById("bar");

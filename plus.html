@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Lozenge Plus · 990 Kč a year</title>
+<title>Lozenge Plus · €39.99 a year</title>
 <link rel="canonical" href="https://lozenge.online/plus.html">
 <link rel="icon" href="img/icon.png">
-<meta name="description" content="Lozenge Plus for a year, 990 Kč on the web. The same Plus as in the app, for less.">
+<meta name="description" content="Lozenge Plus for a year, €39.99 on the web. The same Plus as in the app, for less.">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,6 +34,7 @@ h1{font:800 clamp(34px,8vw,46px)/1 "Bricolage Grotesque",sans-serif;letter-spaci
 .price{display:flex;align-items:baseline;gap:10px;justify-content:center;flex-wrap:wrap}
 .price b{font:800 52px/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.04em}
 .price span,.price s{color:rgba(255,255,255,.88);font-weight:700}
+.cur{color:rgba(255,255,255,.85);font-size:14px;font-weight:700}
 .save{background:#FFD45C;color:#2A1A00;border-radius:999px;padding:5px 12px;font-weight:800;font-size:14px}
 ul.perks{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:8px;text-align:left}
 ul.perks li{display:flex;gap:10px;font-weight:600}
@@ -112,9 +113,10 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
 
   <div class="card hero">
     <img src="img/v24/lozzy-wink.webp" alt="">
-    <span class="save" data-t="save">Web price · save 300 Kč</span>
+    <span class="save" data-t="save">Web price · save €10</span>
     <h1>Lozenge Plus</h1>
-    <div class="price"><b>990 Kč</b><span data-t="year">a year</span><s data-t="app">1 290 Kč in the app</s></div>
+    <div class="price"><b>€39.99</b><span data-t="year">a year</span><s data-t="app">€49.99 in the app</s></div>
+    <span class="cur" data-t="cur">Paid in your currency. In Czechia it is 990 Kč.</span>
     <ul class="perks">
       <li data-t="p1">All 10 mock tests of every paper, for B1, B2 and C1</li>
       <li data-t="p2">AI writing tips, 5 a day</li>
@@ -150,12 +152,12 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
 
   <div class="card">
     <div class="step"><div class="num" id="n2">2</div><div>
-      <h2 data-t="s2">Pay 990 Kč</h2>
+      <h2 data-t="s2">Pay for a year</h2>
       <p data-t="s2p">Card, Apple Pay or Google Pay. One payment for a year. Cancel any time and Plus runs to the end of the year you paid for.</p>
     </div></div>
     <p class="small" id="who" hidden></p>
     <label class="small" style="display:flex;gap:10px;align-items:flex-start"><input type="checkbox" id="waive" style="margin-top:4px;width:20px;height:20px"><span data-t="waive">Turn Plus on right away. I understand that once it starts I lose the 14-day right to withdraw, but I can still ask for a refund within 14 days as the refund policy says.</span></label>
-    <div class="btns"><button class="btn green" type="button" id="pay" disabled data-t="pay">Pay 990 Kč</button></div>
+    <div class="btns"><button class="btn green" type="button" id="pay" disabled data-t="pay">Continue to payment</button></div>
     <div class="msg" id="paymsg" role="status" hidden></div>
     <div class="paybox" id="paybox" hidden><div class="paytop"><button type="button" id="payclose" aria-label="Close">✕</button></div><div id="checkout"></div><p class="secure" data-t="secure">Secure payment by Stripe. Lozenge never sees your card.</p></div>
       </div>
@@ -177,10 +179,10 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
 <script>
 (function () {
   var CS = {
-    save:"Cena na webu · o 300 Kč méně", year:"za rok", app:"v aplikaci 1 290 Kč",
+    save:"Cena na webu · o 10 € méně", year:"za rok", app:"v aplikaci 49,99 €", cur:"Platíš ve své měně. V Česku je to 990 Kč.",
     p1:"Všech 10 zkušebních testů od každé části, pro B1, B2 i C1", p2:"AI tipy k psaní, 5 denně", p3:"AI partner na procvičení mluvení", p4:"Neomezená energie a každý sezónní pass",
     s1:"Přihlas se", s1p:"Stejným účtem, jaký máš v aplikaci: Apple, Google nebo účet Lozenge. Podle něj tě Plus najde.", or:"nebo účtem Lozenge", tlogin:"Přihlásit se", tsignup:"Založit účet", lname:"Tvoje jméno", lemail:"E-mail", lpass:"Heslo", blogin:"Přihlásit se", forgot:"Zapomenuté heslo?", signed:"Jsi přihlášený", out:"Odhlásit", apple:"Pokračovat přes Apple", google:"Pokračovat přes Google",
-    s2:"Zaplať 990 Kč", s2p:"Kartou, Apple Pay nebo Google Pay. Jedna platba na rok. Zrušit můžeš kdykoli a Plus ti poběží do konce zaplaceného roku.", pay:"Zaplatit 990 Kč", paysub:"990 Kč na rok, včetně DPH", secure:"Bezpečná platba přes Stripe. Lozenge tvou kartu nikdy nevidí.", waive:"Zapnout Plus hned. Beru na vědomí, že po zapnutí ztrácím 14denní lhůtu na odstoupení, o vrácení peněz ale můžu do 14 dnů požádat podle pravidel vracení.",
+    s2:"Zaplať na rok", s2p:"Kartou, Apple Pay nebo Google Pay. Jedna platba na rok. Zrušit můžeš kdykoli a Plus ti poběží do konce zaplaceného roku.", pay:"Pokračovat k platbě", paysub:"39,99 € na rok, včetně DPH", secure:"Bezpečná platba přes Stripe. Lozenge tvou kartu nikdy nevidí.", waive:"Zapnout Plus hned. Beru na vědomí, že po zapnutí ztrácím 14denní lhůtu na odstoupení, o vrácení peněz ale můžu do 14 dnů požádat podle pravidel vracení.",
     s3:"Otevři aplikaci", s3p:"Plus se zapne samo, jakmile jsi přihlášený. Na každém telefonu a tabletu, který používáš, s iOS i Androidem.",
     soon:"Placení na webu spustíme během pár dní. Do té doby si Plus koupíš v aplikaci, se 7 dny zdarma.", store:"Stáhnout Lozenge v App Store", store_g:"Stáhnout Lozenge na Google Play",
     fine:"Ceny jsou včetně DPH. Lozenge je nezávislá aplikace, není spojená s Cambridge University Press & Assessment.",
@@ -204,7 +206,7 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
 <script>
 (function () {
-  var STRIPE = { link: "https://buy.stripe.com/5kQ00j5YkfCtbua17S3Nm00" };   /* Stripe Payment Link "Lozenge Plus (1 year)", 990 Kč */
+  var STRIPE = { link: "https://buy.stripe.com/5kQ00j5YkfCtbua17S3Nm00" };   /* Stripe Payment Link "Lozenge Plus (1 year)", €39.99 / 990 Kč */
   var SB = { url: "https://nnslmfuoswqxltjqgvzg.supabase.co", key: "sb_publishable_POu9kAO20GgUBD7gX20glQ_6PO2Cmga" };
   var $ = function (id) { return document.getElementById(id); };
   if (/[?&]paid=1/.test(location.search)) { $("who").hidden = false; $("who").textContent = document.documentElement.lang === "cs" ? "Hotovo! Otevři aplikaci, přihlas se stejným účtem a Plus se zapne." : "Done! Open the app, sign in with the same account and Plus turns on."; }
