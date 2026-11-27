@@ -85,6 +85,7 @@ h2{font-size:clamp(34px,5.4vw,58px)}
 /* App Store button (Apple's own artwork lives in the store; this is our black button with the Apple logo) */
 .store{display:inline-flex;align-items:center;gap:10px;min-height:58px;padding:0 22px 0 18px;border-radius:16px;background:#000;color:#fff;text-decoration:none;box-shadow:0 5px 0 #333}
 .store svg{width:26px;height:26px;fill:#fff}
+.cta .store+.store{margin-left:0}
 .store small{display:block;font:600 11.5px/1 var(--ui);opacity:.85}
 .store b{display:block;font:700 21px/1.1 -apple-system,system-ui,var(--ui);letter-spacing:-.01em}
 .store:active{transform:translateY(4px);box-shadow:0 1px 0 #333}
@@ -258,6 +259,7 @@ footer a{color:var(--ink2);text-decoration:none;font-weight:700;margin-right:16p
 <body>
 <div class="orbs" aria-hidden="true"><i></i><i></i><i></i></div>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="gplay" viewBox="0 0 24 24"><path fill="#34A853" d="M3.6 2.3 13.5 12l-9.9 9.7c-.4-.2-.6-.6-.6-1.1V3.4c0-.5.2-.9.6-1.1z"/><path fill="#FBBC04" d="m16.8 15.3-3.3-3.3 3.3-3.3 3.8 2.2c1 .6 1 1.6 0 2.2z"/><path fill="#4285F4" d="M16.8 8.7 13.5 12 3.6 2.3c.3-.2.8-.2 1.2 0z"/><path fill="#EA4335" d="m16.8 15.3-12 6.9c-.4.2-.9.2-1.2 0l9.9-10.2z"/></symbol>
   <symbol id="apple" viewBox="0 0 24 24"><path d="M16.37 12.62c-.02-2.3 1.88-3.4 1.96-3.46a4.24 4.24 0 0 0-3.34-1.8c-1.42-.14-2.77.83-3.5.83-.72 0-1.83-.81-3.01-.79a4.46 4.46 0 0 0-3.77 2.29c-1.61 2.79-.41 6.92 1.16 9.18.77 1.1 1.68 2.35 2.88 2.3 1.16-.05 1.6-.75 3-.75s1.79.75 3.01.72c1.25-.02 2.04-1.12 2.8-2.23a9.9 9.9 0 0 0 1.27-2.6 4.04 4.04 0 0 1-2.46-3.69ZM14.07 5.86a4.1 4.1 0 0 0 .94-2.94 4.18 4.18 0 0 0-2.7 1.4 3.9 3.9 0 0 0-.97 2.83 3.45 3.45 0 0 0 2.73-1.29Z"/></symbol>
 </svg>
 
@@ -283,6 +285,7 @@ footer a{color:var(--ink2);text-decoration:none;font-weight:700;margin-right:16p
       <p class="lead" data-t="hero_sub">Ten minutes a day with Lozzy. Timed mock tests in the real format, and AI writing tips that show you how to make your own answer stronger.</p>
       <div class="cta">
         <a class="store" href="https://apps.apple.com/app/id6819167082" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#apple"/></svg><span><small data-t="store_small">Download on the</small><b>App Store</b></span></a>
+        <a class="store" href="https://play.google.com/store/apps/details?id=com.marekkalivoda.lozenge" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#gplay"/></svg><span><small data-t="store_small_g">Get it on</small><b>Google Play</b></span></a>
         <a class="web" href="plus.html"><span data-t="hero_web">Plus on the web</span> <b data-t="save_100">save 100 Kč</b></a>
       </div>
       <p class="trust" data-t="trust">Free to start. Original exam-style material, never copied from real papers.</p>
@@ -430,7 +433,7 @@ footer a{color:var(--ink2);text-decoration:none;font-weight:700;margin-right:16p
           <li data-t="f3">AI writing tips once a week</li>
           <li data-t="f4">Streaks, seasons, the word album and Lozzy</li>
         </ul>
-        <a class="pill glass" href="https://apps.apple.com/app/id6819167082" target="_blank" rel="noopener" data-t="free_btn">Download the app</a>
+        <a class="pill glass" href="links/" data-t="free_btn">Download the app</a>
       </div>
       <div class="card plan plus reveal">
         <span class="save" data-t="save_web">Web price · save 100 Kč</span>
@@ -458,7 +461,7 @@ footer a{color:var(--ink2);text-decoration:none;font-weight:700;margin-right:16p
       <details class="card"><summary data-t="q3">Is this an official Cambridge app?</summary><p data-t="a3">No. Lozenge is an independent app for people preparing for Cambridge English exams. It is not affiliated with or endorsed by Cambridge University Press &amp; Assessment.</p></details>
       <details class="card"><summary data-t="q4">How close is the score to the real one?</summary><p data-t="a4">Mock papers are converted with the tables Cambridge publishes for practice tests, so the scale is the same. It is still an estimate from practice papers.</p></details>
       <details class="card"><summary data-t="q5">What happens to my essays and my voice?</summary><p data-t="a5">An essay is sent to the AI tutor only after you agree, and your voice goes to the speaking service only while you practise Speaking. The privacy page lists every service by name.</p></details>
-      <details class="card"><summary data-t="q6">Is there an Android version?</summary><p data-t="a6">Not yet. Lozenge is on iPhone and iPad.</p></details>
+      <details class="card"><summary data-t="q6">Is there an Android version?</summary><p data-t="a6">Yes. Lozenge is on Google Play for Android phones and tablets, and on the App Store for iPhone and iPad. One account keeps your progress on both.</p></details>
     </div>
   </div>
 </section>
@@ -470,6 +473,7 @@ footer a{color:var(--ink2);text-decoration:none;font-weight:700;margin-right:16p
       <h2 data-t="end_h">Your exam has a date. Start today.</h2>
       <div class="cta" style="justify-content:center;margin-top:6px">
         <a class="store" href="https://apps.apple.com/app/id6819167082" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#apple"/></svg><span><small data-t="store_small">Download on the</small><b>App Store</b></span></a>
+        <a class="store" href="https://play.google.com/store/apps/details?id=com.marekkalivoda.lozenge" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#gplay"/></svg><span><small data-t="store_small_g">Get it on</small><b>Google Play</b></span></a>
         <a class="pill dark" href="plus.html" data-t="end_web">Get Plus on the web</a>
       </div>
     </div>
@@ -490,7 +494,7 @@ footer a{color:var(--ink2);text-decoration:none;font-weight:700;margin-right:16p
   var CS = {
     nav_try:"Vyzkoušej otázku", nav_papers:"Čtyři části zkoušky",
     h1:"Slož svou <em>Cambridge</em> zkoušku.", hero_sub:"Deset minut denně s Lozzym. Zkušební testy na čas ve skutečném formátu a AI tipy, jak napsat tvou odpověď líp.",
-    store_small:"Stáhnout v", hero_web:"Plus na webu", save_100:"o 100 Kč levněji",
+    store_small:"Stáhnout v", store_small_g:"Stáhnout na", hero_web:"Plus na webu", save_100:"o 100 Kč levněji",
     trust:"Začni zdarma. Vlastní úlohy ve formátu zkoušky, nikdy kopírované z ostrých testů.",
     chip_lesson:"Lekce hotová", chip_score:"Kdybys psal B2 First dnes", chip_streak:"Série 12 dní",
     try_kicker:"Bez registrace a instalace", try_h:"Odpověz na jednu otázku. Hned teď.", try_sub:"Takhle vypadá lekce. Jedna otázka, jedno klepnutí a vysvětlení, které si zapamatuješ.",
@@ -522,7 +526,7 @@ footer a{color:var(--ink2);text-decoration:none;font-weight:700;margin-right:16p
     q3:"Je to oficiální aplikace Cambridge?", a3:"Ne. Lozenge je nezávislá aplikace pro přípravu na zkoušky Cambridge English. Není spojená s Cambridge University Press & Assessment ani jimi schválená.",
     q4:"Jak přesné je skóre?", a4:"Zkušební testy se převádějí podle tabulek, které Cambridge zveřejňuje pro cvičné testy, takže škála je stejná. Pořád je to ale odhad z cvičných testů.",
     q5:"Co se děje s mými texty a hlasem?", a5:"Text se pošle AI lektorovi, jen když souhlasíš, a hlas jde ke službě jen během procvičování mluvení. Zásady ochrany soukromí uvádějí každou službu jménem.",
-    q6:"Je verze pro Android?", a6:"Zatím ne. Lozenge je na iPhonu a iPadu.",
+    q6:"Je verze pro Android?", a6:"Ano. Lozenge je na Google Play pro telefony a tablety s Androidem a v App Storu pro iPhone a iPad. Jeden účet drží tvůj pokrok na obou.",
     end_h:"Tvoje zkouška má datum. Začni dnes.", end_web:"Koupit Plus na webu",
     privacy:"Ochrana soukromí", terms:"Obchodní podmínky", refunds:"Vrácení peněz", contact:"Kontakt", webapp:"Webová verze", indep:"Lozenge je nezávislá aplikace, není spojená s Cambridge University Press & Assessment. © 2026"
   };
