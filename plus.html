@@ -142,7 +142,7 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
 <script>
 (function () {
-  var STRIPE = { link: "" };   /* https://buy.stripe.com/… from the Stripe dashboard (Payment Links), set once Stripe approves */
+  var STRIPE = { link: "https://buy.stripe.com/5kQ00j5YkfCtbua17S3Nm00" };   /* Stripe Payment Link "Lozenge Plus (1 year)", 990 Kč */
   var SB = { url: "https://nnslmfuoswqxltjqgvzg.supabase.co", key: "sb_publishable_POu9kAO20GgUBD7gX20glQ_6PO2Cmga" };
   var $ = function (id) { return document.getElementById(id); };
   if (/[?&]paid=1/.test(location.search)) { $("who").hidden = false; $("who").textContent = document.documentElement.lang === "cs" ? "Hotovo! Otevři aplikaci, přihlas se stejným účtem a Plus se zapne." : "Done! Open the app, sign in with the same account and Plus turns on."; }
