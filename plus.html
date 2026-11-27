@@ -55,6 +55,42 @@ ul.perks li::before{content:"✓";flex:none;width:22px;height:22px;border-radius
 .small{font-size:14px;color:var(--lead);margin-top:14px}
 footer{text-align:center;color:var(--lead);font-size:14px;margin-top:30px}
 footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
+[hidden]{display:none!important}
+.auth .step h2{padding-right:76px}
+.auth{position:relative;overflow:visible;padding-top:30px}
+.auth .peek{position:absolute;right:22px;top:-46px;width:92px;filter:drop-shadow(0 12px 18px rgba(40,52,160,.35));pointer-events:none}
+.seg{display:grid;grid-template-columns:1fr 1fr;padding:4px;border-radius:999px;background:rgba(68,87,255,.09);border:1px solid var(--rule);margin:18px 0 4px;position:relative}
+.seg button{position:relative;z-index:1;border:0;background:none;font:800 15px inherit;font-family:inherit;color:var(--lead);min-height:44px;border-radius:999px;cursor:pointer;transition:color .2s}
+.seg button[aria-selected="true"]{color:#fff}
+.seg i{position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);border-radius:999px;background:linear-gradient(#5A6BFF,#3546E8);box-shadow:0 4px 0 #2533B8;transition:transform .28s cubic-bezier(.3,1.3,.5,1)}
+.seg[data-mode="signup"] i{transform:translateX(100%)}
+.or{display:flex;align-items:center;gap:12px;color:var(--lead);font-size:13px;font-weight:700;margin:18px 0 6px;text-transform:uppercase;letter-spacing:.06em}
+.or::before,.or::after{content:"";flex:1;height:1px;background:var(--rule)}
+.field{position:relative;margin-top:12px}
+.field input{width:100%;min-height:58px;border-radius:18px;border:1.5px solid var(--rule);background:var(--glass2);color:var(--ink);font:600 17px inherit;font-family:inherit;padding:22px 52px 6px 18px;outline:none;transition:border-color .2s,box-shadow .2s}
+.field label{position:absolute;left:19px;top:18px;color:var(--lead);font-weight:600;pointer-events:none;transition:all .18s}
+.field input:focus,.field input:not(:placeholder-shown){padding-top:24px}
+.field input:focus+label,.field input:not(:placeholder-shown)+label{top:8px;font-size:12px;font-weight:800;color:var(--brand)}
+.field input:focus{border-color:var(--brand);box-shadow:0 0 0 4px rgba(68,87,255,.16)}
+.field .eye{position:absolute;right:8px;top:9px;width:40px;height:40px;border:0;border-radius:12px;background:none;color:var(--lead);cursor:pointer;display:grid;place-items:center}
+.field .eye svg{width:22px;height:22px}
+.btn.brand{background:linear-gradient(#5A6BFF,#3546E8);color:#fff;box-shadow:0 5px 0 #2533B8;margin-top:16px;width:100%}
+.btn.green,.btn.brand{transition:transform .1s,box-shadow .1s}
+.btn.green:active:not([disabled]),.btn.brand:active:not([disabled]){transform:translateY(4px);box-shadow:0 1px 0 #2533B8}
+.forgot{display:block;margin:12px auto 0;border:0;background:none;color:var(--brand);font:700 14px inherit;font-family:inherit;cursor:pointer}
+.msg{margin-top:12px;padding:12px 14px;border-radius:14px;font-weight:700;font-size:15px}
+.msg.err{background:rgba(232,70,93,.12);color:#C8243F}
+.msg.ok{background:rgba(20,184,122,.13);color:#0B7A51}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .msg.err{color:#FF8A9C}:root:not([data-theme="light"]) .msg.ok{color:#5FE0AA}}
+.me{display:flex;align-items:center;gap:14px;margin-top:16px;padding:14px;border-radius:20px;background:rgba(20,184,122,.1);border:1px solid rgba(20,184,122,.25)}
+.me .av{flex:none;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(150deg,#6E4FF2,#E8468D);color:#fff;font:800 20px "Bricolage Grotesque",sans-serif}
+.me b{display:block;font-weight:800}
+.me span{color:var(--lead);font-size:14px;word-break:break-all}
+.me button{margin-left:auto;border:0;background:none;color:var(--lead);font:700 14px inherit;font-family:inherit;cursor:pointer;text-decoration:underline}
+.num.done{background:var(--green)}
+.spin{width:18px;height:18px;border-radius:50%;border:3px solid rgba(255,255,255,.4);border-top-color:#fff;animation:sp .7s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.seg i,.field input,.field label{transition:none}}
 </style>
 </head>
 <body>
@@ -77,19 +113,33 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
     </ul>
   </div>
 
-  <div class="card">
-    <div class="step"><div class="num">1</div><div>
+  <div class="card auth">
+    <img class="peek" src="img/v24/lozzy.webp" alt="">
+    <div class="step"><div class="num" id="n1">1</div><div>
       <h2 data-t="s1">Sign in</h2>
-      <p data-t="s1p">Use the same Apple or Google account you use in the app. That is how Plus finds you.</p>
+      <p data-t="s1p">Use the same account you use in the app: Apple, Google or your Lozenge account. That is how Plus finds you.</p>
     </div></div>
-    <div class="btns">
+    <div id="signedout">
+      <div class="btns">
       <button class="btn apple" type="button" id="in-apple" disabled><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M16.37 12.62c-.02-2.3 1.88-3.4 1.96-3.46a4.24 4.24 0 0 0-3.34-1.8c-1.42-.14-2.77.83-3.5.83-.72 0-1.83-.81-3.01-.79a4.46 4.46 0 0 0-3.77 2.29c-1.61 2.79-.41 6.92 1.16 9.18.77 1.1 1.68 2.35 2.88 2.3 1.16-.05 1.6-.75 3-.75s1.79.75 3.01.72c1.25-.02 2.04-1.12 2.8-2.23a9.9 9.9 0 0 0 1.27-2.6 4.04 4.04 0 0 1-2.46-3.69ZM14.07 5.86a4.1 4.1 0 0 0 .94-2.94 4.18 4.18 0 0 0-2.7 1.4 3.9 3.9 0 0 0-.97 2.83 3.45 3.45 0 0 0 2.73-1.29Z"/></svg><span data-t="apple">Continue with Apple</span></button>
       <button class="btn google" type="button" id="in-google" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.5 12.27c0-.79-.07-1.54-.2-2.27H12v4.3h5.9a5.05 5.05 0 0 1-2.2 3.3v2.75h3.55c2.08-1.92 3.25-4.74 3.25-8.08Z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.76c-.98.66-2.24 1.06-3.72 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.07H2.18a11 11 0 0 0 0 9.87l3.66-2.84Z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15A10.57 10.57 0 0 0 12 1 11 11 0 0 0 2.18 7.07l3.66 2.84C6.71 7.3 9.14 5.38 12 5.38Z"/></svg><span data-t="google">Continue with Google</span></button>
+      </div>
+      <div class="or"><span data-t="or">or with your Lozenge account</span></div>
+      <div class="seg" id="seg" data-mode="login" role="tablist"><i></i><button type="button" role="tab" aria-selected="true" data-m="login" data-t="tlogin">Log in</button><button type="button" role="tab" aria-selected="false" data-m="signup" data-t="tsignup">Create account</button></div>
+      <form id="form" novalidate>
+        <div class="field" id="f-name" hidden><input id="name" type="text" placeholder=" " autocomplete="nickname" maxlength="40"><label for="name" data-t="lname">Your name</label></div>
+        <div class="field"><input id="email" type="email" placeholder=" " autocomplete="email" autocapitalize="off" inputmode="email" required><label for="email" data-t="lemail">Email</label></div>
+        <div class="field"><input id="pass" type="password" placeholder=" " autocomplete="current-password" required><label for="pass" data-t="lpass">Password</label><button class="eye" type="button" id="eye" aria-label="Show password"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
+        <div class="msg" id="msg" role="status" hidden></div>
+        <button class="btn brand" type="submit" id="go"><span data-t="blogin">Log in</span></button>
+        <button class="forgot" type="button" id="forgot" data-t="forgot">Forgot password?</button>
+      </form>
     </div>
+    <div class="me" id="me" hidden><div class="av" id="av">L</div><div><b data-t="signed">You're signed in</b><span id="mail"></span></div><button type="button" id="out" data-t="out">Sign out</button></div>
   </div>
 
   <div class="card">
-    <div class="step"><div class="num">2</div><div>
+    <div class="step"><div class="num" id="n2">2</div><div>
       <h2 data-t="s2">Pay 990 Kč</h2>
       <p data-t="s2p">Card, Apple Pay or Google Pay. One payment for a year. Cancel any time and Plus runs to the end of the year you paid for.</p>
     </div></div>
@@ -117,7 +167,7 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
   var CS = {
     save:"Cena na webu · o 300 Kč méně", year:"za rok", app:"v aplikaci 1 290 Kč",
     p1:"Všech 10 zkušebních testů od každé části, pro B1, B2 i C1", p2:"AI tipy k psaní, 5 denně", p3:"AI partner na procvičení mluvení", p4:"Neomezená energie a každý sezónní pass",
-    s1:"Přihlas se", s1p:"Stejným účtem Apple nebo Google, jaký máš v aplikaci. Podle něj tě Plus najde.", apple:"Pokračovat přes Apple", google:"Pokračovat přes Google",
+    s1:"Přihlas se", s1p:"Stejným účtem, jaký máš v aplikaci: Apple, Google nebo účet Lozenge. Podle něj tě Plus najde.", or:"nebo účtem Lozenge", tlogin:"Přihlásit se", tsignup:"Založit účet", lname:"Tvoje jméno", lemail:"E-mail", lpass:"Heslo", blogin:"Přihlásit se", forgot:"Zapomenuté heslo?", signed:"Jsi přihlášený", out:"Odhlásit", apple:"Pokračovat přes Apple", google:"Pokračovat přes Google",
     s2:"Zaplať 990 Kč", s2p:"Kartou, Apple Pay nebo Google Pay. Jedna platba na rok. Zrušit můžeš kdykoli a Plus ti poběží do konce zaplaceného roku.", pay:"Zaplatit 990 Kč", waive:"Zapnout Plus hned. Beru na vědomí, že po zapnutí ztrácím 14denní lhůtu na odstoupení, o vrácení peněz ale můžu do 14 dnů požádat podle pravidel vracení.",
     s3:"Otevři aplikaci", s3p:"Plus se zapne samo, jakmile jsi přihlášený. Na každém telefonu a tabletu, který používáš, s iOS i Androidem.",
     soon:"Placení na webu spustíme během pár dní. Do té doby si Plus koupíš v aplikaci, se 7 dny zdarma.", store:"Stáhnout Lozenge v App Store", store_g:"Stáhnout Lozenge na Google Play",
@@ -147,12 +197,65 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
   var $ = function (id) { return document.getElementById(id); };
   if (/[?&]paid=1/.test(location.search)) { $("who").hidden = false; $("who").textContent = document.documentElement.lang === "cs" ? "Hotovo! Otevři aplikaci, přihlas se stejným účtem a Plus se zapne." : "Done! Open the app, sign in with the same account and Plus turns on."; }
   if (!STRIPE.link || !window.supabase) return;
-  var sb = window.supabase.createClient(SB.url, SB.key), user = null;
+  var sb = window.supabase.createClient(SB.url, SB.key), user = null, mode = "login", busy = false;
+  var cs = function () { return document.documentElement.lang === "cs"; };
+  var T = function (en, cz) { return cs() ? cz : en; };
   $("soon").hidden = true;
+  function say(text, ok) { var m = $("msg"); m.hidden = !text; m.textContent = text || ""; m.className = "msg " + (ok ? "ok" : "err"); }
+  function nice(e) {
+    var m = String((e && e.message) || e || "");
+    if (/invalid login|invalid_grant|invalid credentials/i.test(m)) return T("Wrong email or password.", "Špatný e-mail nebo heslo.");
+    if (/already (been )?registered|already exists/i.test(m)) return T("We couldn't create an account with this email. If you already have one, log in or reset your password.", "S tímto e-mailem účet založit nejde. Jestli už ho máš, přihlas se nebo si obnov heslo.");
+    if (/password should|weak_password/i.test(m)) return T("Use a longer password: at least 8 characters.", "Použij delší heslo, aspoň 8 znaků.");
+    if (/not confirmed/i.test(m)) return T("Please confirm your email first, check your inbox.", "Nejdřív potvrď e-mail, mrkni do schránky.");
+    if (/rate limit|too many/i.test(m)) return T("Too many tries. Wait a minute and try again.", "Moc pokusů. Počkej chvilku a zkus to znovu.");
+    return T("Something went wrong. Try again.", "Něco se nepovedlo. Zkus to znovu.");
+  }
+  function setMode(m) {
+    mode = m; $("seg").setAttribute("data-mode", m);
+    document.querySelectorAll("#seg button").forEach(function (b) { b.setAttribute("aria-selected", String(b.getAttribute("data-m") === m)); });
+    $("f-name").hidden = m !== "signup"; $("forgot").hidden = m !== "login";
+    $("pass").setAttribute("autocomplete", m === "signup" ? "new-password" : "current-password");
+    $("go").querySelector("span").textContent = m === "signup" ? T("Create account", "Založit účet") : T("Log in", "Přihlásit se");
+    say("");
+  }
+  document.querySelectorAll("#seg button").forEach(function (b) { b.addEventListener("click", function () { setMode(b.getAttribute("data-m")); }); });
+  $("eye").addEventListener("click", function () { var p = $("pass"); p.type = p.type === "password" ? "text" : "password"; $("eye").setAttribute("aria-label", p.type === "password" ? "Show password" : "Hide password"); });
+  function wait(on) { busy = on; var g = $("go"); g.disabled = on; g.querySelector("span").hidden = on; var sp = g.querySelector(".spin"); if (on && !sp) { sp = document.createElement("i"); sp.className = "spin"; g.appendChild(sp); } if (!on && sp) sp.remove(); }
+  $("form").addEventListener("submit", async function (ev) {
+    ev.preventDefault(); if (busy) return;
+    var email = $("email").value.trim(), pass = $("pass").value;
+    if (!/\S+@\S+\.\S+/.test(email)) { say(T("Enter a valid email address.", "Zadej platný e-mail.")); $("email").focus(); return; }
+    if (mode === "signup" ? pass.length < 8 : !pass) { say(mode === "signup" ? T("Use a longer password: at least 8 characters.", "Použij delší heslo, aspoň 8 znaků.") : T("Enter your password.", "Zadej heslo.")); $("pass").focus(); return; }
+    wait(true); say("");
+    try {
+      if (mode === "signup") {
+        var r = await sb.auth.signUp({ email: email, password: pass, options: { emailRedirectTo: location.origin + location.pathname, data: { name: $("name").value.trim() || "Learner", lang: cs() ? "cs" : "en" } } });
+        if (r.error) throw r.error;
+        if (!r.data.session) say(T("Almost done! We've sent you an email. Tap the link in it, then come back here.", "Skoro hotovo! Poslali jsme ti e-mail. Klikni na odkaz v něm a vrať se sem."), true);
+      } else {
+        var r2 = await sb.auth.signInWithPassword({ email: email, password: pass });
+        if (r2.error) throw r2.error;
+      }
+    } catch (e) { say(nice(e)); }
+    wait(false);
+  });
+  $("forgot").addEventListener("click", async function () {
+    var email = $("email").value.trim();
+    if (!/\S+@\S+\.\S+/.test(email)) { say(T("Type your email above first.", "Nejdřív nahoře napiš svůj e-mail.")); $("email").focus(); return; }
+    var r = await sb.auth.resetPasswordForEmail(email, { redirectTo: "https://lozenge.online/app/" });
+    say(r.error ? nice(r.error) : T("Check your inbox for a link to reset your password.", "Ve schránce najdeš odkaz na obnovení hesla."), !r.error);
+  });
+  $("out").addEventListener("click", function () { sb.auth.signOut(); });
   function refresh() {
-    $("in-apple").disabled = !!user; $("in-google").disabled = !!user;
+    $("signedout").hidden = !!user; $("me").hidden = !user;
+    $("n1").classList.toggle("done", !!user); $("n1").textContent = user ? "✓" : "1";
+    if (user) {
+      var nm = (user.user_metadata && (user.user_metadata.name || user.user_metadata.full_name)) || user.email || "L";
+      $("av").textContent = String(nm).trim().charAt(0).toUpperCase();
+      $("mail").textContent = user.email || T("your account", "tvůj účet");
+    }
     $("pay").disabled = !user || !$("waive").checked;
-    if (user) { $("who").hidden = false; $("who").textContent = (document.documentElement.lang === "cs" ? "Přihlášen jako " : "Signed in as ") + (user.email || "your account"); }
   }
   function signIn(provider) { sb.auth.signInWithOAuth({ provider: provider, options: { redirectTo: location.origin + location.pathname } }); }
   $("in-apple").addEventListener("click", function () { signIn("apple"); });
@@ -160,7 +263,7 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
   $("waive").addEventListener("change", refresh);
   $("pay").addEventListener("click", function () {
     if (!user) return;
-    var q = "client_reference_id=" + encodeURIComponent(user.id) + (user.email ? "&prefilled_email=" + encodeURIComponent(user.email) : "") + "&locale=" + (document.documentElement.lang === "cs" ? "cs" : "en");
+    var q = "client_reference_id=" + encodeURIComponent(user.id) + (user.email ? "&prefilled_email=" + encodeURIComponent(user.email) : "") + "&locale=" + (cs() ? "cs" : "en");
     location.href = STRIPE.link + (STRIPE.link.indexOf("?") < 0 ? "?" : "&") + q;
   });
   sb.auth.getSession().then(function (r) { user = r.data && r.data.session ? r.data.session.user : null; refresh(); });
