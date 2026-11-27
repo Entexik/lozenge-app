@@ -58,7 +58,7 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
 [hidden]{display:none!important}
 .paybox{margin:16px -12px 0;border-radius:22px;background:#fff;color:#0B0F2E;padding:14px 10px 10px;animation:payin .35s cubic-bezier(.3,1.2,.5,1)}
 @keyframes payin{from{opacity:0;transform:translateY(12px) scale(.98)}}
-.paytop{display:flex;align-items:center;gap:12px;padding:4px 8px 12px;border-bottom:1px solid #ECEEFB;margin-bottom:6px}
+.paytop{display:flex;justify-content:flex-end;padding:0 4px}
 .paytop img{width:46px;height:46px}
 .paytop b{display:block;font:800 18px "Bricolage Grotesque",sans-serif;letter-spacing:-.02em}
 .paytop span{font-size:14px;color:#545C82;font-weight:600}
@@ -157,7 +157,7 @@ footer a{color:var(--ink2);font-weight:700;text-decoration:none;margin:0 8px}
     <label class="small" style="display:flex;gap:10px;align-items:flex-start"><input type="checkbox" id="waive" style="margin-top:4px;width:20px;height:20px"><span data-t="waive">Turn Plus on right away. I understand that once it starts I lose the 14-day right to withdraw, but I can still ask for a refund within 14 days as the refund policy says.</span></label>
     <div class="btns"><button class="btn green" type="button" id="pay" disabled data-t="pay">Pay 990 Kč</button></div>
     <div class="msg" id="paymsg" role="status" hidden></div>
-    <div class="paybox" id="paybox" hidden><div class="paytop"><img src="img/lozzy-clear-512.png" alt=""><div><b>Lozenge Plus</b><span data-t="paysub">990 Kč a year, VAT included</span></div><button type="button" id="payclose" aria-label="Close">✕</button></div><div id="checkout"></div><p class="secure" data-t="secure">Secure payment by Stripe. Lozenge never sees your card.</p></div>
+    <div class="paybox" id="paybox" hidden><div class="paytop"><button type="button" id="payclose" aria-label="Close">✕</button></div><div id="checkout"></div><p class="secure" data-t="secure">Secure payment by Stripe. Lozenge never sees your card.</p></div>
       </div>
 
   <div class="card">
